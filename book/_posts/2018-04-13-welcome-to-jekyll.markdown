@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Chapter 1"
+title:  "Chapter 0"
 date:   2018-04-13 12:02:54 -0400
 categories: book
 ---
@@ -36,7 +36,7 @@ We can use these tools to push forth a variety of good and bad outcomes:
 
 An incentive is a tool that motivates a party to behave a certain way. Cryptoeconomics is incentive engineering. We will mostly be exploring interactions within protocols but we will also touch on the implications of off-chain interactions to equilibrium in the protocol as well. It’s also important to note that incentives are difficult to design for, because it operates under the assumption that people will always behave a certain way, or always be moved by a certain motive.
 
-Centralized systems don’t need cryptoeconomics because they can technically do whatever the fuck they want. It’s important for decentralized services to exist, even if at the expense of convenience or ease of use, at least for users to have optionality. Reliance on a centralized financial infrastructure leaves users all privy to the risks, accidents, and mandates of central authorities. It’s important to have a censorship resistant option to overcome the whims of central authorities. 
+Centralized systems don’t need cryptoeconomics because they can technically do whatever they want. It’s important for decentralized services to exist, even if at the expense of convenience or ease of use, at least for users to have optionality. Reliance on a centralized financial infrastructure leaves users all privy to the risks, accidents, and mandates of central authorities. It’s important to have a censorship resistant option to overcome the whims of central authorities. 
 
 That’s cool… but how do we govern decentralized networks? The challenges of decentralized governance are of mass coordination, incentive alignment, and security. With these open networks, we want to be able to open participation to the public internet, and incentivize participation in the security and maintenance of the network (running nodes, mining, etc). 
 
@@ -47,7 +47,7 @@ In a centralized payment processor, we trust the central authority  to verify tr
 |               | Order 1                                                             | Order 2                                                              |
 |---------------|---------------------------------------------------------------------|----------------------------------------------------------------------|
 | Initial State | Aparna has 10 eth, Aparna sends Jing 8 eth, Aparna sends Karl 8 eth | Aparna has 10 eth, Aparna sends Karl 8 eth, Aparna sends Jing 8 eth, |
-| Final State   | Aparna has 2 eth, Jing has 8 eth, Karl has 0 eth                    | Aparna has 2 eth, Karl has 8 eth, Jing has 0 eth (fuck that)         |
+| Final State   | Aparna has 2 eth, Jing has 8 eth, Karl has 0 eth                    | Aparna has 2 eth, Karl has 8 eth, Jing has 0 eth         |
 Two drastically different final states arise from a lack of agreement on ordering
 <\center>
 
@@ -85,8 +85,3 @@ Q) If you are a miner will the block you mine in POW always be included in the l
 A) No! Because of forks.
 Q) How can you make it harder for someone to attack the altcoin paypal chain?
 A) Sharding - make attacks all or nothing and Plasma 
-
-
-
-
-
