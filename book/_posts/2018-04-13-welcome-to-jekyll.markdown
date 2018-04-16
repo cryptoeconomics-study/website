@@ -77,6 +77,15 @@ Since mining on the shorter fork does not provide an incentive, and there is a c
 
 Let’s think about those tools in our toolbox again. Without hashing, digital signatures, and other components of public key cryptography, we wouldn’t have the guarantee that users own and control their money, and can only send and spend what they own… or that the money can’t be duplicated! Without the difficulty of mining, we wouldn’t have the economic guarantee that what is written to the blockchain will most likely remain there! Wow cryptoeconomics!
 
+## PROBLEMS
+
+Q) Why do we need Decentralized Consensus not just decentralized code verification and execution?
+A) To prevent the double spend attack.
+Q) If you are a miner will the block you mine in POW always be included in the longest chain?
+A) No! Because of forks.
+Q) How can you make it harder for someone to attack the altcoin paypal chain?
+A) Sharding - make attacks all or nothing and Plasma 
+
 
 
 
