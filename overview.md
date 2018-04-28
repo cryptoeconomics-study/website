@@ -348,7 +348,8 @@
    * Using a coin-run DAO to curate a list
 * Stable Coin Mechanisms
    * Collateralized debt positions (DAI <3)
-Chapter 12: The Future
+
+## Chapter 12: The Future
 * The foundations of Cryptoeconomics have been laid, but this is just the beginning.
 * New ways to approach problem solving:
    * Adversarial thinking.
@@ -383,8 +384,8 @@ Chapter 12: The Future
 
 ------------------
 
-## Honorable Mentions
-This section contains content which was suggested but so far has not been explicitly added to the curriculum. If there are ways to cleanly fit this stuff in, let’s do it!
+## Extra Content
+This section contains content which was suggested but so far has not been explicitly added to the curriculum. Will be trying to find ways to cleanly integrate this content in relevant sections.
 
 #### ldct
 * spontaneous order as a framework (Hayek)
