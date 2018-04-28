@@ -3,13 +3,14 @@
     "collapsible-menu",
     "include-html",
     "favicon",
+    "exercises",
     "youtube"
   ],
   "pluginsConfig": {
     "favicon":{
-        "shortcut": "assets/images/favicon.ico",
-        "bookmark": "assets/images/favicon.ico",
-        "appleTouch": "assets/images/apple-touch-icon.png"
+      "shortcut": "assets/images/favicon.ico",
+      "bookmark": "assets/images/favicon.ico",
+      "appleTouch": "assets/images/apple-touch-icon.png"
     }
   }
 }

@@ -1,3 +1,5 @@
-# Cryptoeconomics: An Introduction -- An Interactive Course!
+# Lectures
 
-This is the course with videos and interactive problems.
+This is the lecture section which will have videos and interactive problems.
+
+<img style="display: block; margin-left: auto; margin-right: auto; width: 50%;" src="/assets/images/under-construction.png" />
