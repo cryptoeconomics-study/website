@@ -4,8 +4,11 @@
   "description": "A course on cryptoeconomics.",
   "dependencies": {
     "gitbook-plugin-collapsible-menu": "^1.0.3",
+    "gitbook-plugin-custom-landing": "0.0.1",
     "gitbook-plugin-exercises": "MostlyAdequate/plugin-exercises",
-    "gitbook-plugin-include-codeblock": "^3.1.2"
+    "gitbook-plugin-favicon": "0.0.2",
+    "gitbook-plugin-include-codeblock": "^3.1.2",
+    "gitbook-plugin-youtube": "^1.1.0"
   },
   "devDependencies": {
     "gitbook-cli": "^2.3.2"

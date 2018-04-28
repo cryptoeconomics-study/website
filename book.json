@@ -1,6 +1,15 @@
 {
   "plugins": [
     "collapsible-menu",
+    "include-html",
+    "favicon",
     "youtube"
-  ]
+  ],
+  "pluginsConfig": {
+    "favicon":{
+        "shortcut": "assets/images/favicon.ico",
+        "bookmark": "assets/images/favicon.ico",
+        "appleTouch": "assets/images/apple-touch-icon.png"
+    }
+  }
 }

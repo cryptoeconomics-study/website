@@ -76,3 +76,25 @@ A) No! Because of forks.
 Q) How can you make it harder for someone to attack the altcoin paypal chain?
 A) Sharding - make attacks all or nothing and Plasma 
 ```
+
+## PROBLEMS2
+
+```
+Q) Why do we need Decentralized Consensus not just decentralized code verification and execution?
+A) To prevent the double spend attack.
+Q) If you are a miner will the block you mine in POW always be included in the longest chain?
+A) No! Because of forks.
+Q) How can you make it harder for someone to attack the altcoin paypal chain?
+A) Sharding - make attacks all or nothing and Plasma 
+```
+
+## PROBLEMS3
+
+```
+Q) Why do we need Decentralized Consensus not just decentralized code verification and execution?
+A) To prevent the double spend attack.
+Q) If you are a miner will the block you mine in POW always be included in the longest chain?
+A) No! Because of forks.
+Q) How can you make it harder for someone to attack the altcoin paypal chain?
+A) Sharding - make attacks all or nothing and Plasma 
+```
