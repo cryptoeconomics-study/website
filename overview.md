@@ -313,9 +313,9 @@
    * Proof of custody algorithm:
       * 1) Commit to a merkle tree of the data, where each chunk (node in the merkle tree) is signed by a temporary private key.
       * 2) The private key must be hidden for some time T, and if revealed the validator forfeits all their stake.
-      * 2) After time T, the penalty for revealing is removed, and the private key must be revealed.
-      * 3) All nodes can use the data & the revealed private key to regenerate the merkle tree commitment & check if it is correct.
-      * 4) If the tree is incorrect, submit a challenge.
+      * 3) After time T, the penalty for revealing is removed, and the private key must be revealed.
+      * 4) All nodes can use the data & the revealed private key to regenerate the merkle tree commitment & check if it is correct.
+      * 5) If the tree is incorrect, submit a challenge.
 * Combining probabilistic sampling, proofs of custody, and RANDAOs, we can start to see how a sharding protocol might be put together.
    * Ethereum is still finalizing a sharding protocol. Please contribute! 
 
