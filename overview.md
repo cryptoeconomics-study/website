@@ -173,6 +173,14 @@
       * When ⅔ votes are reached for two subsequent checkpoints, the first is finalized.
       * Extra credit
       * Add slashing conditions!
+      
+      **Suggested Background Reading**
+      
+* Zamfir, V. (Dec 7, 2016) The History of Casper - Ch 1 https://medium.com/@Vlad_Zamfir/the-history-of-casper-part-1-59233819c9a9
+* Zamfir, V. (Dec 7, 2016) The History of Casper - Ch 2 https://medium.com/@Vlad_Zamfir/the-history-of-casper-chapter-2-8e09b9d3b780
+* Zamfir, V. (Dec 11, 2016) The History of Casper - Ch 3 https://medium.com/@Vlad_Zamfir/the-history-of-casper-chapter-3-70fefb1182fc
+* Zamfir, V. (Dec 12, 2016) The History of Casper - Ch 4 https://medium.com/@Vlad_Zamfir/the-history-of-casper-chapter-4-3855638b5f0e
+* Zamfir, V. (Dec 30, 2016) The History of Casper - Ch 5 https://medium.com/@Vlad_Zamfir/the-history-of-casper-chapter-5-8652959cef58
 
 ## Chapter 6: Analyzing Proof of Stake
 * Fault attribution
