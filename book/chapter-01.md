@@ -29,28 +29,31 @@ Hash functions are mainly used for securing the integrity of information and als
 
 To change the past data, all the hashes previously produced after that date in time will all deterministically change as well. And unless it is accepted by the majority of the blockchain network, it will be rejected as invalid.  To overcome all of this, this you would not only have to recompute all the hashed blocks to form the new chain but also have enough computing power to gain acceptance as the longest chain (hence the name, proof of work as hashing takes a lot of computational power/energy).
 
-### Public Key Encryption
+### Public Key Cryptography
 
 Public key cryptography is a field of cryptography which that solves the key distribution problem involved with the symmetrical encryption of information. Okay, let's talk about what that exactly means… 
 
 Encryption is essentially a mathematical algorithm that renders information unusable, producing. The input is known as a plain text and the produced unusable information is called a ciphertext. Below is notation describing a plain text being encrypted then decrypted.
 
-encryption(Plain-text) = Cipher-text, 
-decryption(Cipher-text) = Plain-text
+1. encryption(Plain-text) = Cipher-text, 
+2. decryption(Cipher-text) = Plain-text
 
 A ciphertext can be unscrambled by decrypting it back to the plain text. The inner workings and mechanics of these algorithms are public knowledge...  Wait? So if the algorithms are known, can’t anyone decrypt the encrypted information?
 
 Encryption of algorithms involves a secret key that is used to secure the information. Unless anyone else has the key, they cannot decrypt the information. There are two types of encryption algorithms which manage and share encryption and decryption keys differently and they are known as symmetrical and asymmetrical algorithms.
 
 Symmetric algorithms secure their information during encryption using a key and also use the same key for the decryption of that information as described in notation below:
-encryption(key1, Plain-text) = Cipher-text
-decryption(key1, Cipher-text) = Plain-text
+
+1. encryption(key1, Plain-text) = Cipher-text
+2. decryption(key1, Cipher-text) = Plain-text
 
 The problem with encryption is that if person A wants to use the encryption algorithm to communicate with person B, person A has to somehow safely exchange the cipher key to person B. Once their shared security key has been exchanged, then they will be able to communicate freely. This however key exchange cannot be made in compromised communication channels or open communicates where a potential eavesdropper might be listening to. This is known as the key exchange problem.
 
 Public key algorithms or asymmetrical encryption algorithms solve the problem of sharing sensitive information. Instead with asymmetrical algorithms or public key cryptography, encryption and decryption keys are two separate items instead of being one single key.
 
 Since, there are now two keys with their respective encryption and decryption capabilities separated, person A can simply share their encryption key or public key to person B over insecure communications. There is no fear over the compromise of the key as it can only be used to encrypt information, not decrypt. Person B receives person A’s public key and can use that to encrypt his own message to produce a ciphertext. Person B sends back the ciphertext back to person A where then Person A decrypts the ciphertext using their own decryption key or private key. Person A’s private key or decryption key is at no time at risk of compromise, unlike the symmetrical key that needs to be first exchanged. 
+
+
 
 
 
