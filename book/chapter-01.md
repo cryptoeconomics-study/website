@@ -1,10 +1,10 @@
 # Chapter 1: Centralized Payment Processor
 
-In chapter 0 we introduced you to the concept of cryptoeconomics, outlined the tools for designing cryptoeconomics systems and also studied the bitcoin mechanism at a high level. In this next chapter, we will dive deeper into cryptoeconomic tools we mentioned before (Hashes, public key cryptography, digital signatures) and also start looking at the design of decentralized computing systems.
+In chapter 0 we introduced you to the concept of cryptoeconomics, outlined the tools for designing cryptoeconomics systems and also studied the bitcoin mechanism at a high level. In this chapter, we will dive deeper into the cryptoeconomic tools we mentioned before (Hashes, public key cryptography, digital signatures) and also start looking at the design of decentralized computing systems.
 
 ## Cryptographic tools
 
-Cryptoeconomic design is the use of cryptography and economics to generate a desired end goal through mathematical guarantees and economic incentive. These end outcomes are engineered through a set of mechanisms that align individual participants of cryptoeconomic systems with desired individual behavior. 
+Cryptoeconomic design is the use of cryptography and economics to generate a desired end goal through mathematical guarantees and economic incentive. These end outcomes are engineered through a set of mechanisms that align individual participants of cryptoeconomic systems with desired participating behavior. 
 
 Cryptography is the practice of secret and secure communication. Existing for thousands of years, it is an ultimately about using mathematics and probability to secure information. Cryptography is used to secure... 
 - Confidentiality (keeping information a secret to eavesdroppers)
@@ -31,30 +31,24 @@ To change the past data, all the hashes previously produced after that date in t
 
 ### Public Key Cryptography
 
-Public key cryptography is a field of cryptography which that solves the key distribution problem involved with the symmetrical encryption of information. Okay, let's talk about what that exactly means… 
+Public key cryptography is a field of cryptography which solves the key distribution problem involved with the symmetrical encryption of information. Okay, let's talk about what that exactly means… 
 
-Encryption is essentially a mathematical algorithm that renders information unusable, producing. The input is known as a plain text and the produced unusable information is called a ciphertext. Below is notation describing a plain text being encrypted then decrypted.
+Encryption is a mathematical algorithm that renders information unusable, producing. The input is known as a plain-text and the produced output is called a cipher-text. Below is notation describing a plain text being encrypted then decrypted.
 
 1. encryption(Plain-text) = Cipher-text, 
 2. decryption(Cipher-text) = Plain-text
 
 A ciphertext can be unscrambled by decrypting it back to the plain text. The inner workings and mechanics of these algorithms are public knowledge...  Wait? So if the algorithms are known, can’t anyone decrypt the encrypted information?
 
-Encryption of algorithms involves a secret key that is used to secure the information. Unless anyone else has the key, they cannot decrypt the information. There are two types of encryption algorithms which manage and share encryption and decryption keys differently and they are known as symmetrical and asymmetrical algorithms.
+Encryption of algorithms involves a secret key that is used to secure the information. Unless someone has the key, they cannot decrypt the information. There are two types of encryption algorithms which manage keys differently and they are known as symmetrical and asymmetrical algorithms.
 
-Symmetric algorithms secure their information during encryption using a key and also use the same key for the decryption of that information as described in notation below:
+Symmetric algorithms secure their information during encryption using a key which is also used for the decryption of cipher-texts as described in notation below:
 
 1. encryption(key1, Plain-text) = Cipher-text
 2. decryption(key1, Cipher-text) = Plain-text
 
-The problem with encryption is that if person A wants to use the encryption algorithm to communicate with person B, person A has to somehow safely exchange the cipher key to person B. Once their shared security key has been exchanged, then they will be able to communicate freely. This however key exchange cannot be made in compromised communication channels or open communicates where a potential eavesdropper might be listening to. This is known as the key exchange problem.
+The problem with symmetrical encryption is that if person A wants to use the encryption algorithm to communicate with person B, person A has to somehow safely exchange the key to person B. Once their shared key has been exchanged, then they will be able to communicate freely. This 'key exchange' however cannot conducted using a compromised or public communication channels where a potential eavesdropper might be listening in on. This is known as the key exchange problem.
 
-Public key algorithms or asymmetrical encryption algorithms solve the problem of sharing sensitive information. Instead with asymmetrical algorithms or public key cryptography, encryption and decryption keys are two separate items instead of being one single key.
+Public key algorithms or asymmetrical encryption algorithms solve the problem of sharing sensitive information. With public key cryptography, encryption and decryption keys are two separate items instead of being one single key.
 
 Since, there are now two keys with their respective encryption and decryption capabilities separated, person A can simply share their encryption key or public key to person B over insecure communications. There is no fear over the compromise of the key as it can only be used to encrypt information, not decrypt. Person B receives person A’s public key and can use that to encrypt his own message to produce a ciphertext. Person B sends back the ciphertext back to person A where then Person A decrypts the ciphertext using their own decryption key or private key. Person A’s private key or decryption key is at no time at risk of compromise, unlike the symmetrical key that needs to be first exchanged. 
-
-
-
-
-
-
