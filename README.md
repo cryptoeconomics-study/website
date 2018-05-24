@@ -1,7 +1,7 @@
+<img src="https://i.imgur.com/XzsEQmk.png" width="100px"/>
+
 # Cryptoeconomics: An Introduction
 This is the master repo for the cryptoeconomics course located on: **https://cryptoeconomics.study**.
-
-![Cryptoeconomics: An Introduction logo](https://i.imgur.com/XzsEQmk.png)
 
 ### Contributing
 This course is an entirely open source effort. Your contributions are more than welcome!
