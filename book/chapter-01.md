@@ -48,10 +48,26 @@ Symmetric algorithms secure their information during encryption with a key which
 1. encryption(key1, Plain-text) = Cipher-text
 2. decryption(key1, Cipher-text) = Plain-text
 
-The problem with symmetrical encryption is that if person A wants to use the encryption algorithm to communicate with person B, they both have to have the secret key to decrypt the encrypted messages. Only once their key has been exchange will they be able to communicate in secret. The problem is that this 'key exchange' cannot be done in open public or through compromised communication channels where a eavesdropper might be listening in on. This is known as the key exchange problem.
+The problem with symmetrical encryption is that if person A wants to use the encryption algorithm to communicate with person B, they both have to have the secret key to decrypt the encrypted messages. Only once their key has been exchanged, will they be able to communicate in secret. The problem is that this 'key exchange' cannot be done in open public or through compromised communication channels where a eavesdropper might be listening in on. This is known as the key exchange problem.
 
-Public key algorithms or asymmetrical encryption algorithms, solve the problem of sharing sensitive information. With public key cryptography, encryption and decryption functions of the key are separateed into two keys as opposed to being a single key with dual functionality.
+Public key algorithms or asymmetrical encryption algorithms, solve the problem of sharing sensitive information. With public key cryptography, encryption and decryption functions of the key are separated into two keys as opposed to being a single key with dual functionality.
 
 Since, there are two keys with their respective encryption and decryption capabilities separated, person A can simply share their encryption key or public key to person B over insecure communications without fear of compromising the condfidentiality of the message. Anyone with the public key can encrypt messages but this is relatively useless without the decryption key. Person B receives person A’s public key and now can use that to encrypt his own message to produce a cipher-text. Person B sends back the ciphertext back to person A where Person A then decrypts the ciphertext using their own decryption key or private key. Person A’s private key is at no point at risk of compromise as opposed to the symmetrical key exchange.
 
 Public key encryption is used for sending secure messages over insecure communications. They are also used for digital signatures and is the underlying concept that validates transactions on a public ledger.
+
+### Digital Signatures
+
+In the real world, we use signatures as an act of deliberation from someone where it is used as a to agree with documents and claim authorship of work. While relatively straightforward, signatures actually have a lot of meta properties tied to them. Signatures are...
+
+- Unforgeable: The signature is unique to the signer and thus is proof of an identity
+- Unalterable: The signature cannot be altered or moved to another document
+- Nonrepudiable: The signature cannot be revoked afterward 
+
+Signatures in real life can be forged and which is an even bigger problem with digital signatures as files are easily copied and tampered with. How can you achieve a sign of deliberation that satisfies all the requirements of a signature? The answer is in a public key cryptography algorithm called the Digital Signature Algorithm (DSA).
+
+For Person A to sign a document, a hash value is produced from that document using a hash function. Person A uses the encryption key, which is kept hidden, to encrypt the hash value of the document to produce a cipher-text: E(H). For DSA, the encryption key is the private key that is kept a secret and the decryption key is the public key that is published into the open. Person A publishes the document and along with the E(H). Anyone can verify that person A has signed the document by hashing the document and then using Person A’s trusted and published decryption key to decrypt the cipher-text E(H) to produce the same hash of the document. If the document hashes match, then the signature is valid.
+
+The signature it is never exposed but rather the key used for encryption. The uniquely transformed cipher-text is the signature.
+
+
