@@ -12,5 +12,8 @@
       "bookmark": "assets/images/favicon.ico",
       "appleTouch": "assets/images/apple-touch-icon.png"
     }
+  },
+  "structure": {
+    "readme": "homepage.md"
   }
 }

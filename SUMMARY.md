@@ -1,6 +1,6 @@
 # Summary
 
-* [Homepage](./README.md)
+* [Homepage](./homepage.md)
 * [Course Overview](./overview.md)
   * [Chapter 1: Centralized Payment Processor](./overview.md#chapter-1-centralized-payment-processor)
   * [Chapter 2: Client Validation, Networks, and Double Spends](./overview.md#chapter-2-client-validation-networks-and-double-spends)
