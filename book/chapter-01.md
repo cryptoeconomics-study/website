@@ -1,4 +1,5 @@
 # Chapter 1: Centralized Payment Processor
+// TODO: Re-write overview paragraph. Need to add a description overview of states and paypal project.
 
 In chapter 0 we introduced you to the concept of cryptoeconomics, outlined the tools for designing cryptoeconomics systems and also studied the bitcoin mechanism at a high level. In this chapter, we will dive deeper into the cryptoeconomic tools we mentioned before (Hashes, public key cryptography, digital signatures) and also start looking at the design of decentralized computing systems.
 
@@ -14,7 +15,7 @@ Cryptography is the practice of secret and secure communication. Existing for th
 
 ### One way hash functions
 
-// ToDo: Rewrite section to mention / describe concepts as pre-image / 2nd pre-image etc.
+// TODO: Rewrite section to mention / describe concepts as pre-image / 2nd pre-image etc.
 
 Hashes are one-way mathematical functions that take a variable length input of any size and produces a unique fixed length output called a hash value. This function is considered as 'one way' as it is very difficult to find the original input of a hash value. This is unless you try to brute force guess all existing inputs to find a matching hash value. 
 
