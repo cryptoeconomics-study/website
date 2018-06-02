@@ -14,6 +14,8 @@ Cryptography is the practice of secret and secure communication. Existing for th
 
 ### One way hash functions
 
+// ToDo: Rewrite section to mention / describe concepts as pre-image / 2nd pre-image etc.
+
 Hashes are one-way mathematical functions that take a variable length input of any size and produces a unique fixed length output called a hash value. This function is considered as 'one way' as it is very difficult to find the original input of a hash value. This is unless you try to brute force guess all existing inputs to find a matching hash value. 
 
 (If you are interested in the security of the hash function, check out this video: [Security of SHA-256](https://www.youtube.com/watch?v=S9JGmA5_unY))
