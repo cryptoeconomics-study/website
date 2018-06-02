@@ -74,4 +74,11 @@ For Person A to sign a document, a hash value is produced from that document usi
 
 The signature it is never exposed but rather the key used for encryption. The uniquely transformed cipher-text is the signature.
 
+## States & transitions
+
+Previously we talked about states and state transitions. While it might sound rather abstract, the concept of states can be applied to everything in the world. And state transitions is simply howthe world changes from moment to moment. Everything in the world is information. Everything in the world can be presented by information or the state in which the information is at from temperature, to the approximations of how likely electron clouds will be at certain places, the physical coordinates of where you are at right now. State transitions are how that information changes. And this information changes in different ways from the laws of physics to even your ability to walk - changing your physical location.
+
+Imagine this: You have 10 dollars cash intotal in your wallet right now. Your current state for how much cash you have in this state is 10 dollars. If you see another person: Ralph standing next to you who has no cash and you give him 3 dollars then, that is a state transition. By giving 3 dollars away to Ralph, you are changing the state of your total wallet from 10 → $7 whereas for Ralph his wallet's state also transitions from $0 → $3. No one except the government can create money from thin air. The creation of money is call minting and its scarcity is also what gives cash value. No one would care aobut it if anyone could replciate a bank note, hence counterfeiting protection. So with cash, all people are able to do are to send money to each other.
+
+While handing money in person to each may seem simply enough, it is eactly the representation of what digital cash systems and payment processing systems.
 
