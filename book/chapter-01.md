@@ -1,5 +1,4 @@
 # Chapter 1: Centralized Payment Processor
-// TODO: Re-write overview paragraph. Need to add a description overview of states and paypal central payment processor.
 
 In chapter 0 we introduced you to the concept of cryptoeconomics, outlined the tools for designing cryptoeconomics systems and also studied the bitcoin mechanism at a high level. In this chapter, we will dive deeper into the cryptoeconomic tools we mentioned before (Hashes, public key cryptography, digital signatures) and also start looking at the design of decentralized computing systems.
 
@@ -14,8 +13,6 @@ Cryptography is the practice of secret and secure communication. Existing for th
 - Nonrepudiation (proving the author of signed information)
 
 ### One way hash functions
-
-// TODO: Edit section to mention describe pre-image resistance / 2nd pre-image etc.
 
 Hashes are one-way mathematical functions that take a variable length input of any size and produces a unique fixed length output called a hash value. This function is considered as 'one way' as it is very difficult to find the original input of a hash value. This is unless you try to brute force guess all existing inputs to find a matching hash value. 
 
@@ -60,7 +57,6 @@ Since, there are two keys with their respective encryption and decryption capabi
 Public key encryption is used for sending secure messages over insecure communications. They are also used for digital signatures and is the underlying concept that validates transactions on a public ledger.
 
 ### Digital Signatures
-// TODO: Write about DSA functions: geenratekeys, sign, verify, explain hexidecimal? + Mention lightl about Pseudonyms & how DSA is to create account addresses
 
 In the real world, we use signatures as an act of deliberation from someone where it is used as a to agree with documents and claim authorship of work. While relatively straightforward, signatures actually have a lot of meta properties tied to them. Signatures are...
 
@@ -74,85 +70,4 @@ For Person A to sign a document, a hash value is produced from that document usi
 
 The signature it is never exposed but rather the key used for encryption. The uniquely transformed cipher-text is the signature.
 
-## States transitions
 
-// Everything below is me writing, it is fairly raw and might not make sense yet - first write, then edit :)
-
-Previously we mentioned these things known as states state transitions. It is a concept representing how information changes from moment to moment. If you think about it, everything is information and data. If you freeze the time in the world, it would be one state of the world. But as you resume time, the states would change accordingly, for example with atoms if you freeze time you might be able to see the location of the electronics since time is frozen. However, when you resume time, they will be in a different location or 'state'. These state changes are dictated by the laws of physics just like how the state of where you are in your room is dictated by where you decide to move. This is the same with money.
-
-Imagine you have 10 dollars cash in your wallet right now and are standing next to a person call Ralph who has no cash in his wallet.
-
-**State:**
-
-You: $10
-
-Ralph: $0
-
-If you were to give Ralph $3 to put into his wallet, the state transition would be:
-
-**State transition:**
-
-You: $10 → $7
-
-Ralph: $0 → $3
-
-This transition would result in the new state:
-
-**New state:**
-
-You: $7
-
-Ralph: $3
-
-One reason why we have wallets in the first place is that we want to store our money in a safe place. Why? Money is a medium of exchange which allows you to buy goods and services. It is scarce! It doesn't grow on trees and no one can counterfeit the money even if they tried. Only the bank has the ability to print more money. You only can receive and send money whereas the bank can mint new money.
-
-Now let's examine the exchange that took place between you and Ralph as shown above. What does it really mean to give someone money?
-
-1. When you have the money, you are able to do anything you want with it. You can send, hold or even throw it away. You can do this because you physically hold it in your wallet.
-
-2. When you don't have money you can't physically use it.
-
-When you give money away you authorize it by handing it to someone else. Your state changes from 1 to 2. And the cash notes is a physical representation of that money but also physical proof that you don't have it anymore or have it. The challenge with digital payment systems is that you either have to trust a central organization to verify these state transitions. And if you don't want to use a central processor, how do you trust digital state changes or transactions? One interesting way to think about cryptocurrencies is that you are able to cryptographically about to prove state transitions. You can prove that you don't have something anymore, emulating the physical proof of ownership that is hard to recreate.
-
-## Digital cash system
-
-The physical representation of cash almost mirrors digital cash systems in many aspects. It works very similarly to real life cash. There are two types of transactions: Mint or Send. Minting is the creation of cash which usually can only be done by the bank but in our case Paypal itself. Send is a transaction that can be done by anyone just like real life cash notes.
-
-The beginning of this payments system, where there no activity has taken place, is called the genesis state or initial state. All ledgers are really just a list of transactions applied to the genesis state. These transactions are usually grouped together in chronological time intervals, called blocks. The most recent states are derived from the state transitions applied by to the genesis state.
-
-In this payment system, instead of physically carrying cash in a wallet, your ownership is listed and mapped to a unique address. You are able to control the state of this unique address if you have the signature of the corresponding address. Instead of physically handing money to someone else, you sign state changes to your own balance with your signature. And if the is enough cash in your balance and your signature matches the balance address, then the state transition is executed.
-
-Similar to cash notes, you cannot send the same cash notes over and over again and to also protect yourself some something similar happening, each state change is submitted with a unique number known as a nonce. A nonce is a number that increments with each state change from your account and gives you relay protection - meaning you can't resubmit the same transaction multiple times and bleed your account dry. In code, a state transition function might look like:
-
-    function applyTransaction (state, tx) {
-      // Check the from address matches the signature
-      const signer = EthCrypto.recover(tx.sig, getTxHash(tx.contents))
-      if (signer !== tx.contents.from) {
-        throw new Error('Invalid signature!')
-      }
-      // If we don't have a record for this address, create one
-      if (!(tx.contents.to in state)) {
-        state[[tx.contents.to]] = {
-          balance: 0,
-          nonce: -1
-        }
-      }
-      // Check that the nonce is correct for replay protection
-      if (tx.contents.nonce !== state[[tx.contents.from]].nonce + 1) {
-        throw new Error('Invalid nonce!')
-      }
-      // Mint coins **only if identity is PayPal**
-      if (tx.contents.type === 'mint' && tx.contents.from === accounts.paypal.address) {
-        state[[tx.contents.to]].balance += tx.contents.amount
-      } else if (tx.contents.type === 'send') { // Send coins
-        if (state[[tx.contents.from]].balance - tx.contents.amount < 0) {
-          throw new Error('Not enough money!')
-        }
-        state[[tx.contents.from]].balance -= tx.contents.amount
-        state[[tx.contents.to]].balance += tx.contents.amount
-      }
-      state[[tx.contents.from]].nonce += 1
-      return state
-    }
-
-Check out the code implementation of it here: [https://codepen.io/karlfloersch/pen/YaEoYy?editors=0012](https://codepen.io/karlfloersch/pen/YaEoYy?editors=0012)
