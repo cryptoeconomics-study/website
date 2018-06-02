@@ -161,3 +161,15 @@ In code, a state change function might look like:
     }
 
 Check out the code implementation of it here: [https://codepen.io/karlfloersch/pen/YaEoYy?editors=0012](https://codepen.io/karlfloersch/pen/YaEoYy?editors=0012)
+
+## Balance model vs UTXOs
+
+//TODO: In progress, yet to make this stuff readable and communicatable + have to write about the benefits of both models
+
+In the code implementation of the payment processor and as well as Ethereum, there is a global state of all accounts. All addresses are mapped to an balance and all state changes involve the reduction of one accounts balance and increase in another accounts balance. The balance of the account is derived from the last state transition. A transaction is valid if the sending account has enough balance to pay for it, in which case the sending account is debited and the receiving account is credited with the value. 
+
+Bitcoin however uses another model of state transitions where instead of changing the state of the account balance, it changes the state of how much bitcoin is spent and not spent. Called UTXOs - unspent transaction outputs. With every transaction there is an input and output state change of the sender and the recipetant. These transaction state transitions are stored and user balances are derived off the aggregated total balance of unspent transactions of an address. When a user sends a transaction, the output part is like throwing away an amount of bitcoin that they own and then having the ability to reassign that amount to whoever they want as long as the input is less than the output. More like physical coins.
+
+Benefits of UTXOs: a tad more private, more scalable???, can spcify multiple recipients with one transaction, an input can come from many outputs / accounts, fungibility issues
+
+Benefits of balances: savings for space?, greater fungibility - however black lsits can happen?, simpliity easy to understand, client reference.
