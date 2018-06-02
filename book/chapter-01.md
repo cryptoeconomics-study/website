@@ -60,6 +60,7 @@ Since, there are two keys with their respective encryption and decryption capabi
 Public key encryption is used for sending secure messages over insecure communications. They are also used for digital signatures and is the underlying concept that validates transactions on a public ledger.
 
 ### Digital Signatures
+// TODO: Write about DSA functions: geenratekeys, sign, verify 
 
 In the real world, we use signatures as an act of deliberation from someone where it is used as a to agree with documents and claim authorship of work. While relatively straightforward, signatures actually have a lot of meta properties tied to them. Signatures are...
 
