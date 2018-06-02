@@ -74,11 +74,84 @@ For Person A to sign a document, a hash value is produced from that document usi
 
 The signature it is never exposed but rather the key used for encryption. The uniquely transformed cipher-text is the signature.
 
-## States & transitions
+Everything below is me writing, it is fairly raw and might not make sense yet - first write, then edit :)
 
-Previously we talked about states and state transitions. While it might sound rather abstract, the concept of states can be applied to everything in the world. And state transitions is simply howthe world changes from moment to moment. Everything in the world is information. Everything in the world can be presented by information or the state in which the information is at from temperature, to the approximations of how likely electron clouds will be at certain places, the physical coordinates of where you are at right now. State transitions are how that information changes. And this information changes in different ways from the laws of physics to even your ability to walk - changing your physical location.
+## States transitions
 
-Imagine this: You have 10 dollars cash intotal in your wallet right now. Your current state for how much cash you have in this state is 10 dollars. If you see another person: Ralph standing next to you who has no cash and you give him 3 dollars then, that is a state transition. By giving 3 dollars away to Ralph, you are changing the state of your total wallet from 10 → $7 whereas for Ralph his wallet's state also transitions from $0 → $3. No one except the government can create money from thin air. The creation of money is call minting and its scarcity is also what gives cash value. No one would care aobut it if anyone could replciate a bank note, hence counterfeiting protection. So with cash, all people are able to do are to send money to each other.
+Previously we mentioned these things known as states state transitions. It is a concept representing how information changes from moment to moment. If you think about it, everything is information and data. If you freeze the time in the world, it would be one state of the world. But as you resume time, the states would change accordingly, for example with atoms if you freeze time you might be able to see the location of the electroncs since time is frozen. However when you resume time, they will be in a different location or 'state'. These state changes are dictated by the laws of physics just like how the state of where you are in your room is dictated by where you decide to move. This is the same with money.
 
-While handing money in person to each may seem simply enough, it is eactly the representation of what digital cash systems and payment processing systems.
+Imagine you have 10 dollars cash in your wallet right now and are standinf next to a person call Ralph who has no cash in his wallet.
 
+**State:**
+
+You: $10
+
+Ralph: $0 
+
+If you were to give Ralph $3 to put into his wallet, the state transition would be:
+
+**State transition:**
+
+You: $10 → $7
+
+Ralph: $0 → $3
+
+This transition would result in the new state:
+
+**New state:**
+
+You: $7
+
+Ralph: $3
+
+One reason why we have wallets in the first place is because we want to store our money in a safe place. Why? Money is a medium of exchange which allows you to buy goods and services. It is scarce! I doesn't grow on trees and no one can conterfeit the money even if they tried. Only the bank has the ability to print more money. You only can recieve and send money where as the bank can mint new money.
+
+Now lets examine the exchange that took place between you and ralph as shown above. What does it really mean to give someone money?
+
+1. When you have the money, you are able to do anything you want with it. You can send, hold or even throw it away. You can do this because you physically hold it in your wallet.
+2. When you don't have money you can't physically use it.
+
+When you give money away you authorize it by handing it to someone else. Your state changes from 1 to 2. And the cash notes is a physical representation of that money but also physical proof that you don't have it anymore or have it. The challenge with digital payment systems is that you either have to trust a central organisation to verify these state transitions. And if you don't want to use a central processor, how do you trust digital state changes or transactions? One interesting way to think about cryptocurrencies is that you are able to digitally prove state transitions. You can prove that you don't have something anymore.
+
+## Digital cashsystem
+
+Physical representation of cash systems almost mirrors digital cash systems in many aspects. It works very similar to real life cash. There are two types of transactions: Mint or Send. Minting is the creation of cash which usually can only done by the bank but in our case Paypal itself. Send is a transaction that can be done by anyone just like real life cash notes. 
+
+At the beginning of this payments system there is nothing. This is known as the genesis state or initial state. All ledgers are simply a list of transactions applied to the genesis state. These lists of transactions are usually grouped together in time intervals and are called blocks. And the most recent states are dervied from the state transitions apllied by blocks to the genesis state.
+
+In this payment system, instead of physically carrying cash in a wallet, your ownership is listed and mapped to an unique address. You are able to control the state of this unique address if you have the signature of the corresponding address. Instead of physically handing money to someone else, you sign state changes to your own balance with your signature. And if the is enough cash in your balance and your signature matches the balance address, then the state transition is executed. 
+
+Similar to cash notes, you cannot send the same cash notes over and over again and to also protect yourself some something similar happening, each state change is submitted with an unique number known as a nonce. The nonce is a number that increments with each state change from your account and give you relay protection - meaning you can't resubmit the same transaction multiple times and bleed your account dry. In code, a state transition function might look like: 
+
+    function applyTransaction (state, tx) {
+      // Check the from address matches the signature
+      const signer = EthCrypto.recover(tx.sig, getTxHash(tx.contents))
+      if (signer !== tx.contents.from) {
+        throw new Error('Invalid signature!')
+      }
+      // If we don't have a record for this address, create one
+      if (!(tx.contents.to in state)) {
+        state[[tx.contents.to]] = {
+          balance: 0,
+          nonce: -1
+        }
+      }
+      // Check that the nonce is correct for replay protection
+      if (tx.contents.nonce !== state[[tx.contents.from]].nonce + 1) {
+        throw new Error('Invalid nonce!')
+      }
+      // Mint coins **only if identity is PayPal**
+      if (tx.contents.type === 'mint' && tx.contents.from === accounts.paypal.address) {
+        state[[tx.contents.to]].balance += tx.contents.amount
+      } else if (tx.contents.type === 'send') { // Send coins
+        if (state[[tx.contents.from]].balance - tx.contents.amount < 0) {
+          throw new Error('Not enough money!')
+        }
+        state[[tx.contents.from]].balance -= tx.contents.amount
+        state[[tx.contents.to]].balance += tx.contents.amount
+      }
+      state[[tx.contents.from]].nonce += 1
+      return state
+    }
+
+Check out the code implementation of it here: [https://codepen.io/karlfloersch/pen/YaEoYy?editors=0012](https://codepen.io/karlfloersch/pen/YaEoYy?editors=0012)
