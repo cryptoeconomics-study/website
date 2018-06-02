@@ -173,3 +173,15 @@ Bitcoin however uses another model of state transitions where instead of changin
 Benefits of UTXOs: a tad more private, more scalable???, can spcify multiple recipients with one transaction, an input can come from many outputs / accounts, fungibility issues
 
 Benefits of balances: savings for space?, greater fungibility - however black lsits can happen?, simpliity easy to understand, client reference.
+
+## Centralised and decentralised systems
+
+What is a blockchain? A blockchain is a decentralised computing system which stores data in a linear fashion. This linearity of the data is secured by a decentralised network of computers. Bitcoin uses a blockchain as an public ledger of all state changes. Paypal on the other hand is a central processor where the record and security of the data is based on the trust of the company. Why do we use centralised systems? And what are the downsides of them? Why are decentralised systems important?
+
+**Advantages of centralized systems**
+
+Firstly it is easy to maintain centralised servers and computer systems. We have become very good at building them, designing and developing them. We also have learnt how to scale centralised computer systems. 
+
+**Disadvantages of centralized systems**
+
+There is a single point of failure, censorship
