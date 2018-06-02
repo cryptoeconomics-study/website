@@ -37,7 +37,7 @@ In a centralized payment processor, we trust the central authority to verify tra
   
 |               | Order 1                                                             | Order 2                                                              |
 |---------------|---------------------------------------------------------------------|----------------------------------------------------------------------|
-| Initial State | Aparna has 10 eth, Aparna sends Jing 8 eth, Aparna sends Karl 8 eth | Aparna has 10 eth, Aparna sends Karl 8 eth, Aparna sends Jing 8 eth, |
+| Initial State | Aparna has 10 eth, Aparna sends Jing 8 eth, Aparna sends Karl 8 eth | Aparna has 10 eth, Aparna sends Karl 8 eth Aparna sends Jing 8 eth, |
 | Final State   | Aparna has 2 eth, Jing has 8 eth, Karl has 0 eth                    | Aparna has 2 eth, Karl has 8 eth, Jing has 0 eth         |
 
 Note that two drastically different final states arise from a lack of agreement on transaction ordering.
