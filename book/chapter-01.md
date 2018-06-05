@@ -14,7 +14,7 @@ Cryptography is the practice of secret and secure communication. Existing for th
 
 ### One way hash functions
 
-Hashes are one-way mathematical functions that take a variable length input of any size and produces a unique fixed length output called a hash value. This function is considered as 'one way' as it is very difficult to find the original input of a hash value. This is unless you try to brute force guess all existing inputs to find a matching hash value. 
+A hash function produces a deterministic fixed-size, random looking output which is called a hash. These hashes are one-way mathematical functions that take a variable length input of any size and produces a unique fixed length output called a hash value. This function is considered as 'one way' as it is very difficult to find the original input of a hash value. This is unless you try to brute force guess all existing inputs to find a matching hash value. 
 
 (If you are interested in the security of the hash function, check out this video: [Security of SHA-256](https://www.youtube.com/watch?v=S9JGmA5_unY))
 
@@ -30,7 +30,7 @@ This is a core underlying property that secures proof of work (PoW) blockchains.
 
 Unless it is accepeted by the majority of the nodes that validate blocks of data, it is rejected as invalid. To overcome all of this, this you would not only have to recompute all the hashed blocks to form the new chain but also have enough computing power to out compete the production of other block creators. Hashes protect the integrity of data.
 
-### Public Key Cryptography
+### Public Key Cryptography (Assymetric Cryptography)
 
 Public key cryptography is a field of cryptography which solves the key distribution problem involved with the symmetrical encryption. Okay, let's talk about what that exactly means… 
 
