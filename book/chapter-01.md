@@ -1,12 +1,17 @@
 # Chapter 1: Centralized Payment Processor
 
-In [Chapter 0](https://github.com/cryptoeconomics-study/website/blob/master/book/chapter-00.md) we introduced you to the concept of cryptoeconomics, outlined the tools for designing cryptoeconomics systems and also studied the bitcoin mechanism at a high level. In this chapter, we will dive deeper into the cryptoeconomic tools we mentioned before (Hashes, public key cryptography, digital signatures) and also start looking at the design of decentralized computing systems.
+In [Chapter 0](https://github.com/cryptoeconomics-study/website/blob/master/book/chapter-00.md) we introduced you to the concept of cryptoeconomics, outlined the tools for designing cryptoeconomics systems and also studied cryptoeconomics in Bitcoin at a high level. 
+
+**Introduction**
+In Chapter 1 we will learn about cryptographic primitives and how they have been used to build Bitcoin and Ethereum. We will also explore the design of an centralised computer system; our Web 2.0 Paypal payment processor and and also discuss the pros/cons of centralized systems.
+
+Before we look at our centralise payments processor, lets take a look at some cryptographic tools that are not only used for building decentralised computing systems but for most applications we use today. This will provide some basic context for the topics we will explore in the later chapters.
 
 ## Cryptographic tools
 
-Cryptoeconomic design is the use of cryptography and economics to generate a desired end goal for distributed systems. Using mathematical guarantees and economic incentives, these end outcomes are engineered through a set of mechanisms that align individual participants of cryptoeconomic systems with desired participating behavior. 
+Cryptoeconomic design is the use of cryptography and economics to generate a desired end goal. In our specific case, we will be looking at it in the context of distributed systems. We use different tools such as mathematical guarentees and economic incentives to achieve certain participating behaviours or certain end outcomes.
 
-Cryptography is the practice of secret and secure communication. Existing for thousands of years, it is an ultimately about using mathematics and probability to secure information. Cryptography is used to secure... 
+**Cryptography is the practice of secret and secure communication.** Existing for thousands of years, it is a practice which uses mathematics and probability to secure information. Cryptography involves ensuring...
 - Confidentiality (keeping information a secret to eavesdroppers)
 - Authentication (verifying the correct origin of information)
 - Integrity (proving that information has not been tampered with)
@@ -14,60 +19,190 @@ Cryptography is the practice of secret and secure communication. Existing for th
 
 ### One way hash functions
 
-Hashes are one-way mathematical functions that take a variable length input of any size and produces a unique fixed length output called a hash value. This function is considered as 'one way' as it is very difficult to find the original input of a hash value. This is unless you try to brute force guess all existing inputs to find a matching hash value. 
+Hashes are one-way mathematical functions that take a variable length input of any size (called a pre-image) and produces a unique fixed length output called a hash value. This function is considered as 'one way' as it is very difficult to find the original input of a hash value, unless all input combinations are brute forced to find a matching hash value. 
 
-(If you are interested in the security of the hash function, check out this video: [Security of SHA-256](https://www.youtube.com/watch?v=S9JGmA5_unY))
+If you are interested in the security of the hash function, here is a video: [Security of SHA-256 hashfunctions](https://www.youtube.com/watch?v=S9JGmA5_unY)
 
-The hash function that Ethereum uses, follows the design of SHA3-256 hash function. Here is an example of a hash input and a typical output. [You can play with the SHA-3 256 hash function yourself here.](http://passwordsgenerator.net/sha256-hash-generator/)
+Bitcoin uses the SHA-256 Hash function and Ethereum uses the Keccak hash function, which is a a derivation of the SHA256 hash function. Here is an example of a hash input and a typical output. [You can play with the SHA-256 hash function yourself here.](http://passwordsgenerator.net/sha256-hash-generator/)
 
-SHA-3 256(Hello world) -> 64EC88CA00B268E5BA1A35678A1B5316D212F4F366B2477232534A8AECA37F3C
+SHA 256(Hello world) = 64EC88CA00B268E5BA1A35678A1B5316D212F4F366B2477232534A8AECA37F3C
 
-The magic of hash functions is that they are deterministic. This means that if you change the input in any shape or way, the output will also change. The same message will ALWAYS result in the same hash value. It is difficult to generate the same hash value with two different inputs however it is possible ~ this is called a collision. They are mathematically unlikely but can they be reproduced with certain hash functions such as the cryptographically defunct SHA-1 and MD5 functions. 
+The magic of hash functions is that they are deterministic. This means that if you change the input in any shape or way, the output will also change. The same message will ALWAYS result in the same hash value. It is difficult to generate the same hash value with two different inputs however it is possible ~ this is called a collision. They are mathematically unlikely but can they be reproduced with certain hash functions such as the cryptographically defunct SHA-1 and MD5 functions.
 
-Hash functions are mainly used for securing the integrity of information and thus also can act as unique identifiers. Since hash functions are deterministic, they are able to prove that certain pieces of information have not been tampered with. If information is tampered with, it will produce a different hash to the original version. 
+Hash functions are mainly used for securing the integrity of information and thus also can act as unique identifiers. Since hash functions are deterministic, they are able to prove that certain pieces of information have not been tampered with. If information is tampered with, it will produce a different hash to the original version.
 
-This is a core underlying property that secures proof of work (PoW) blockchains. Lets take a look at how... In essence, blockchains are linearly chained ‘blocks’ of data. These blocks are known as Merkle trees, a hash value generated from 'trees' of other hashes. With each respective block, their hash value is generated with along with the hash of the previous block. Thus if you were to change something in the past history of the blockchain data, it would deterministically change the hash value of the block in front of it, causing a 'chain' reaction, resulting in a totally different blockchain made of different hash values. 
+Cryptographic hashing are one of the mainly key ingredients that are used to secure proof of work (PoW) blockchains. Conceptually, blockchains are linearly chained ‘blocks’ of data where blocks of data are groups of transaction information.  With each respective block generation, the block's data produces a hash value which is then embedded along with the next block of data. This creates a cryptographic proof where if you were to change something in the past history of the blockchain data, it would deterministically change the hash value of the block in front of it, causing a 'chain' reaction, resulting in a totally different blockchain made of different hash values. 
 
-Unless it is accepeted by the majority of the nodes that validate blocks of data, it is rejected as invalid. To overcome all of this, this you would not only have to recompute all the hashed blocks to form the new chain but also have enough computing power to out compete the production of other block creators. Hashes protect the integrity of data.
+![Blockchain Diagram from Google Images](http://learningspot.altervista.org/wp-content/uploads/2017/05/blockchain_structure-960x506.png)
 
-### Public Key Cryptography
+For a block to be accepted by the PoW blockchain, you must produce a block hash which fits the block criteria - the amount of zeros at the beginning of the hash value. (The SHA 256 produces hash values represented as hexadecimals. They are a base 16 numerical system. Binary is base two. Numbers are base 10 - 0 to 9)
 
-Public key cryptography is a field of cryptography which solves the key distribution problem involved with the symmetrical encryption. Okay, let's talk about what that exactly means… 
+The hash of the block changes by changing a number known as a nonce. Block producers or miners race to solve the puzzle of the right nonce to find the matching hash value to claim the block reward. This takes billions of attempts as well as a lot of computing power as incentivised by block rewards. Take a look below...
 
-Encryption is a mathematical algorithm that renders information unusable. This output known as a cipher text can be unscrambled or decrypted to produce the original input known as the plain-text.
+    Block criteria: 0000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    
+    "Hello, world!0" => 1312af178c253f84028d480a6adc1e25e81caa44c749ec81976192e2ec934c64
+    "Hello, world!4248" => 6e110d98b388e77e9c6f042ac6b497cec46660deef75a55ebc7cfdf65cc0b965
+    "Hello, world!4249" => c004190b822f1669cac8dc37e761cb73652e7832fb814565702245cf26ebb9e6
+    
+    "Hello, world!4250" => 0000c3af42fc31103f1fdc0151fa747ff87349a4714df7cc52ea464e12dcd4e9
+    
+    => success! We found the matching hash value :) = $$$$
 
-1. encryption(Plain-text) = Cipher-text, 
-2. decryption(Cipher-text) = Plain-text
+This race to find the right hash is continuous where block producers will pool together computing power to try to win the race as a group. These different groups will have the longest chains. To change the pass and maliciously attempt to get the change to be accepted as the accepted history, you must produce a longer chain. To do this, you will require an astronomical amount of computing power to do so. And unless you do so your data will be rejected as invalid and adopt the longest chain's data. 
 
-The inner workings and mechanics of these algorithms are public knowledge...  Wait? So if the algorithms are known, can’t anyone decrypt the encrypted information?
+### Public key cryptography
+
+Public key cryptography is a cryptographic key system separates the functions of a symmetrical cipher key into their respective functions: public key and a private key. It solves the key distribution problem involved with the symmetrical encryption. Okay, let's talk about what that exactly means…
+
+Encryption is a mathematical algorithm that renders information unusable. It produces an output called a cipher text. It can be unscrambled or decrypted to produce the original input known as the plain-text.
+
+    encryption(Plain-text) = Cipher-text
+    decryption(Cipher-text) = Plain-text
+
+The inner workings and mechanics of these algorithms are public knowledge... So if the algorithms are known, can’t anyone decrypt the encrypted information?
 
 Encryption algorithms uses a secret key or 'password' to secure the information. Unless someone has the key, they cannot decrypt the information. There are two types of encryption algorithms which manage keys differently: symmetrical and asymmetrical algorithms.
 
-Symmetric algorithms secure their information during encryption with a key which is also used for the decryption of cipher-texts as described in notation below:
+Symmetric algorithms secure their information with a key where is also used for the decryption of cipher-texts as described in notation below:
 
-1. encryption(key1, Plain-text) = Cipher-text
-2. decryption(key1, Cipher-text) = Plain-text
+    encryption(key1, Plain-text) = Cipher-text
+    decryption(key1, Cipher-text) = Plain-text
 
-The problem with symmetrical encryption is that if person A wants to use the encryption algorithm to communicate with person B, they both have to have the secret key to decrypt the encrypted messages. Only once their key has been exchanged, will they be able to communicate in secret. The problem is that this 'key exchange' cannot be done in open public or through compromised communication channels where a eavesdropper might be listening in on. This is known as the key exchange problem.
+The problem with symmetrical encryption is that if person A wants to use the encryption algorithm to communicate with person B, they both have to have the secret key to decrypt the encrypted messages. Only once their key has been exchanged, will they be able to communicate in secret. The problem is that this 'key exchange' cannot be done using compromised communication channels where a eavesdropper might be listening in on. This is known as the key exchange problem. Symmetrical key systems require the sharing of a sensitive secret.
 
-Public key algorithms or asymmetrical encryption algorithms, solve the problem of sharing sensitive information. With public key cryptography, encryption and decryption functions of the key are separated into two keys as opposed to being a single key with dual functionality.
+Public key algorithms or asymmetrical encryption algorithms, solves this problem. With public key cryptography, the encryption and decryption functions of the key are separated into two keys as opposed to being a single key with dual functionality.
 
-Since, there are two keys with their respective encryption and decryption capabilities separated, person A can simply share their encryption key or public key to person B over insecure communications without fear of compromising the condfidentiality of the message. Anyone with the public key can encrypt messages but this is relatively useless without the decryption key. Person B receives person A’s public key and now can use that to encrypt his own message to produce a cipher-text. Person B sends back the ciphertext back to person A where Person A then decrypts the ciphertext using their own decryption key or private key. Person A’s private key is at no point at risk of compromise as opposed to the symmetrical key exchange.
+Since, there are two keys with their respective encryption and decryption capabilities separated, person A can simply share their encryption key or public key to person B over insecure communications without fear of compromising the confidentiality of the message. Anyone with the public key can encrypt messages. The cipher-text can also be freely intercepted but cannot be decrypted without the decryption key. Person B receives person A’s public key and now can use that to encrypt his own message to produce a cipher-text. Person B sends back the cipher-text back to person A where Person A then decrypts the cipher-text using their own decryption key or private key. Person A’s private key is at no point at risk of compromise as opposed to the symmetrical key exchange. The sensitive secret in this case neither moves or is exchanged.
 
 Public key encryption is used for sending secure messages over insecure communications. They are also used for digital signatures and is the underlying concept that validates transactions on a public ledger.
 
-### Digital Signatures
+### Digital signatures
 
-In the real world, we use signatures as an act of deliberation from someone where it is used as a to agree with documents and claim authorship of work. While relatively straightforward, signatures actually have a lot of meta properties tied to them. Signatures are...
-
+**In the real world, we use signatures as an act of deliberation from someone.** It is used as a to agree with documents and claim authorship of work. While relatively straightforward, the concept of signatures have a lot of meta properties tied to them. If we consider a signature, what makes them a signature?
 - Unforgeable: The signature is unique to the signer and thus is proof of an identity
 - Unalterable: The signature cannot be altered or moved to another document
-- Nonrepudiable: The signature cannot be revoked afterward 
+- Nonrepudiable: The signature cannot be revoked afterward
 
-Signatures in real life can be forged and which is an even bigger problem with digital signatures as files are easily copied and tampered with. How can you achieve a sign of deliberation that satisfies all the requirements of a signature? The answer is in a public key cryptography algorithm called the Digital Signature Algorithm (DSA).
+Signatures in real life can be forged and especially with digital signatures as files can be easily copied and tampered with. How can you achieve a sign of deliberation that satisfies all the requirements of a signature? The answer is in a public key cryptography algorithm called the Digital Signature Algorithm (DSA).
 
 For Person A to sign a document, a hash value is produced from that document using a hash function. Person A uses the encryption key, which is kept hidden, to encrypt the hash value of the document to produce a cipher-text: E(H). For DSA, the encryption key is the private key that is kept a secret and the decryption key is the public key that is published into the open. Person A publishes the document and along with the E(H). Anyone can verify that person A has signed the document by hashing the document and then using Person A’s trusted and published decryption key to decrypt the cipher-text E(H) to produce the same hash of the document. If the document hashes match, then the signature is valid.
 
-The signature it is never exposed but rather the key used for encryption. The uniquely transformed cipher-text is the signature.
+You can think of the decryption of the right hash as the signature itself. The successful decryption is proof 
+ it is never exposed but rather the key used for encryption. The uniquely transformed cipher-text is proof of signature.
+
+## States transitions
+
+Water has different states: gas, liquid and solid. States are information at certain points in time and you can think of state transitions as how information changes from one moment to another.  If you freeze time in the world, it would be one state. But as you say resume time for one second, the world would transition to the next state within that second. We are going to look at the concept and exchange of money in terms of state transitions.
+
+Imagine you have 10 dollars cash in your wallet right now and are standing next to a person call Ralph who has no $0 cash in his wallet.
+
+If you were to give Ralph $3 to put into his wallet, the state transition would be:
+
+**Current state:**
+You: $10
+Ralph: $0
+
+If you were to give Ralph $3 to put into his wallet, the state transition would be:
+
+**State transition:**
+You: $10 → $7
+Ralph: $0 → $3
+
+This transition would result in the new state:
+
+**New state:**
+You: $7
+Ralph: $3
+
+Money is a medium of exchange which allows you to buy goods and services. It is valuable and scarce ! It doesn't grow on trees and no one can counterfeit the money even if they tried. Only the bank has the ability to print more money. You only can receive and send money whereas the bank can mint new money.
+
+Considering the state change above: **What does it really mean to give someone money?**
+
+1. When you have the money, you are able to do anything you want with it. You can send, hold or even throw it away. You can do this because you physically hold it in your wallet.
+
+2. When you don't have money you can't physically use it. When you hand money to someone else, there is physical exchange but also proof that you don't have it anymore and the other person now has it.
+
+When you give someone else money you authorise a state transition and your state changes. One interesting way to think about cryptocurrencies is that you are able to cryptographically about to prove state transitions through a public ledger that both parties trust. You are able to prove that you don't have something anymore, and doing so digitally before Bitcoin was considered very difficult.
+
+## Digital cash system
+
+The physical representation of cash almost mirrors digital cash systems we will be looking at in many aspects. It works very similar to the concept of real life cash. There are two types of transactions: Mint or Send. Minting is the creation of cash which usually can only be done by the bank but in our case Paypal itself. Send is a transaction that can be done by anyone just like real life cash notes.
+
+The beginning of this payments system, where there no activity has taken place, is called the genesis state or initial state. All ledgers are really just a list of state transactions applied to the genesis state. These transactions are usually grouped together in chronological time intervals, called blocks. The most recent states are derived from the state transitions applied by to the genesis state.
+
+In this payment system, instead of physically carrying cash in a wallet, your ownership of funds is listed to a unique public address to which you hold the corresponding private key that can be used to sign signatures. You are able to control the state of this unique address if the signature can be verified by the public address. Instead of physically handing money to someone else, you sign state changes to your own balance with your signature. And if the is enough cash in your balance and your signature matches the balance address, then the state transition is executed.
+
+Similar to cash notes, you cannot send the same cash notes over and over again and to also protect yourself some something similar happening, each state change is submitted with a unique number known as a nonce. A nonce is a number that increments with each state change from your account and gives you relay protection - meaning you can't resubmit the same transaction multiple times and bleed your account dry. 
+
+In code, a state transition function might look like:
+
+    function applyTransaction (state, tx) {
+      // Check the from address matches the signature
+      const signer = EthCrypto.recover(tx.sig, getTxHash(tx.contents))
+      if (signer !== tx.contents.from) {
+        throw new Error('Invalid signature!')
+      }
+      // If we don't have a record for this address, create one
+      if (!(tx.contents.to in state)) {
+        state[[tx.contents.to]] = {
+          balance: 0,
+          nonce: -1
+        }
+      }
+      // Check that the nonce is correct for replay protection
+      if (tx.contents.nonce !== state[[tx.contents.from]].nonce + 1) {
+        throw new Error('Invalid nonce!')
+      }
+      // Mint coins **only if identity is PayPal**
+      if (tx.contents.type === 'mint' && tx.contents.from === accounts.paypal.address) {
+        state[[tx.contents.to]].balance += tx.contents.amount
+      } else if (tx.contents.type === 'send') { // Send coins
+        if (state[[tx.contents.from]].balance - tx.contents.amount < 0) {
+          throw new Error('Not enough money!')
+        }
+        state[[tx.contents.from]].balance -= tx.contents.amount
+        state[[tx.contents.to]].balance += tx.contents.amount
+      }
+      state[[tx.contents.from]].nonce += 1
+      return state
+    }
+
+Check out the code implementation of it here: [https://codepen.io/karlfloersch/pen/YaEoYy?editors=0012](https://codepen.io/karlfloersch/pen/YaEoYy?editors=0012)
+
+## Balance model vs UTXOs
+
+In the code implementation as well as with Ethereum, balances derived from the latest state transition of an account. All transactions involve the reduction of one account and the increase of another balance.  A transaction is valid if the sending account has enough balance to pay for it, in which case the sending account is debited and the receiving account is credited with the value. 
+
+Bitcoin however uses another model of handing states using a UTXO model (Unspent Transaction Output). Rather than the account balance being a state, it is the aggregation of how much unspent transaction outputs they have. They work similar to chocolate bars. You either own a whole chocolate bar or pieces of chocolate bars. You can count how much Bitcoin or chocolate in total you have but can't really put them together all in one block. When you want to transact in chocolate you have to pay the total amount in 'pieces' or many different unspent transactions.
+
+![UTXO Diagram by Pet3rpan](https://cdn-images-1.medium.com/max/1600/1*zVkkJFKf_AbGNmU42tVFzQ.png)
 
 
+Benefits of UTXOs: a tad more private, more scalable???, can spcify multiple recipients with one transaction, an input can come from many outputs / accounts, fungibility issues
+
+Benefits of balances: savings for space?, greater fungibility - however black lsits can happen?, simpliity easy to understand, client reference.
+
+## Centralised and decentralised systems
+
+What is a blockchain? A blockchain is a decentralised computing system which stores data in a linear fashion. This linearity of the data is secured by a decentralised network of computers. Bitcoin uses a blockchain as an public ledger of all state changes. Paypal on the other hand is a central processor where the record and security of the data is based on the trust of the company. Why do we use centralised systems? And what are the downsides of them? Why are decentralised systems important?
+
+**Advantages of centralized systems**
+
+Firstly it is easy to maintain centralised servers and computer systems. We have become very good at building them, designing and developing them. We also have learnt how to scale centralised computer systems. 
+
+**Disadvantages of centralized systems**
+
+There is a single point of failure, censorship
+
+## Further reading
+
+**Applied Cryptography by Bruce Schneier**
+Thorough textbook that covers basic cryptographic concepts and protocols. [Link](https://www.schneier.com/books/applied_cryptography/)
+
+**Papers written by David Chaum:** 
+Papers written during the 80s by a prominent cryptography on the need for decentralisation
+- [Untraceable Electronic Mail, Return Addresses, and Digital Pseudonyms](https://www.chaum.com/publications/chaum-mix.pdf) (1979)
+- [Computer Systems Established, Maintained, and Trusted by Mutually Suspicious Groups](https://www.chaum.com/publications/research_chaum_2.pdf) (1982)
+- [Security Without Identification: Transaction Systems to Make Big Brother Obsolete](https://www.chaum.com/publications/Security_Wthout_Identification.html) (1985)
+- [Untraceable Electronic Cash](https://www.chaum.com/publications/Untraceable_Electronic_Cash.pdf) (1988)
