@@ -30,7 +30,7 @@ This is a core underlying property that secures proof of work (PoW) blockchains.
 
 Unless it is accepeted by the majority of the nodes that validate blocks of data, it is rejected as invalid. To overcome all of this, this you would not only have to recompute all the hashed blocks to form the new chain but also have enough computing power to out compete the production of other block creators. Hashes protect the integrity of data.
 
-### Public Key Cryptography (Assymetric Cryptography)
+### Public Key Cryptography (Asymmetric Cryptography)
 
 Public key cryptography is a field of cryptography which solves the key distribution problem involved with the symmetrical encryption. Okay, let's talk about what that exactly means… 
 
