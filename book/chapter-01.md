@@ -30,7 +30,7 @@ Cryptoeconomic design is the use of cryptography and economics to generate a des
 
 ### One way hash functions
 
-Hashes are one-way mathematical functions that take a variable length input of any size (called a pre-image) and produces a unique fixed length output called a hash value. This function is considered as 'one way' as it is very difficult to find the original input of a hash value, unless all input combinations are brute forced to find a matching hash value. 
+A hash function produces a deterministic fixed-size, random looking output which is called a hash. These hashes are one-way mathematical functions that take a variable length input of any size and produces a unique fixed length output called a hash value. This function is considered as 'one way' as it is very difficult to find the original input of a hash value. This is unless you try to brute force guess all existing inputs to find a matching hash value. 
 
 If you are interested in the security of the hash function, here is a video: [Security of SHA-256 hashfunctions](https://www.youtube.com/watch?v=S9JGmA5_unY)
 
