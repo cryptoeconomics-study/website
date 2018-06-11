@@ -1,5 +1,7 @@
 # Chapter 1: Centralized Payment Processor
 
+In [Chapter 0](https://github.com/cryptoeconomics-study/website/blob/master/book/chapter-00.md) we introduced you to the concept of cryptoeconomics, outlined the tools for designing cryptoeconomics systems and also studied cryptoeconomics in Bitcoin at a high level. 
+
 **Introduction**
 In Chapter 1 we will learn about cryptographic primitives and how they have been used to build Bitcoin and Ethereum. We will also explore the design of an centralised computer system; our Web 2.0 Paypal payment processor and and also discuss the pros/cons of centralized systems.
 
