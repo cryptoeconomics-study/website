@@ -11,16 +11,16 @@
 
 # Chapter 1: Centralized Payment Processor
 
-In [Chapter 0](https://github.com/cryptoeconomics-study/website/blob/master/book/chapter-00.md) we introduced you to the concept of cryptoeconomics, outlined the tools for designing cryptoeconomics systems and also studied cryptoeconomics in Bitcoin at a high level. 
+In [Chapter 0](https://github.com/cryptoeconomics-study/website/blob/master/book/chapter-00.md) we introduced you to the concept of cryptoeconomics, outlined the tools for designing cryptoeconomics systems and also studied cryptoeconomics in Bitcoin at a high level.
 
 **Introduction**
-In Chapter 1 we will learn about cryptographic primitives and how they have been used to build Bitcoin and Ethereum. We will also explore the design of an centralised computer system; our Web 2.0 Paypal payment processor and and also discuss the pros/cons of centralized systems.
+In Chapter 1 we will learn about cryptographic primitives and how they have been used to build Bitcoin and Ethereum. We will also explore the design of a centralized computer system; our Web 2.0 Paypal payment processor and also discuss the pros/cons of centralized systems.
 
-Before we look at our centralise payments processor, lets take a look at some cryptographic tools that are not only used for building decentralised computing systems but for most applications we use today. This will provide some basic context for the topics we will explore in the later chapters.
+Before we look at our centralized payments processor, lets take a look at some cryptographic tools that are not only used for building decentralized computing systems but for most applications we use today. This will provide some basic context for the topics we will explore in the later chapters.
 
 ## Cryptographic tools
 
-Cryptoeconomic design is the use of cryptography and economics to generate a desired end goal. In our specific case, we will be looking at it in the context of distributed systems. We use different tools such as mathematical guarentees and economic incentives to achieve certain participating behaviours or certain end outcomes.
+Cryptoeconomic design is the use of cryptography and economics to generate a desired end goal. In our specific case, we will be looking at it in the context of distributed systems. We use different tools such as mathematical guarantees and economic incentives to achieve certain participating behaviors or certain end outcomes.
 
 **Cryptography is the practice of secret and secure communication.** Existing for thousands of years, it is a practice which uses mathematics and probability to secure information. Cryptography involves ensuring...
 - Confidentiality (keeping information a secret to eavesdroppers)
@@ -30,11 +30,11 @@ Cryptoeconomic design is the use of cryptography and economics to generate a des
 
 ### One way hash functions
 
-A hash function produces a deterministic fixed-size, random looking output which is called a hash. These hashes are one-way mathematical functions that take a variable length input of any size and produces a unique fixed length output called a hash value. This function is considered as 'one way' as it is very difficult to find the original input of a hash value. This is unless you try to brute force guess all existing inputs to find a matching hash value. 
+A hash function produces a deterministic fixed-size, random looking output which is called a hash. These hashes are one-way mathematical functions that take a variable length input of any size and produces a unique fixed length output called a hash value. This function is considered as 'one way' as it is very difficult to find the original input of a hash value. This is unless you try to brute force guess all existing inputs to find a matching hash value.
 
 If you are interested in the security of the hash function, here is a video: [Security of SHA-256 hashfunctions](https://www.youtube.com/watch?v=S9JGmA5_unY)
 
-Bitcoin uses the SHA-256 Hash function and Ethereum uses the Keccak hash function, which is a a derivation of the SHA256 hash function. Here is an example of a hash input and a typical output. [You can play with the SHA-256 hash function yourself here.](http://passwordsgenerator.net/sha256-hash-generator/)
+Bitcoin uses the SHA-256 Hash function and Ethereum uses the Keccak hash function, which is a derivation of the SHA256 hash function. Here is an example of a hash input and a typical output. [You can play with the SHA-256 hash function yourself here.](http://passwordsgenerator.net/sha256-hash-generator/)
 
 SHA 256(Hello world) = 64EC88CA00B268E5BA1A35678A1B5316D212F4F366B2477232534A8AECA37F3C
 
@@ -42,25 +42,25 @@ The magic of hash functions is that they are deterministic. This means that if y
 
 Hash functions are mainly used for securing the integrity of information and thus also can act as unique identifiers. Since hash functions are deterministic, they are able to prove that certain pieces of information have not been tampered with. If information is tampered with, it will produce a different hash to the original version.
 
-Cryptographic hashing are one of the mainly key ingredients that are used to secure proof of work (PoW) blockchains. Conceptually, blockchains are linearly chained ‘blocks’ of data where blocks of data are groups of transaction information.  With each respective block generation, the block's data produces a hash value which is then embedded along with the next block of data. This creates a cryptographic proof where if you were to change something in the past history of the blockchain data, it would deterministically change the hash value of the block in front of it, causing a 'chain' reaction, resulting in a totally different blockchain made of different hash values. 
+Cryptographic hashing are one of the mainly key ingredients that are used to secure proof of work (PoW) blockchains. Conceptually, blockchains are linearly chained ‘blocks’ of data where blocks of data are groups of transaction information.  With each respective block generation, the block's data produces a hash value which is then embedded along with the next block of data. This creates a cryptographic proof where if you were to change something in the past history of the blockchain data, it would deterministically change the hash value of the block in front of it, causing a 'chain' reaction, resulting in a totally different blockchain made of different hash values.
 
 ![Blockchain Diagram from Google Images](http://learningspot.altervista.org/wp-content/uploads/2017/05/blockchain_structure-960x506.png)
 
 For a block to be accepted by the PoW blockchain, you must produce a block hash which fits the block criteria - the amount of zeros at the beginning of the hash value. (The SHA 256 produces hash values represented as hexadecimals. They are a base 16 numerical system. Binary is base two. Numbers are base 10 - 0 to 9)
 
-The hash of the block changes by changing a number known as a nonce. Block producers or miners race to solve the puzzle of the right nonce to find the matching hash value to claim the block reward. This takes billions of attempts as well as a lot of computing power as incentivised by block rewards. Take a look below...
+The hash of the block changes by changing a number known as a nonce. Block producers or miners race to solve the puzzle of the right nonce to find the matching hash value to claim the block reward. This takes billions of attempts as well as a lot of computing power as incentivized by block rewards. Take a look below...
 
     Block criteria: 0000xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    
+
     "Hello, world!0" => 1312af178c253f84028d480a6adc1e25e81caa44c749ec81976192e2ec934c64
     "Hello, world!4248" => 6e110d98b388e77e9c6f042ac6b497cec46660deef75a55ebc7cfdf65cc0b965
     "Hello, world!4249" => c004190b822f1669cac8dc37e761cb73652e7832fb814565702245cf26ebb9e6
-    
+
     "Hello, world!4250" => 0000c3af42fc31103f1fdc0151fa747ff87349a4714df7cc52ea464e12dcd4e9
-    
+
     => success! We found the matching hash value :) = $$$$
 
-This race to find the right hash is continuous where block producers will pool together computing power to try to win the race as a group. These different groups will have the longest chains. To change the pass and maliciously attempt to get the change to be accepted as the accepted history, you must produce a longer chain. To do this, you will require an astronomical amount of computing power to do so. And unless you do so your data will be rejected as invalid and adopt the longest chain's data. 
+This race to find the right hash is continuous where block producers will pool together computing power to try to win the race as a group. These different groups will have the longest chains. To change the pass and maliciously attempt to get the change to be accepted as the accepted history, you must produce a longer chain. To do this, you will require an astronomical amount of computing power to do so. And unless you do so your data will be rejected as invalid and adopt the longest chain's data.
 
 ### Public key cryptography
 
@@ -99,7 +99,7 @@ Signatures in real life can be forged and especially with digital signatures as 
 
 For Person A to sign a document, a hash value is produced from that document using a hash function. Person A uses the encryption key, which is kept hidden, to encrypt the hash value of the document to produce a cipher-text: E(H). For DSA, the encryption key is the private key that is kept a secret and the decryption key is the public key that is published into the open. Person A publishes the document and along with the E(H). Anyone can verify that person A has signed the document by hashing the document and then using Person A’s trusted and published decryption key to decrypt the cipher-text E(H) to produce the same hash of the document. If the document hashes match, then the signature is valid.
 
-You can think of the decryption of the right hash as the signature itself. The successful decryption is proof 
+You can think of the decryption of the right hash as the signature itself. The successful decryption is proof
  it is never exposed but rather the key used for encryption. The uniquely transformed cipher-text is proof of signature.
 
 ## States transitions
@@ -134,7 +134,7 @@ Considering the state change above: **What does it really mean to give someone m
 
 2. When you don't have money you can't physically use it. When you hand money to someone else, there is physical exchange but also proof that you don't have it anymore and the other person now has it.
 
-When you give someone else money you authorise a state transition and your state changes. One interesting way to think about cryptocurrencies is that you are able to cryptographically about to prove state transitions through a public ledger that both parties trust. You are able to prove that you don't have something anymore, and doing so digitally before Bitcoin was considered very difficult.
+When you give someone else money you authorize a state transition and your state changes. One interesting way to think about cryptocurrencies is that you are able to cryptographically about to prove state transitions through a public ledger that both parties trust. You are able to prove that you don't have something anymore, and doing so digitally before Bitcoin was considered very difficult.
 
 ## Digital cash system
 
@@ -144,7 +144,7 @@ The beginning of this payments system, where there no activity has taken place, 
 
 In this payment system, instead of physically carrying cash in a wallet, your ownership of funds is listed to a unique public address to which you hold the corresponding private key that can be used to sign signatures. You are able to control the state of this unique address if the signature can be verified by the public address. Instead of physically handing money to someone else, you sign state changes to your own balance with your signature. And if the is enough cash in your balance and your signature matches the balance address, then the state transition is executed.
 
-Similar to cash notes, you cannot send the same cash notes over and over again and to also protect yourself some something similar happening, each state change is submitted with a unique number known as a nonce. A nonce is a number that increments with each state change from your account and gives you relay protection - meaning you can't resubmit the same transaction multiple times and bleed your account dry. 
+Similar to cash notes, you cannot send the same cash notes over and over again and to also protect yourself some something similar happening, each state change is submitted with a unique number known as a nonce. A nonce is a number that increments with each state change from your account and gives you relay protection - meaning you can't resubmit the same transaction multiple times and bleed your account dry.
 
 In code, a state transition function might look like:
 
@@ -183,24 +183,24 @@ Check out the code implementation of it here: [https://codepen.io/karlfloersch/p
 
 ## Balance model vs UTXOs
 
-In the code implementation as well as with Ethereum, balances derived from the latest state transition of an account. All transactions involve the reduction of one account and the increase of another balance.  A transaction is valid if the sending account has enough balance to pay for it, in which case the sending account is debited and the receiving account is credited with the value. 
+In the code implementation as well as with Ethereum, balances derived from the latest state transition of an account. All transactions involve the reduction of one account and the increase of another balance.  A transaction is valid if the sending account has enough balance to pay for it, in which case the sending account is debited and the receiving account is credited with the value.
 
 Bitcoin however uses another model of handing states using a UTXO model (Unspent Transaction Output). Rather than the account balance being a state, it is the aggregation of how much unspent transaction outputs they have. They work similar to chocolate bars. You either own a whole chocolate bar or pieces of chocolate bars. You can count how much Bitcoin or chocolate in total you have but can't really put them together all in one block. When you want to transact in chocolate you have to pay the total amount in 'pieces' or many different unspent transactions.
 
 ![UTXO Diagram by Pet3rpan](https://cdn-images-1.medium.com/max/1600/1*zVkkJFKf_AbGNmU42tVFzQ.png)
 
 
-Benefits of UTXOs: a tad more private, more scalable???, can spcify multiple recipients with one transaction, an input can come from many outputs / accounts, fungibility issues
+Benefits of UTXOs: a tad more private, more scalable???, can specify multiple recipients with one transaction, an input can come from many outputs / accounts, fungibility issues
 
-Benefits of balances: savings for space?, greater fungibility - however black lsits can happen?, simpliity easy to understand, client reference.
+Benefits of balances: savings for space?, greater fungibility - however blacklists can happen?, simplicity easy to understand, client reference.
 
-## Centralised and decentralised systems
+## Centralized and decentralized systems
 
-What is a blockchain? A blockchain is a decentralised computing system which stores data in a linear fashion. This linearity of the data is secured by a decentralised network of computers. Bitcoin uses a blockchain as an public ledger of all state changes. Paypal on the other hand is a central processor where the record and security of the data is based on the trust of the company. Why do we use centralised systems? And what are the downsides of them? Why are decentralised systems important?
+What is a blockchain? A blockchain is a decentralized computing system which stores data in a linear fashion. This linearity of the data is secured by a decentralized network of computers. Bitcoin uses a blockchain as an public ledger of all state changes. Paypal on the other hand is a central processor where the record and security of the data is based on the trust of the company. Why do we use centralized systems? And what are the downsides of them? Why are decentralized systems important?
 
 **Advantages of centralized systems**
 
-Firstly it is easy to maintain centralised servers and computer systems. We have become very good at building them, designing and developing them. We also have learnt how to scale centralised computer systems. 
+Firstly it is easy to maintain centralized servers and computer systems. We have become very good at building them, designing and developing them. We also have learnt how to scale centralized computer systems.
 
 **Disadvantages of centralized systems**
 
@@ -211,7 +211,7 @@ There is a single point of failure, censorship
 **Applied Cryptography by Bruce Schneier**
 Thorough textbook that covers basic cryptographic concepts and protocols. [Link](https://www.schneier.com/books/applied_cryptography/)
 
-**Papers written by David Chaum:** 
+**Papers written by David Chaum:**
 Papers written during the 80s by a prominent cryptography on the need for decentralisation
 - [Untraceable Electronic Mail, Return Addresses, and Digital Pseudonyms](https://www.chaum.com/publications/chaum-mix.pdf) (1979)
 - [Computer Systems Established, Maintained, and Trusted by Mutually Suspicious Groups](https://www.chaum.com/publications/research_chaum_2.pdf) (1982)
