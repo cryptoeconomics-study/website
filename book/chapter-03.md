@@ -12,7 +12,7 @@ Many types of proof of work, memory hard, cpu hard
 Simplest form would be using a hash function over and over to generate a hash with some number of leading zeros.
 6 leading 0’s: hash(block_msg) == `0x000000abcdef123456789`
 
-Implementation: https://github.com/karlfloersch/lessons/blob/master/lessons/02_proofOfWork.js#L16-L26 
+Implementation: https://github.com/karlfloersch/lessons/blob/master/lessons/02_proofOfWork.js#L16-L26
 
 The more leading zeros, the more work you have to do (computation).
 
@@ -28,7 +28,7 @@ The amount of work that is done on a chain is considered the number of “votes�
 
 **Difficulty & difficulty adjustment**
 
-* Difficulty -- The more zeros in a row, the more hashs you have to compute/work you have to do. Intuitively you can think of how much longer it takes to flip a coin and get heads once, vs flip a coin and get heads 10 times in a row.
+* Difficulty -- The more zeros in a row, the more hashes you have to compute/work you have to do. Intuitively you can think of how much longer it takes to flip a coin and get heads once, vs flip a coin and get heads 10 times in a row.
 
 * Difficulty adjustment -- In order to target a particular blocktime (eg. 1 block every 10 minutes) we adjust the number of zeros the computers need to compute to create a new block. So if we find a whole bunch of blocks very quickly with a difficulty of finding 3 zeros in a row, then the protocol will say “ok now find hashes with 4 zeros in a row” and so on.
 
@@ -38,13 +38,13 @@ The amount of work that is done on a chain is considered the number of “votes�
 
 * A reversion or “reorg” happens when we choose a new chain which doesn’t include all blocks from our previous chain.
 
-* This is scary! Transactions which we believed to have occured may no longer be valid. This means if you received a payment, there is a chance will be “reverted”.
+* This is scary! Transactions which we believed to have occurred may no longer be valid. This means if you received a payment, there is a chance will be “reverted”.
 
 * In proof of work, blocks are less likely to be reorged out of the chain the deeper they are in the chain. For instance, if a block is 20 blocks deep in the chain, we can assume that it is probably going to be included in the history going forward, assuming no extraordinary circumstances.
 
 **Properties of Proof of Work**
 
-With particular assumptions proof of work can be argued to be 
+With particular assumptions proof of work can be argued to be
 
 1) reversion resistant
 
@@ -53,4 +53,3 @@ With particular assumptions proof of work can be argued to be
 3) robust.
 
 We will analyze these assumptions in the next chapter!
-
