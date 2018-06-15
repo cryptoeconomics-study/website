@@ -1,50 +1,61 @@
-# Chapter 2: Client-Side Validation, Networks & Double Spends
+# Chapter 2: Client Validation, Networks, and Double Spends
+In Chapter 1, we began to lay the foundations for bringing money into the digital realm, interpreting money as a "state" which updates upon recieving or sending value. By using digital signatures to enforce ownership of that money--only allowing it to be sent when the owner digitally "signs off"--we are beginning to get a sense of how systems like Paypal and Bitcoin might be built.
 
-**What is it?**
+Let's examine some of the other problems we need to solve to make this all work.
 
-* All clients download all transactions and run the PayPal code to generate their belief of the current state.
+### Client Side Validation
+Unfortunately, using digital signatures to enforce ownership properties are only part of the story to putting money on the internet. Let's say Alice wants to buy a coffee from Bob and Alice sends him a message "I, Alice, send Bob $5." Should Bob hand over the coffee?
 
-**What does it give you?**
+Well... not necesarily. Bob needs more assurances about the state--everyone's "balance," or the amount of money they have--before accpeting the payment:
 
-* The ability to verify that the history is correct
+* Does Alice's state have $5 to give in the first place?
+* Will that message definitely change the state so that Bob gets +5?
 
-**This introduces a couple new challenges**
+### Validating History
 
-* Throughput limited by client hardware -- because clients are running all transactions, the transactions per second is limited by whatever the clients use to run those transactions.
+One way we can try to tackle the first question is via something called "client side validation." In this method, all participants keep track of all previous states and transactions on their own computer. This way, everyone can run the entire history of the state themselves and confirm Alice really has $5!
 
-* Privacy -- because clients must download all transactions, everyone knows everyone else’s balances. This can be mitigated using zero knowledge proofs, but generating them is computationally expensive and complex to implement.
+This is an improvement--but it still has significant issues. For one, the more history and transactions there are, the longer it would take you to check--in other words, the throughput (number of transactions) is limited by the person's computer!  Similarly, it hurts privacy--every person can see every other person's spending.
 
-###Double spend problem
-A simple way to decentralize PayPal is to make clients run all transactions. In this section we see why this is not enough.
-How to mentally model a network & synchrony assumptions
+Even worse...
 
-* Synchronous network -- Global clock, & there is a known (constant) latency L in which all messages are assumed to be received. For instance all messages propagate in 5 seconds.
+### The Double Spend Problem
 
+Regardless of how Bob figures out WHETHER Alice has the money to spend, he faces an even harder problem after: making sure that he gets it. How can Bob be assured that, once he hands over a coffee, the state will update his account +$5?
+
+The thing which makes this particularly tricky is a behavior Alice can exhibit called "double spending." Imagine that Alice has $5 and teams up with a friend who also wants a coffee.  Together, they each go into SEPARATE coffee shops, each prepared with a different signed transaction:
+
+1. "I, Alice, give $5 to Carol's Coffee"
+2. "I, Alice, give $5 to Dan's Donuts"
+
+Even if both Carol and Dan client-side validate that Alice has $5 to spend, obviously they both should not accept these signed messages as valid transactions. If they did, Alice and her friend would be able to spend $10 in total, starting with only $5! This is not how money should work.
+
+One obvious way to solve this might be for Carol and Dan to create a network (internet, wifi, tin can telephone...) and share any transactions they see--that way, if either gets a message from Alice, the other will see it.  However, while this might work for neighbors, it's impossible to guarantee for the internet at large. The problem comes from a description of networks called synchrony.
+
+* Synchronous network -- Global clock, & there is a known (constant) latency L in which all messages are assumed to be received. For instance: "all messages propagate in 5 seconds."
 * Partially Synchronous network -- There is some unknown latency L in which all messages are assumed to be received. It is important to note that this latency is unknown and could be extremely high.
-
 * Asynchronous network -- Local clock, & there are no timing assumptions made. We are not able to determine objectively the time ordering of transactions, though each individual node still has an idea of what order it saw messages arrive in (and different nodes can disagree).
 
-In a decentralized system, we cannot rely on a global clock, and we cannot assume a constant latency for all messages to be delivered.
+In a decentralized system, we cannot assume synchrony: perhaps some users are firewalled or censored, and messages take an extremely long time to get to them.
 
-This is the root cause of the double spend problem: an attacker can send one message to Jing & another message to Aparna each spending the same coins. If Jing and Aparna both accept those transactions, their states will diverge and we will have a fork. Not good! We need decentralized consensus!
+We need some way to prevent multiple clients from 'forking'--disagreeing on or having different copies of the current state--even in the case of asynchrony. We need a way to reach *consensus* on which state is the 'right one.'
 
-###Proof of Authority
+### Proof of Authority
 
-The simplest way to solve the double spend problem is by electing some of the users to sign off on ordering.
+A potential solution is to totally trust a third party like Paypal to keep track of the state--once Bob gets Alice's message, he passes it along to that party, who replies confirming that Alice has enough money and that the state was properly updated.  But what if Paypal lies about the copy of the state it's keeping?
 
-**Creating a blockchain**
+The simplest solution to these issues is to combine it with client-side validation. We pick a user, or group of users, to sign off on valid updates to the state, and all other users accept this as canonical after checking themselves that the updates were valid.
 
-* To compactly sign off on ordering, we bundle a bunch of transactions into a block
+To compactly sign off on ordering, we can group transactions -- updates to the state -- in groups called blocks. At the start of a block, we included a hash of its previous block, so that signing off on one block means implicitly signing off on the entire history which came before it. 
 
-* Each block has a pointer to the hash of a previous block.
+Now, users can download all blocks, verify the signatures of the "authorities" themselves, and use that to construct their opinion on the current balances.  This is certainly an improvement to the above models, if not perfect. On the plus side, pros are its:
 
-* We construct a chain of blocks, and so now by signing off on one block, you are implicitly signing off on every block in that chain.
+* Simplicity: it's just some more signature checks
+* Security: provides client-side validation and prevents double spends
 
-* Users download blocks, check signatures of authorities, and use that to construct their opinion on the current balances.
+However, the system isn't perfect. It still requires us to trust the authorities in some ways:
 
-Compared to our centralized payment processor this has benefits, but it’s not great
+* Censorship: while they can't change the history, they can block transactions by not including them in the blocks they create.
+* Not robust: if the authorities go offline, there's no obvious way to keep using the system.
 
-* Pro: Simple; provides client-side validation.
-* Con: [censorship] Central authority cannot change the history, but they can censor transactions from being included; [not robust] single point of failure means if the authorities go offline, there isn’t a clean way to recover.
-
-We’re still largely centralized! Let’s really decentralize this time.
+The ideal system would provide a *decentralized* consensus--one which provided the pros above, but with further limitations to censorship, reversion resistancem, and increased robustness. Look to the next chapter to learn Bitcoin's elegant solution--a scheme called "proof of work!"
