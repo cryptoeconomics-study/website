@@ -1,4 +1,17 @@
+### Topic Jump
+
+* [1.1 Cryptographic tools](#1-cryptographic-tools)
+* [1.2 One way hash functions](#2-one-way-hash-functions)
+* [1.3 Public Key cryptography](#3-public-key-cryptography)
+* [1.4 Digital signatures](#4-digital-signatures)
+
+<br />
+
+<hr />
+
 # Chapter 1: Centralized Payment Processor
+
+In [Chapter 0](https://github.com/cryptoeconomics-study/website/blob/master/book/chapter-00.md) we introduced you to the concept of cryptoeconomics, outlined the tools for designing cryptoeconomics systems and also studied cryptoeconomics in Bitcoin at a high level. 
 
 **Introduction**
 In Chapter 1 we will learn about cryptographic primitives and how they have been used to build Bitcoin and Ethereum. We will also explore the design of an centralised computer system; our Web 2.0 Paypal payment processor and and also discuss the pros/cons of centralized systems.
@@ -17,7 +30,7 @@ Cryptoeconomic design is the use of cryptography and economics to generate a des
 
 ### One way hash functions
 
-Hashes are one-way mathematical functions that take a variable length input of any size (called a pre-image) and produces a unique fixed length output called a hash value. This function is considered as 'one way' as it is very difficult to find the original input of a hash value, unless all input combinations are brute forced to find a matching hash value. 
+A hash function produces a deterministic fixed-size, random looking output which is called a hash. These hashes are one-way mathematical functions that take a variable length input of any size and produces a unique fixed length output called a hash value. This function is considered as 'one way' as it is very difficult to find the original input of a hash value. This is unless you try to brute force guess all existing inputs to find a matching hash value. 
 
 If you are interested in the security of the hash function, here is a video: [Security of SHA-256 hashfunctions](https://www.youtube.com/watch?v=S9JGmA5_unY)
 
