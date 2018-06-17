@@ -189,22 +189,48 @@ Bitcoin however uses another model of handing states using a UTXO model (Unspent
 
 ![UTXO Diagram by Pet3rpan](https://cdn-images-1.medium.com/max/1600/1*zVkkJFKf_AbGNmU42tVFzQ.png)
 
+Benefits of UTXOs:
 
-Benefits of UTXOs: a tad more private, more scalable???, can spcify multiple recipients with one transaction, an input can come from many outputs / accounts, fungibility issues
+- **Higher degree of privacy:** If a user uses a new address for each transaction that they receive then it will often be difficult to link accounts to each other. This applies greatly to currency, but less to arbitrary dapps, as arbitrary dapps often necessarily involve keeping track of complex bundled state of users and there may not exist such an easy user state partitioning scheme as in currency.
 
-Benefits of balances: savings for space?, greater fungibility - however black lsits can happen?, simpliity easy to understand, client reference.
+- **Potential scalability paradigms:** UTXOs are more theoretically compatible with certain kinds of scalability paradigms, as we can rely on only the owner of some coins maintaining a Merkle proof of ownership, and even if everyone including the owner decides to forget that data then only the owner is harmed. In an account paradigm, everyone losing the portion of a Merkle tree corresponding to an account would make it impossible to process messages that affect that account at all in any way, including sending to it. However, non-UTXO-dependent scalability paradigms do exist.
+
+Benefits of balances:
+
+- **Large space savings:** for example, if an account has 5 UTXO, then switching from a UTXO model to an account model would reduce the space requirements from (20 + 32 + 8) * 5 = 300 bytes (20 for the address, 32 for the txid and 8 for the value) to 20 + 8 + 2 = 30 bytes (20 for the address, 8 for the value, 2 for a nonce(see below)). In reality savings are not nearly this massive because accounts need to be stored in a Patricia tree (see below) but they are nevertheless large. Additionally, transactions can be smaller (eg. 100 bytes in Ethereum vs. 200-250 bytes in Bitcoin) because every transaction need only make one reference and one signature and produces one output.
+
+- **Greater fungibility:** because there is no blockchain-level concept of the source of a specific set of coins, it becomes less practical, both technically and legally, to institute a redlist/blacklisting scheme and to draw a distinction between coins depending on where they come from.
+
+- **Simplicity:** easier to code and understand, especially once more complex scripts become involved. Although it is possible to shoehorn arbitrary decentralized applications into a UTXO paradigm, essentially by giving scripts the ability to restrict what kinds of UTXO a given UTXO can be spent to, and requiring spends to include Merkle tree proofs of change-of-application-state-root that scripts evaluate, such a paradigm is much more complicated and ugly than just using accounts.
+
+- **Constant light client reference:** Light clients can at any point access all data related to an account by scanning down the state tree in a specific direction. In a UTXO paradigm, the references change with each transaction, a particularly burdensome problem for long-running dapps that try to use the above mentioned state-root-in-UTXO propagation mechanism.
+
+savings for space?, greater fungibility - however black lsits can happen?, simpliity easy to understand, client reference.
 
 ## Centralised and decentralised systems
 
-What is a blockchain? A blockchain is a decentralised computing system which stores data in a linear fashion. This linearity of the data is secured by a decentralised network of computers. Bitcoin uses a blockchain as an public ledger of all state changes. Paypal on the other hand is a central processor where the record and security of the data is based on the trust of the company. Why do we use centralised systems? And what are the downsides of them? Why are decentralised systems important?
+Unknown to many, the need for decentralised computer systems has existed since the beginning of the 80s. Nearly 3 years after the open publication of public key cryptography, a post graduate student known as David Chaum released the paper "[Untraceable Electronic Mail, Return Addresses, and Digital Pseudonyms](https://www.chaum.com/publications/chaum-mix.pdf)" (1979). He was recently introduced to the field of cryptography and believed that while public key would solve the privacy of the information, the metadata around those messages were just as important to personal privacy. His paper solves the metadata problem of messaging by introducing a concept known as mix networks where messages are batched together and then send through multiple nodes before exiting to their final destination, thus rendering the sender anonymous by obfuscating the time of sending, sender address, and size of message. Indirectly he had invented the first initial instance of a decentralised computer system, one where the transportation of digital messages were spread amongst nodes to ensure privacy.
 
-**Advantages of centralized systems**
+On top of this idea, he went on to patent the world's first cryptographic electronic cash system ([Patent US4529870](https://www.chaum.com/patents/US4529870.pdf)) in 1980. He pursued the concept of decentralised computer systems asn released his dissertation "[Computer Systems Established, Maintained, and Trusted by Mutually Suspicious Groups](https://www.chaum.com/publications/research_chaum_2.pdf)" (1982) where he presented the needs for decentralised computer systems. With being one of the first to recognise the importantance of metadata, he beleived that the uncryptographially protected congregation of data around centralised computer systems would enable mass surveillance programs and the exploitation of consumer behaviours for marketing purposes. He didn't trust the companies to protect his data, instead, he had trust in cryptography to do so. 
 
-Firstly it is easy to maintain centralised servers and computer systems. We have become very good at building them, designing and developing them. We also have learnt how to scale centralised computer systems. 
+“Large-scale automated transaction systems are imminent. As the initial choice for their architecture gathers economic and social momentum, it becomes increasingly difficult to reverse. Whichever approach prevails, it will likely have a profound and enduring impact on economic freedom, democracy, and our informational rights.”
 
-**Disadvantages of centralized systems**
+* From his most iconic paper "[Security without Identification Card Computers to make Big Brother Obsolete](https://chaum.com/publications/Security_Wthout_Identification.html)" (1985) *
 
-There is a single point of failure, censorship
+The interesting thing about the need for cryptographic protection and security of systems is that decentralisation and transparency of the code goes hand in hand. For such a system to be trusted, its code must be transparent to be tested and trusted and the execution of the code to be trusted requires a trusted third part to execute it. A human wouldn't do, we would have to depend on a network of computers to do so. Ethereum does exactly just that. 
+
+Advantages of centralized systems
+
+- **Building, maintaining, designing:** After decades of building centralised systems, we have become very good at building them, scaling, designing and developing them.
+- **Cheap:** As a result of years of progress in designing more efficient centralised systems and market competition for providing centralised systems, it is very cheap to operate them.
+
+Disadvantages of centralized systems
+
+As opposed to centralised computer systems, blockchains decentralised the security and verification of information. It enables a trustless linear state of information secured by thousands of independant computers around the world. And of course, Ethereum enables trustless execution of code.
+
+- **Trust:** Due to centralised management, security and verification of information, we have to trust organisations based on legal regulations and mostly human trust for them to 'follow the rules'. These rules have been broken numerous times and has little meaning anymore. Edward Snowden's leaks in 2013 revealed evidence of CIA Mass Surveillance progams that had monitored 'private user' data from google, facebook, yahoo, verizon and more.
+- **Complete authority:** Due to complete control over information and the management of information, information can be censored and controlled in opaque manners. An example of this includes the icnreased censorship of Reddit and how many other centralised services are pressured to censor information. This is not only dangerous to the freedom of speech but the freedom of information.
+- **Central point of failure:** Due to the centralised security of information, these sources are vulnerable to exploitation, bugs or human error as a central point of failure. An example of this would be in 2018 where the biggest bank in Australia, Commonwealth Bank of Australia, lost and was unable to recover the records of over 20 Million users of its users.
 
 ## Further reading
 
@@ -217,3 +243,6 @@ Papers written during the 80s by a prominent cryptography on the need for decent
 - [Computer Systems Established, Maintained, and Trusted by Mutually Suspicious Groups](https://www.chaum.com/publications/research_chaum_2.pdf) (1982)
 - [Security Without Identification: Transaction Systems to Make Big Brother Obsolete](https://www.chaum.com/publications/Security_Wthout_Identification.html) (1985)
 - [Untraceable Electronic Cash](https://www.chaum.com/publications/Untraceable_Electronic_Cash.pdf) (1988)
+
+## References
+Benefits of UTXOs & Balances: https://github.com/ethereum/wiki/wiki/Design-Rationale#accounts-and-not-utxos
