@@ -11,7 +11,7 @@ There are certain properties that we look for in decentralized consensus.
 
 * Reversion resistance: There is a single history that cannot be changed, and the past cannot be modified or rewritten.
 
-* Robustness: the consensus engine (ie blockchain) will not go offline or halt.
+* Robustness: the consensus engine (ie blockchain) will not go offline or halt (i.e. it won't constantly loop through some piece of code and be paralysed).
  
 Let’s take a look at Proof of Work and examine how it achieves these three properties.
 
