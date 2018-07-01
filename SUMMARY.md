@@ -21,5 +21,5 @@
   * [Chapter 1.1 - Hashes and Signatures](./lectures/chapter-01-1.md)
   * [Chapter 1.2 - Implementation](./lectures/chapter-01-2.md)
 * [Book](./book/README.md)
-  * [Chapter 0](./book/chapter-0.md)
-    * [PROBLEMS](./book/chapter-0.md#problems)
+  * [Chapter 0](./book/chapter-00.md)
+    * [PROBLEMS](./book/chapter-00.md#problems)
