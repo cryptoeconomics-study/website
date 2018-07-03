@@ -1,22 +1,28 @@
 # Chapter 5: Proof of Stake
-**What is Proof of Stake?**
+So far we have talked about Proof-of-Work which is the protocol that Bitcoin uses to come to consensus. However, Bitcoin’s proof of work has a lot of problems, the biggest of which is scalability and energy consumption. Bitcoin is claimed to use up as much energy as the country Iceland. Furthermore, this energy consumption isn’t justified because a decentralized payment system that is much slower than any bank or centralized institution that exists today is not a viable replacement. If you were to buy coffee with bitcoin today, you would end up with cold coffee. Naturally, these are sufficient reasons why there is a need for alternative sybil control mechanisms. Proof-of-Stake is one of the most talked about sybil control mechanisms proposed. Ethereum, Cardano, EOS, Tendermint, Algorand, ThunderToken are some of the biggest projects which are all using Proof-of-Stake. In this chapter we will understand what Proof-of-stake is and why it is a scalable and energy efficient alternative to Proof-of-Work.
+**
+What is Proof of Stake?**
+Proof-of-Stake is an alternative decentralized sybil control protocol design family that can be layered on any consensus mechanism. The idea behind this family of protocols is that voting power is directly proportional to the stake or number of coins held by a “validator”. Validators perform the job that miners in proof-of-work perform, their responsibility is take care of the functioning of the blockchain network for which they are usually rewarded with transaction fees and block rewards. The belief is that stakeholders of the blockchain are economically rational and hence are incentivized to act honestly because the value of their money diminishes any time the trust in the blockchain system wanes. 
+There are several ways of classifying the idea of Proof-of-Stake. One common way is based on if users can also gain a share of rewards in protocol by sending their rewards to validators that the user trusts and having the validator act on the user’s behalf also called as “delegating”. When the user can act as a delegator, the protocol is often classified as Delegated Proof-of-Stake. Another classification is along the lines of if the Proof-of-Stake protocol ensures that once a block has been added to the blockchain it will be considered as the final view and cannot be removed or forked at that height.  This property is referred to as finality. “BFT based” Proof-of-Stakes ensure immediate finality at every block while “Chain based” Proof-of-Stakes use a concept of eventual finality or the idea that when many blocks are added on top of the current block the probability of the current block being replaced becomes very low.
+Proof-of-Stakes can have several other variations based on if rewards are given to validators, their randomness source, their network assumptions and many more parameters. For the rest of the chapter we focus on solely on Ethereum’s designs. To learn more about how these compare to other Proof-of-Stakes you can see[ this chart](http://https://github.com/Mechanism-Labs/MetaAnalysis-of-Alternative-Consensus-Protocols " this chart"). 
+**Naive Proof of Stake and the nothing at stake problem.**
+In early versions of proof of stake, specifically in chain based proof of stakes, there was nothing penalizing conflicting votes. This means that validators could vote on multiple conflicting histories without any repercussions. It was actually economically rational for validators to vote on multiple chains, since it would mean that they had a higher expected reward. 
+[![Nothing at stake attack in chain based systems](https://raw.githubusercontent.com/vbuterin/diagrams/master/possec.png "Nothing at stake attack in chain based systems")](http://https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQs#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed "Nothing at stake attack in chain based systems")
+[Nothing At Stake in Chain Based systems](https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQs#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixedhttp:// "Nothing At Stake in Chain Based systems")
 
-* In the family of alternative decentralized consensus protocols
-* Votes on the main chain are weighted by the coins on that chain.
-* This is opposed to PoW where the votes are work (energy burned) on the chain
-
-**Naive Proof of Stake and the *nothing at stake* problem**
-
-* In early versions of PoS, there was nothing penalizing conflicting votes
-* This means validators could vote on multiple conflicting histories
-* Take a look at a payout matrix for voting on multiple chains. Highest expected payout is for voting on both.
-* The entire point of a decentralized consensus is to come to agreement on a single transaction history.If there is no penalty for voting on multiple histories, we lose the property we are attempting to guarantee.
+This is problematic because if there ever is a fork in the blockchain history, there is little incentive for anyone to ever resolve the fork. Thus, a chain based proof-of-stake system with no penalties and only rewards never comes to agreement on a single transaction history. This attack is called the nothing at stake problem because there is no penalty and only a reward for acting in a dishonest manner. Although one can argue that if someone holds a lot of stake, it is still in their incentive to eventually have the blockchain converge to ensure that the price of the staking token doesn’t fall drastically and incentivize more usage of the blockchain. Thus, nothing at stake might be an attack if proof of stake is modelled from the perspective of just one round, but if proof-of-stake is modelled from the perspective of multiple rounds it may no longer be an attack vector.
 
 **Solving nothing at stake by introducing slashing.**
+One way to present nothing at stake is by penalizing validators who vote on multiple conflicting histories. This is only a solution for systems where there are rewards. If there are no rewards, penalizing stakeholders would disincentivize them from participating. 
+In order to penalize any malicious actor, detecting malicious behaviour is important. It is relatively easy to detect double signing of two conflicting histories at the same height. Thus any honest node who constructs and submits a proof of fraudulent behaviour as a transaction into the blockchain can redeem a reward for catching bad actors. The malicious validator in turn gets punished by losing some portion of their stake tokens. 
+The threat of losing tokens disincentivizes validators from creating conflicting histories at the same height. There are multiple versions of slashing that have been thought about. One type of slashing is called slashing for voting on multiple chains, while another type of slashing tries to mimic proof-of-work by slashing a validator who votes on the wrong chain. 
+The new payoff matrices look something like the ones below: 
 
-* In order to solve the nothing at stake problem, we must penalize validators who vote on two conflicting histories. 
-* We allow anyone to provide proof that a validator equivocated (voted on conflicting histories), and the validator is punished by having their coins burned
-* We have now introduced a strong disincentive for creating multiple histories: take a look how the payoff matrix changes for validators voting on multiple chains
+![Slasher on multiple chains](https://github.com/vbuterin/diagrams/raw/master/slasher1sec.png?raw=true "Slasher on multiple chains")
+Slashing for voting on the multiple chains
+
+![](https://github.com/vbuterin/diagrams/raw/master/slasher2sec.png?raw=true)
+Slashing for voting on the wrong chain
 
 **Slashing conditions case studies: Casper FFG**
 
