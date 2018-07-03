@@ -33,24 +33,26 @@ Slashing for voting on the wrong chain
 * Formal verification: quick look at isabelle proof for casper slashing conditions, and discuss importance of both valiation and verification
 
 **Advanced PoS systems:**
+**Slashing Conditions Case Study: Casper FFG**
+Casper FFG is a chain based hybrid proof of stake that plans to use proof of work as the randomness generation mechanism to to propose blocks. However, proof-of-work only provides probabilistic finality. In order to ensure that any transaction included in the blockchain is not going to be displaced, finality is important. Proof-of-stake is layered at the end of every epoch i.e around 50 blocks to ensure finality in Casper FFG. Validators on casper can check for malicious behavior by looking out for the following two conditions:
+1) NO_DBL_VOTE 
+ 2) NO_SURROUND_VOTE
+A general proof of stake round has a leader who proposes a certain value and requires ⅔ staking power to agree on the right value. The assumption that such a voting system makes is that there are less than ⅓ malicious actors in the system. In fact, because of the byzantine generals problem and impossibility result, the proof of stake mechanism needs this assumption to hold. This means that if we ever finalize two conflicting histories, then more than ⅓ of the staking power is in the hands malicious actors. This also means that ⅓ of the coins need to be slashed. 
 
-Validator set changes
+**Advanced PoS Systems**
+Any Proof of stake system also needs to deal with Validator set changes i.e there should be different validators for different rounds. This is important for two reasons
+Permissionless: Any proof-of-stake system should also enable validators to go offline and come back online. This is important because initially there might be a lot of interest for people to join as a validator but if they don’t make a lot of rewards they might want to stop being validators. In bitcoin anyone can join or leave at any time that they want. This is what it means for a system to be permissionless. 
+Scalability: This enables more people to participate as validators while ensuring that the system is scalable. Sending messages across the internet is expensive thus it is it becomes costly to have a huge validator set for every round of proof-of-stake. 
+Casper ensures validators can join and leave as long as there is a sufficient bonding and unbonding period. Thus validator sets can only change once there are two consecutive finalized blocks. This is to defend against short range attacks i.e a validator forks the history and immediately unbonds thus cannot be slashed for acting badly. 
+Another consideration with validator sets is to ensure that minority isn’t grieved or trapped in forever. If for example the majority is dishonest, then the minority will not be able to unbond their stake and leave the system because finality is never reached. In order to resist such an attack, we introduce leaking. Leaking allows minority validators to soft fork to their own chain, and then over a period of time, they will have control of a majority of stake on their soft fork chain. This allows them to reach finality & effectively coordinate a hard fork. The minority could always sell their private keys to the validator in the worst case, however that is not an ideal fall back mechanism because that leads to several signature based attacks. No one else might be willing to buy the private keys if they hear that the network is under attack and if the market doesn’t know that the network is under attack, such an attempt to sell keys will definitely inform the market and cause chaotic markets. 
+**RanDAO block proposal**
+Proof of work is both a sybil control mechanism and a source of randomness. Casper FFG uses a hybrid of proof of stake and proof of work. In order to completely replace proof of work, one also needs a randomness generation mechanism. Randao is one approach to generate randomness. 
+Randao uses a scheme called onion hashing described below: 
+Hash a random value 10000 times, and then commit to the last hash in the chain.
+Each time it is your turn, you reveal the previous hash in the chain. This is checked against your last reveal eg. I reveal x_4 and it is checked with -- hash(x_4) == x_5. 
+There are multiple other randomness generation schemes which are thoroughly analyzed. 
 
-* Validator sets can only change once there are two consecutive finalized blocks
-
-Validator leaking
-
-* In order to resist censorship (a main vulnerability in PoS), we introduce leaking
-* Leaking allows minority validators to soft fork their own chain, and then over a period of time they will have control of a majority of stake on their soft fork chain. 
-* This allows them to reach finality and effecrtively coordinate a hard fork. 
-
-RanDAO block proposal
-
-* To remove PoW entirely, one approach is randomly selecting a validator to propose the next block.
-* This can be done with onion hashing
-* Onion hashing: has a random value 10,000 times, and then commit to the last hash in the chain. Each time it's your turn, you reveal the previous hash in the chain. This is checked against your last reveal, eg.:
-I reveal `x_4` and it is checked with -- `hash(x_4) == x_5`
-
+**Problems to try out**
 Implement Casper FFG with no slashing
 
 * Send `DEPOSIT` transaction which makes you a validator.
