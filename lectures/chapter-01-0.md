@@ -5,17 +5,14 @@
 An overview of all the content we will be covering in Chapter 1!
 
 {% exercise %}
-Please contribute exercises!
-
-What is the GitHub where you can contribute? (Hint: Check solution 😉)
-
-{% initial %}
-var githubLink =
-
-{% solution %}
-var githubLink = 'https://github.com/cryptoeconomics-study/website';
-
-{% validation %}
-assert(githubLink == 'https://github.com/cryptoeconomics-study/website');
+{%mcq ans='o3', random=true %}
+{%title%} What is an account nonce?
+{%o1%} Noncense
+{%o2%} Random value given from proof of work
+{%o3%} The transaction count of the account
+{%o4%} An account signature
+{%hint%} https://github.com/ethereum/wiki/wiki/Glossary
+{%message%} Fantastic! The account nonce is a transaction counter in each account. This prevents replay attacks where a transaction sending eg. 20 coins from A to B can be replayed by B over and over to continually drain A's balance.
+{%endmcq%}
 
 {% endexercise %}
