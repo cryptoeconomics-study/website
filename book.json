@@ -4,7 +4,8 @@
     "include-html",
     "favicon",
     "exercises",
-    "youtube"
+    "youtube",
+    "mcqx"
   ],
   "pluginsConfig": {
     "favicon":{
