@@ -14,7 +14,7 @@
 
 * Privacy -- because clients must download all transactions, everyone knows everyone else’s balances. This can be mitigated using zero knowledge proofs, but generating them is computationally expensive and complex to implement.
 
-###Double spend problem
+### Double spend problem
 A simple way to decentralize PayPal is to make clients run all transactions. In this section we see why this is not enough.
 How to mentally model a network & synchrony assumptions
 
@@ -28,7 +28,7 @@ In a decentralized system, we cannot rely on a global clock, and we cannot assum
 
 This is the root cause of the double spend problem: an attacker can send one message to Jing & another message to Aparna each spending the same coins. If Jing and Aparna both accept those transactions, their states will diverge and we will have a fork. Not good! We need decentralized consensus!
 
-###Proof of Authority
+### Proof of Authority
 
 The simplest way to solve the double spend problem is by electing some of the users to sign off on ordering.
 
