@@ -1,8 +1,7 @@
-# Chapter 3: Core Mechanisms in Cryptocurrency
+# Chapter 3: Proof of Work
 
 ## WORKING DRAFT
 
-###What is proof of work?
 
 There are many types of proof of work: memory hard, cpu hard. At its core, proof of work is a difficult puzzle that requires a costly expenditure in pursuit of a prize. 
 
