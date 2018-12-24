@@ -1,6 +1,8 @@
-# Chapter 3: Proof of Work
+# Chapter 3: Core Mechanisms in Cryptocurrency
 
-What is proof of work?
+## WORKING DRAFT
+
+###What is proof of work?
 
 There are many types of proof of work: memory hard, cpu hard. At its core, proof of work is a difficult puzzle that requires a costly expenditure in pursuit of a prize. 
 
@@ -9,7 +11,7 @@ There are certain properties that we look for in decentralized consensus.
 
 * Censorship resistance: Everyone’s transactions will be included.
 
-* Reversion resistance: There is a single history that cannot be changed, and the past cannot be modified or rewritten.
+* Reversion resistance: There is a single history that cannot be changed, and the past cannot be modified or rewritten. 
 
 * Robustness: the consensus engine (ie blockchain) will not go offline or halt.
  
