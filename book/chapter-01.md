@@ -16,7 +16,7 @@ In [Chapter 0](https://github.com/cryptoeconomics-study/website/blob/master/book
 **Introduction**
 In Chapter 1 we will learn about cryptographic primitives and how they have been used to build Bitcoin and Ethereum. We will also explore the design of an centralised computer system; our Web 2.0 Paypal payment processor and and also discuss the pros/cons of centralized systems.
 
-Before we look at our centralise payments processor, lets take a look at some cryptographic tools that are not only used for building decentralised computing systems but for most applications we use today. This will provide some basic context for the topics we will explore in the later chapters.
+Before we look at our centralised payments processor, lets take a look at some cryptographic tools that are not only used for building decentralised computing systems but for most applications we use today. This will provide some basic context for the topics we will explore in the later chapters.
 
 ## Cryptographic tools
 
