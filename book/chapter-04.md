@@ -1,5 +1,4 @@
 # Chapter 4: Attacks on Proof of Work
-# Chapter 4: Attacks on Proof of Work
 
 Proof of work is designed to be censorship and reversion resistant, but these properties are conditional on honesty assumptions:
 
