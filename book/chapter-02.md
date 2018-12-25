@@ -1,4 +1,4 @@
-# Chapter 7: An Introduction to Game Theory
+# Chapter 02: An Introduction to Game Theory
 
 
 ## WORKING DRAFT 
@@ -6,7 +6,7 @@
 (TODO: Tie these examples into crypto-economic examples - why are these a part of our toolbox?)
 
 
->Cooperative game theory allows players to coordinate and choose strategies together providing all participants in the coalition a higher payoff.
+Cooperative game theory allows players to coordinate and choose strategies together providing all participants in the coalition a higher payoff.
 A “fair” allocation of payoffs within the coalition can be determined in different ways.
 A process of bargaining can occur during coalition formation.
 
