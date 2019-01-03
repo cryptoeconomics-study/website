@@ -1,2 +1,2 @@
-# Chapter 10: Sharding
+# Chapter 10: 
 TODO
