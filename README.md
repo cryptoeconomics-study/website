@@ -15,7 +15,7 @@ on how to contribute [here](https://forum.cryptoeconomics.study/t/contribution-g
 feel free to pick up any issues you see.
 
 
-Note: the /book repo is a subtree of this repo. To merge changes from the subtree into this repo, run:
+Note: the /book repo is a subtree of this repo. [Read more here](https://medium.com/@v/git-subtrees-a-tutorial-6ff568381844) To merge changes from the subtree into this repo, run:
 
 `git subtree pull --prefix=book —-squash book-subtree master`
 
