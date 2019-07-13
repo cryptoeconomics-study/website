@@ -1,0 +1,83 @@
+/**
+ * Copyright 2019 Cryptoeconomics.Study
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+
+ *     http://www.apache.org/licenses/LICENSE-2.0
+
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+/* Make nav bar dark like the background of the hero image container */
+.fixedHeaderContainer {
+    background: $secondaryColor;
+}
+
+/* Add a hero image to the home splash */
+.heroImage {
+    background-image: url("/img/ces-splash.png"); /* The image used */
+    background-color: $secondaryColor; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+/* Add simple tags to use the primary color */
+.primary-color {
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+    color: #ffffff;
+}
+
+.primary-color-text {
+    color: $primaryColor!important;
+}
+
+/* Make Home Splash title look better */
+.projectTitle {
+    font-weight: 300;
+		color: $secondaryColor; 
+}
+
+/* Add green checkmarks to homepage list */
+.lead {
+    list-style: none;
+  }
+
+.lead li:before {
+    content: '✓ ';
+    color: #28a745;
+  }
+
+/* Patch the docs nav bar on mobile */
+.docsNavContainer {
+    max-width: 100%;
+    padding: 0;
+}
+
+/* Fix search icon in search box */
+.navSearchWrapper::before {
+    box-sizing: unset;
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media only screen and (min-width: 1024px) {
+}
+
+@media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (min-width: 1400px) {
+}
+
+@media only screen and (min-width: 1500px) {
+}
