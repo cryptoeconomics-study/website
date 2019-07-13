@@ -30,6 +30,9 @@ class HomeSplash extends React.Component {
 
     const SplashContainer = props => (
       <div
+				style={{
+					backgroundImage: `url("img/ces-splash.png")`, /* The image used */
+				}}
         className={`homeContainer heroImage pt-${this.props.padding} pb-${
           this.props.padding
         }`}

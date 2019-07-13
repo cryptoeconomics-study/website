@@ -22,7 +22,7 @@
 
 /* Add a hero image to the home splash */
 .heroImage {
-    background-image: url("/img/ces-splash.png"); /* The image used */
+    background-image: url("img/ces-splash.png"); /* The image used */
     background-color: $secondaryColor; /* Used if the image is unavailable */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
