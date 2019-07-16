@@ -43,7 +43,7 @@ const siteConfig = {
 		//{page: 'community', label: 'Community'},
 		{doc: 'getting-started/index', label: 'Course'},
     {href: 'https://forum.cryptoeconomics.study', label: 'Community'},
-    {href: 'https://github.com/cryptoeconomics-study', label: 'GitHub'},
+		{href: 'https://github.com/cryptoeconomics-study/issues', label: 'Contributing'},
     {search: true},
   ],
 

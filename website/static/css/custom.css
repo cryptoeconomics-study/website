@@ -22,8 +22,9 @@
 
 /* Add a hero image to the home splash */
 .heroImage {
-    background-image: url("img/ces-splash.png"); /* The image used */
-    background-color: $secondaryColor; /* Used if the image is unavailable */
+    background-image: url("img/cropped-rainbow-eth.png"); /* The image used */
+    /* background-color: $secondaryColor; */ /* Used if the image is unavailable */
+		background-color: #ffffff;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */

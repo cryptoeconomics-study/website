@@ -29,19 +29,23 @@ class HomeSplash extends React.Component {
     const pageUrl = page => baseUrl + (language ? `${language}/` : "") + page;
 
     const SplashContainer = props => (
-      <div
-				style={{
-					backgroundImage: `url("img/ces-splash.png")`, /* The image used */
-				}}
-        className={`homeContainer heroImage pt-${this.props.padding} pb-${
-          this.props.padding
-        }`}
-      >
-        <div className="homeSplashFade">
-          <div className="wrapper homeWrapper">{props.children}</div>
-        </div>
-      </div>
+			<div className={`homeContainer heroImage pt-${this.props.padding} pb-${this.props.padding}`}>
+				<div className="homeSplashFade">
+					<div className="wrapper homeWrapper">{props.children}</div>
+				</div>
+			</div>
     );
+
+		const SplashHeader = () => (
+			<div
+				className='heroImage'
+				style={{
+					backgroundImage: `url("img/cropped-rainbow-eth.png")`,
+					padding: '20vmin',
+				}}
+			>
+			</div>
+		);
 
     const ProjectTitle = () => (
       <Container>
@@ -59,27 +63,30 @@ class HomeSplash extends React.Component {
     );
 
     return (
-      <SplashContainer>
-        <div className="inner">
-          <ProjectTitle siteConfig={siteConfig} />
-          <PromoSection>
-            {this.props.buttons
-              ? this.props.buttons.map((button, index) => {
-                  return (
-                    <Button
-                      key={index}
-                      variant="secondary"
-                      href={button.href}
-                      className={`mr-2` + (index == 0 ? ` primary-color` : ``)}
-                    >
-                      {button.name}
-                    </Button>
-                  );
-                })
-              : ""}
-          </PromoSection>
-        </div>
-      </SplashContainer>
+			<div>
+				<SplashHeader />
+				<SplashContainer>
+					<div className="inner">
+						<ProjectTitle siteConfig={siteConfig} />
+						<PromoSection>
+							{this.props.buttons
+								? this.props.buttons.map((button, index) => {
+										return (
+											<Button
+												key={index}
+												variant="secondary"
+												href={button.href}
+												className={`mr-2` + (index == 0 ? ` primary-color` : ``)}
+											>
+												{button.name}
+											</Button>
+										);
+									})
+								: ""}
+						</PromoSection>
+					</div>
+				</SplashContainer>
+			</div>
     );
   }
 }
