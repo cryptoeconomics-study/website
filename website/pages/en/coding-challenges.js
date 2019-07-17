@@ -26,7 +26,7 @@ const Image = require("../../../../react-bootstrap/Image.js");
 const Badge = require("../../../../react-bootstrap/Badge.js");
 const translate = require('../../server/translate.js').translate;
 
-class Tutorials extends React.Component {
+class CodingChallenges extends React.Component {
   render() {
     const { config: siteConfig, language = "" } = this.props;
     const { baseUrl, docsUrl } = siteConfig;
@@ -245,6 +245,6 @@ class Tutorials extends React.Component {
   }
 }
 
-Tutorials.title = 'Coding Challenges';
-Tutorials.description = 'Cryptoeconomics.Study Coding Challenges.';
-module.exports = Tutorials;
+CodingChallenges.title = 'Coding Challenges';
+CodingChallenges.description = 'Cryptoeconomics.Study Coding Challenges.';
+module.exports = CodingChallenges;
