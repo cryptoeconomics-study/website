@@ -1,5 +1,5 @@
 ---
-title: "Ch1: Centralized Payments Processor"
+title: "Overview"
 ---
 
 An overview of all the content we will be covering in Chapter 1!

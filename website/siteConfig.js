@@ -40,11 +40,10 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-		//{page: 'community', label: 'Community'},
-		{doc: 'getting-started/index', label: 'Course'},
+		{doc: 'getting-started/welcome', label: 'Course'},
     {href: 'https://forum.cryptoeconomics.study', label: 'Community'},
 		{href: 'https://github.com/cryptoeconomics-study/issues', label: 'Contributing'},
-    {search: true},
+		//{search: true},
   ],
 
   // If you have users set above, you add it here:
