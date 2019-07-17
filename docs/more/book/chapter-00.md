@@ -1,9 +1,3 @@
----
-layout: post
-title:  "Chapter 0"
-date:   2018-04-13 12:02:54 -0400
-categories: book
----
 # INTRODUCTION 
 
 This introduction aims to define cryptoeconomics, outline some tools for the design and analysis of cryptoeconomic systems, and study the mechanism design within Bitcoin at a high level. The goal is to present a sample of what may be taught in order to whet the appetite for further study. Cryptoeconomics is a rapidly evolving field. The reader should be aware that cryptoeconomic concepts and the content of this introduction are still being actively developed.

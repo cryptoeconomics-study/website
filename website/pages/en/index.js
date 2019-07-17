@@ -38,7 +38,9 @@ class Index extends React.Component {
     const Feature = props => (
       <Row
 				style={{
-					minHeight: '30vmin'
+					minHeight: '30vmin',
+					paddingTop: '5vmin',
+					paddingBottom: '5vmin',
 				}}
         className={
           (props.background
@@ -64,7 +66,11 @@ class Index extends React.Component {
     const FeatureWlogo = props => (
       <Row
 				style={{
-					minHeight: '30vmin'
+					minHeight: '30vmin',
+					paddingTop: '5vmin',
+					paddingBottom: '5vmin',
+					margin: 'auto 2em',
+					textAlign: 'center',
 				}}
         className={
           (props.background
@@ -78,11 +84,10 @@ class Index extends React.Component {
           <h2>{props.title}</h2>
           <p className="lead">{props.children}</p>
         </Col>
-        <Col md={5} className={props.imageAlign == `right` ? `order-md-2` : `order-md-1`}>
+				<Col
+					md={5} 
+					className={props.imageAlign == `right` ? `order-md-2` : `order-md-1`}>
 					<Image 
-						style={{
-							paddingLeft: '20%',
-						}}
 						src={props.image} 
 						alt={props.title}/>
         </Col>
@@ -95,6 +100,8 @@ class Index extends React.Component {
 				style={{
 					minHeight: '30vmin',
 					textAligh: 'center',
+					paddingTop: '5vmin',
+					paddingBottom: '5vmin',
 					//background: 'red'
 				}}
         className={
@@ -117,7 +124,13 @@ class Index extends React.Component {
 					className={props.imageAlign == `right` ? `order-md-2` : `order-md-1`}
         >
 				<div className="videoWrapper">
-					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/m-0escxJ-j8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe 
+						width="560" 
+						height="315" 
+						src="https://www.youtube-nocookie.com/embed/m-0escxJ-j8" 
+						frameBorder="0" 
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+						allowFullScreen></iframe>
 				</div>
         </Col>
       </Row>
@@ -144,7 +157,7 @@ class Index extends React.Component {
     const Hotspots = () => (
       <Row>
         <HotspotCard
-          title={<translate>Course</translate>}
+          title={<translate>A Course Of Course!</translate>}
           text={<translate>Cryptoeconomics.Study is a fun and engaging course built to help you understand the basics of cryptoeconomic mechanism design.</translate>}
         >
           <Button
@@ -183,10 +196,12 @@ class Index extends React.Component {
       </Row>
     );
 
+		// Learn Anchor
 		const LearnAnchor = () => (
 			<div id="learn"></div>
 		);
 
+		// What is CES
     const WhatIsCES = () => (
       <div
         className="productShowcaseSection mb-5 mt-5"
@@ -307,13 +322,17 @@ class Index extends React.Component {
         />
         <div className="mainContainer">
           <Container>
+						<br />
             <Hotspots />
+						<br />
 						<LearnAnchor />
             <WhatIsCES />
-            <Highlight1 />
-            <Highlight2/>
-            <Highlight3 />
 						<br />
+            <Highlight1 />
+						<br />
+            <Highlight2/>
+						<br />
+            <Highlight3 />
 						<br />
             <Showcase />
 						<br />

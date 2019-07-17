@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 const React = require("react");
 
 const HomeSplash = require(`${process.cwd()}` + `/core/HomeSplash.js`);
@@ -21,8 +20,9 @@ const HomeSplash = require(`${process.cwd()}` + `/core/HomeSplash.js`);
 const Container = require("../../../../react-bootstrap/Container.js");
 const Button = require("../../../../react-bootstrap/Button.js");
 const Card = require("../../../../react-bootstrap/Card.js");
-const Col = require("../../../../react-bootstrap/Col.js");
 const Row = require("../../../../react-bootstrap/Row.js");
+const Col = require("../../../../react-bootstrap/Col.js");
+const Image = require("../../../../react-bootstrap/Image.js");
 const Badge = require("../../../../react-bootstrap/Badge.js");
 const translate = require('../../server/translate.js').translate;
 
@@ -39,7 +39,7 @@ class Tutorials extends React.Component {
       props.data.map(tutorial => (
         <Col md={3} className="mb-3 d-flex align-items-stretch">
           <Card>
-            <Card.Img variant="top" src={tutorial.img ? tutorial.img : `${baseUrl}img/substrate-placeholder.png`} />
+            <Card.Img variant="top" src={tutorial.img ? tutorial.img : `${baseUrl}img/ces-logo.png`} />
             <Card.Body className="d-flex flex-column">
               <Card.Title>{tutorial.title}</Card.Title>
               <Card.Text>{tutorial.text}</Card.Text>
@@ -87,34 +87,11 @@ class Tutorials extends React.Component {
         </Col>
       ));
 
-    const RuntimeRecipes = () => (
+		const Chapter1 = () => (
       <div>
         <h2>
           <translate>
-            Runtime Recipes
-          </translate>
-        </h2>
-        <hr />
-        <p>
-          <translate>
-            Find code samples for common patterns and best practices when developing runtime modules on Substrate:
-          </translate>
-        </p>
-        <p>
-          <Button variant="secondary" className="primary-color" href="https://substrate.dev/recipes">
-            <translate>
-              Substrate Runtime Recipes >
-            </translate>
-          </Button>
-        </p>
-      </div>
-    )
-
-    const RuntimeTutorials = () => (
-      <div>
-        <h2>
-          <translate>
-            Runtime Development
+						Chapter 1: Payment Processor
           </translate>
         </h2>
         <hr />
@@ -177,11 +154,11 @@ class Tutorials extends React.Component {
       </div>
     );
 
-    const ContractTutorials = () => (
+    const Chapter2 = () => (
       <div className="mt-4">
         <h2>
           <translate>
-            Smart Contract Development
+						Chapter 2: Network Models
           </translate>
         </h2>
         <hr />
@@ -189,31 +166,38 @@ class Tutorials extends React.Component {
           <TutorialCards
             data={[
               {
-                img: `${baseUrl}img/substrate-contracts-workshop.png`,
-                title: <translate>Substrate Contracts Workshop</translate>,
-                text: <translate>A comprehensive, end-to-end tutorial for building an ERC20 token using Parity Substrate and ink!.</translate>,
+                img: `${baseUrl}img/under-construction.png`,
+                title: <translate>TBD</translate>,
+                text: <translate>Something cool</translate>,
+                difficulty: "easy",
+                length: "1",
+                prerequisite: true,
+                href: `${docUrl("ch2/index")}`
+              },
+              {
+                img: `${baseUrl}img/under-construction.png`,
+                title: <translate>TBD</translate>,
+                text: <translate>Something cool</translate>,
+                difficulty: "easy",
+                length: "3",
+                prerequisite: true,
+                href: `${docUrl("ch2/index")}`
+              },
+              {
+                img: `${baseUrl}img/under-construction.png`,
+                title: <translate>TBD</translate>,
+                text: <translate>Something cool.</translate>,
                 difficulty: "easy",
                 length: "4",
-                prerequisite: false,
-                href: "https://substrate-developer-hub.github.io/substrate-contracts-workshop/"
+                prerequisite: true,
               },
               {
-                img: `${baseUrl}img/ink-placeholder.png`,
-                title: <translate>Deploying Your First Contract</translate>,
-                text: <translate>A simple guide that helps you understand the process of deploying smart contracts on Substrate.</translate>,
+                img: `${baseUrl}img/under-construction.png`,
+                title: <translate>TBD</translate>,
+                text: <translate>Something cool</translate>,
                 difficulty: "easy",
                 length: "1",
-                prerequisite: false,
-                href: `${docUrl("contracts/deploying-a-contract")}`
-              },
-              {
-                img: `${baseUrl}img/ink-placeholder.png`,
-                title: <translate>Writing Your First Contract</translate>,
-                text: <translate>A simple guide that helps you write your first 'flipper' contract.</translate>,
-                difficulty: "easy",
-                length: "1",
-                prerequisite: false,
-                href: `${docUrl("tutorials/creating-your-first-contract")}`
+                prerequisite: true,
               },
             ]}
           />
@@ -221,11 +205,11 @@ class Tutorials extends React.Component {
       </div>
     );
 
-    const NetworkTutorials = () => (
+    const Chapter3 = () => (
       <div className="mt-4">
         <h2>
           <translate>
-            Running a Network
+						Chapter 3: Proof of Work
           </translate>
         </h2>
         <hr />
@@ -233,12 +217,12 @@ class Tutorials extends React.Component {
           <TutorialCards
             data={[
               {
-                title: <translate>Start a Private Network with Substrate</translate>,
-                text: <translate>Learn to start a blockchain network with a validator/authority set of your choosing using Substrate.</translate>,
-                difficulty: "easy",
-                length: "2",
-                prerequisite: false,
-                href: `${docUrl("tutorials/start-a-private-network-with-substrate")}`
+                img: `${baseUrl}img/under-construction.png`,
+                title: <translate>Create a Proof of Work Blockchain simulation</translate>,
+                text: <translate>Learn to create a blockchain network that uses Proof of Work to validate blocks</translate>,
+                difficulty: "medium",
+                length: "4",
+                prerequisite: true,
               },
             ]}
           />
@@ -248,19 +232,19 @@ class Tutorials extends React.Component {
 
     return (
       <div>
+				<img src='img/ces-logo.png' />
         <HomeSplash
           siteConfig={siteConfig}
           language={language}
-          title={<translate>Tutorial Catalog</translate>}
+          title={<translate>Cryptoeconomics.Study Coding Challenges</translate>}
           tagline={<translate>Let's learn together!</translate>}
-          padding={0}
+          padding={5}
         />
         <div className="mainContainer">
           <Container>
-            <RuntimeRecipes />
-            <RuntimeTutorials />
-            <ContractTutorials />
-            <NetworkTutorials />
+            <Chapter1 />
+            <Chapter2 />
+            <Chapter3 />
           </Container>
         </div>
       </div>
@@ -268,6 +252,6 @@ class Tutorials extends React.Component {
   }
 }
 
-Tutorials.title = 'Tutorials';
-Tutorials.description = 'Find the latest tutorials for Substrate.';
+Tutorials.title = 'Coding Challenges';
+Tutorials.description = 'Cryptoeconomics.Study Coding Challenges.';
 module.exports = Tutorials;
