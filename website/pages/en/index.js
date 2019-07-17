@@ -37,6 +37,9 @@ class Index extends React.Component {
 		// Feature
     const Feature = props => (
       <Row
+				style={{
+					minHeight: '30vmin'
+				}}
         className={
           (props.background
             ? props.background == `dark`
@@ -60,6 +63,9 @@ class Index extends React.Component {
 		// Feature w resized logo
     const FeatureWlogo = props => (
       <Row
+				style={{
+					minHeight: '30vmin'
+				}}
         className={
           (props.background
             ? props.background == `dark`
@@ -75,8 +81,6 @@ class Index extends React.Component {
         <Col md={5} className={props.imageAlign == `right` ? `order-md-2` : `order-md-1`}>
 					<Image 
 						style={{
-							maxWidth: '20vmin', 
-							maxHeight: '32vmin',
 							paddingLeft: '20%',
 						}}
 						src={props.image} 
@@ -88,6 +92,11 @@ class Index extends React.Component {
 		// Feature w iframe
     const FeatureWiframe = props => (
       <Row
+				style={{
+					minHeight: '30vmin',
+					textAligh: 'center',
+					//background: 'red'
+				}}
         className={
           (props.background
             ? props.background == `dark`
@@ -108,8 +117,8 @@ class Index extends React.Component {
 					className={props.imageAlign == `right` ? `order-md-2` : `order-md-1`}
         >
 					<iframe 
-						width='404vmin'
-						height='250vmin'
+						maxWidth='404vmin'
+						maxHeight='250vmin'
 						align='left'
 						src="https://www.youtube-nocookie.com/embed/m-0escxJ-j8" 
 						frameBorder="0" 
@@ -141,8 +150,8 @@ class Index extends React.Component {
     const Hotspots = () => (
       <Row>
         <HotspotCard
-          title={<translate>Lectures</translate>}
-          text={<translate>Cryptoeconomics.Study has fun and engaging lectures to help you understand the basics of cryptoeconomic mechanism design.</translate>}
+          title={<translate>Course</translate>}
+          text={<translate>Cryptoeconomics.Study is a fun and engaging course built to help you understand the basics of cryptoeconomic mechanism design.</translate>}
         >
           <Button
             variant="secondary"
@@ -150,31 +159,31 @@ class Index extends React.Component {
 						href='https://www.youtube.com/channel/UCGagQMCWglF-oGt8HKZfHNg'
             className="m-1 primary-color"
           >
-            <translate>Lectures</translate>
+            <translate>Try It Out!</translate>
           </Button>
         </HotspotCard>
         <HotspotCard
-          title={<translate>Documentation</translate>}
-          text={<translate>Cryptoeconomics.Study has detailed documentation to help you dive deeper into core concepts.</translate>}
+          title={<translate>Community</translate>}
+          text={<translate>Cryptoeconomics.Study has a rapidly growing, friendly, and engaged community. Ask questions and work together to solve coding challenges.</translate>}
         >
           <Button
             variant="secondary"
             href={docUrl('getting-started')}
             className="m-1 primary-color"
           >
-            <translate>Docs</translate>
+            <translate>Community Forum</translate>
           </Button>
         </HotspotCard>
         <HotspotCard
           title={<translate>Coding Challenges</translate>}
-          text={<translate>Cryptoeconomics.Study has a range of coding challenges that will help you go from speculator to builder.</translate>}
+          text={<translate>Cryptoeconomics.Study has a range of coding challenges to help you go from speculator to builder.</translate>}
         >
           <Button
             variant="secondary"
             href={pageUrl('tutorials')}
             className="m-1 primary-color"
           >
-            <translate>Tutorials</translate>
+            <translate>Coding Challenges</translate>
           </Button>
         </HotspotCard>
       </Row>
