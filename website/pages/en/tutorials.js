@@ -99,54 +99,49 @@ class Tutorials extends React.Component {
           <TutorialCards
             data={[
               {
-                img: `${baseUrl}img/substrate-collectables-workshop.png`,
-                title: <translate>Substrate Collectables Workshop</translate>,
-                text: <translate>A comprehensive, end-to-end tutorial for creating a non-fungible token chain. Learn all the basics of Substrate runtime development here!</translate>,
+                img: `${baseUrl}img/ces-logo.png`,
+                title: <translate>Ch1.1 Hashes and Signatures</translate>,
+                text: <translate>Learn the magic of hash functions and how signatures work!</translate>,
                 difficulty: "easy",
-                length: "5",
+                length: "1",
                 prerequisite: false,
-                href: "https://substrate-developer-hub.github.io/substrate-collectables-workshop/"
+                href: `${docUrl("sync/ch1.1-code-challenge")}`
               },
               {
-                title: <translate>Creating Your First Substrate Chain</translate>,
-                text: <translate>A minimal, end-to-end guide to build and interact with your first custom Substrate chain.</translate>,
+                img: `${baseUrl}img/ces-logo.png`,
+                title: <translate>Ch1.2 Payment Processor</translate>,
+                text: <translate>Learn about beautiful state & state transitions, as well as how we use this design pattern to construct our simple payment processor!</translate>,
                 difficulty: "easy",
-                length: "< 1",
+                length: "1",
                 prerequisite: false,
-                href: `${docUrl("tutorials/creating-your-first-substrate-chain")}`
+                href: `${docUrl("sync/ch1.2-code-challenge")}`
               },
               {
-                title: <translate>Substrate Token Curated Registry</translate>,
-                text: <translate>Build a TCR module using Substrate.</translate>,
-                difficulty: "medium",
-                length: "3",
-                prerequisite: true,
-                href: `${docUrl("tutorials/tcr/")}`
-              },
-              {
-                img: `${baseUrl}img/crates.png`,
-                title: <translate>Write a Runtime Module in its Own Crate</translate>,
-                text: <translate>Make your runtime modules re-usable by packaging them in their own rust crate.</translate>,
-                difficulty: "medium",
-                length: "2",
+                img: `${baseUrl}img/ces-logo.png`,
+                title: <translate>Ch1.3 Replay Protection</translate>,
+                text: <translate>Learn how signed messages can be used for unsavory ends! Replay protection is critical!</translate>,
+                difficulty: "easy",
+                length: "1",
                 prerequisite: false,
-                href: `${docUrl("tutorials/creating-a-runtime-module")}`
+                href: `${docUrl("sync/ch1.3-code-challenge")}`
               },
               {
-                title: <translate>UTXO Workshop</translate>,
-                text: <translate>A tutorial teaching you how to build a UTXO chain like Bitcoin using Substrate.</translate>,
-                difficulty: "medium",
-                length: "2",
-                prerequisite: true,
-                href: "https://github.com/substrate-developer-hub/utxo-workshop"
-              },
-              {
-                title: "Adding a Module to Your Runtime",
-                text: "Add the Contracts module or other SRML modules to your Substrate node template.",
-                difficulty: "medium",
-                length: "2",
+                img: `${baseUrl}img/ces-logo.png`,
+                title: <translate>Ch1.4 Account Model vs UTXOs</translate>,
+                text: <translate>Learn how to implement the UTXO model & why you might want to!</translate>,
+                difficulty: "easy",
+                length: "1",
                 prerequisite: false,
-                href: `${docUrl("tutorials/adding-a-module-to-your-runtime")}`
+                href: `${docUrl("sync/ch1.4-code-challenge")}`
+              },
+              {
+                img: `${baseUrl}img/ces-logo.png`,
+                title: <translate>Ch1.5 Centralized Systems</translate>,
+                text: <translate>We go over some common pitfalls of building systems which do not account for particularly nasty failure modes--system faults, monopoly pricing, censorship, & fraud. With cryptoeconomics we can make sure these bad things don't happen!</translate>,
+                difficulty: "easy",
+                length: "1",
+                prerequisite: false,
+                href: `${docUrl("sync/ch1.5-code-challenge")}`
               },
             ]}
           />
@@ -172,7 +167,6 @@ class Tutorials extends React.Component {
                 difficulty: "easy",
                 length: "1",
                 prerequisite: true,
-                href: `${docUrl("ch2/index")}`
               },
               {
                 img: `${baseUrl}img/under-construction.png`,
@@ -181,7 +175,6 @@ class Tutorials extends React.Component {
                 difficulty: "easy",
                 length: "3",
                 prerequisite: true,
-                href: `${docUrl("ch2/index")}`
               },
               {
                 img: `${baseUrl}img/under-construction.png`,
