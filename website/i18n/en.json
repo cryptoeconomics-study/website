@@ -5,9 +5,6 @@
     "previous": "Previous",
     "tagline": "Everything you Need to Learn The Fundamentals Of Cryptoeconomics",
     "docs": {
-      "ch0/index": {
-        "title": "Introduction To Cryptoeconomics"
-      },
       "ch1/ch1.1/lecture": {
         "title": "Lecture"
       },
@@ -47,17 +44,32 @@
       "getting-started/welcome": {
         "title": "Welcome"
       },
+      "more/dev-resources": {
+        "title": "Developer Resources"
+      },
+      "more/glossary": {
+        "title": "Glossary"
+      },
+      "more/intro-to-cryptoeconomics": {
+        "title": "Introduction To Cryptoeconomics"
+      },
       "sync/ch1.1-code-challenge": {
+        "title": "Code Challenge"
+      },
+      "sync/ch1.2-code-challenge": {
+        "title": "Code Challenge"
+      },
+      "sync/ch1.3-code-challenge": {
+        "title": "Code Challenge"
+      },
+      "sync/ch1.4-code-challenge": {
+        "title": "Code Challenge"
+      },
+      "sync/ch1.5-code-challenge": {
         "title": "Code Challenge"
       },
       "sync/dev-env-setup": {
         "title": "Dev Env Setup"
-      },
-      "tools/dev-resources": {
-        "title": "Developer Resources"
-      },
-      "tools/glossary": {
-        "title": "Glossary"
       },
       "tutorials/adding-a-module-to-your-runtime": {
         "title": "Adding a Module to Your Runtime"
@@ -107,11 +119,10 @@
     "categories": {
       "Getting Started": "Getting Started",
       "Chapter 0": "Chapter 0",
-      "Ch1: Central Payment Processor": "Ch1: Central Payment Processor",
+      "Ch1: Payment Processor": "Ch1: Payment Processor",
       "Ch2 Network Models": "Ch2 Network Models",
       "Ch3 Proof of Work": "Ch3 Proof of Work",
-      "Tools & Resources": "Tools & Resources",
-      "Contribute": "Contribute"
+      "More": "More"
     }
   },
   "pages-strings": {

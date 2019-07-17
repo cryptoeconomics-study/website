@@ -8,7 +8,7 @@
 		"Chapter 0": [
 			"ch0/index"
 		],
-		"Ch1: Central Payment Processor": [
+		"Ch1: Payment Processor": [
 			"ch1/index",
       {
         "type": "subcategory",
@@ -20,7 +20,7 @@
       },
       {
         "type": "subcategory",
-        "label": "1.2 Payment Processor Implimentation",
+        "label": "1.2 Payment Processor",
         "ids": [
           "ch1/ch1.2/lecture",
           "sync/ch1.2-code-challenge"
@@ -44,7 +44,7 @@
       },
       {
         "type": "subcategory",
-        "label": "1.5 Properties of Centralized Systems",
+        "label": "1.5 Centralized Systems",
         "ids": [
           "ch1/ch1.5/lecture",
           "sync/ch1.5-code-challenge"
@@ -57,13 +57,9 @@
 		"Ch3 Proof of Work": [
 			"ch3/index"
 		],
-    "Tools & Resources": [
-			"tools/glossary",
-			"tools/dev-resources"
-		],
-    "Contribute": [
-			"contribute/contributing",
-			"contribute/help-translate"
+    "More": [
+			"more/glossary",
+			"more/dev-resources"
 		]
   }
 }

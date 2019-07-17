@@ -42,7 +42,7 @@ const siteConfig = {
   headerLinks: [
 		{doc: 'getting-started/welcome', label: 'Course'},
     {href: 'https://forum.cryptoeconomics.study', label: 'Community'},
-		{href: 'https://github.com/cryptoeconomics-study/issues', label: 'Contributing'},
+		{href: 'https://forum.cryptoeconomics.study/t/official-contribution-guidelines/453', label: 'Contributing'},
 		//{search: true},
   ],
 
