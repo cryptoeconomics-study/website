@@ -58,8 +58,8 @@
 			"ch3/index"
 		],
     "More": [
-			"more/glossary",
-			"more/dev-resources"
+			"more/dev-resources",
+			"more/glossary"
 		]
   }
 }

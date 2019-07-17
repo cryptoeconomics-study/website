@@ -180,12 +180,17 @@ class Index extends React.Component {
       </Row>
     );
 
+		const LearnAnchor = () => (
+			<div id="learn"></div>
+		);
+
     const WhatIsCES = () => (
       <div
         className="productShowcaseSection mb-5 mt-5"
         style={{ textAlign: "center" }}
       >
-        <h2 className="text-dark">
+				<h2 
+					className="text-dark">
           <translate>What is Cryptoeconomics.Study?</translate>
         </h2>
         <h2 className="primary-color-text">&#11015;</h2>
@@ -292,14 +297,15 @@ class Index extends React.Component {
           title={siteConfig.title}
           tagline={siteConfig.tagline}
           buttons={[
-            { name: "Get Started", href: `${docUrl('getting-started')}` },
-            { name: "Try a Coding Challenge", href: `${pageUrl('tutorials')}`},
+            { name: "Get Started, It's Free!", href: `${docUrl('getting-started')}` },
+            { name: "Learn More", href:'#learn'},
           ]}
           padding={5}
         />
         <div className="mainContainer">
           <Container>
             <Hotspots />
+						<LearnAnchor />
             <WhatIsCES />
             <Highlight1 />
             <Highlight2/>
