@@ -39,7 +39,7 @@ class CodingChallenges extends React.Component {
       props.data.map(tutorial => (
         <Col md={3} className="mb-3 d-flex align-items-stretch">
           <Card>
-            <Card.Img variant="top" src={tutorial.img ? tutorial.img : `${baseUrl}img/ces-logo.png`} />
+            <Card.Img variant="top" src={tutorial.img ? tutorial.img : `${baseUrl}img/ces-logo-small.png`} />
             <Card.Body className="d-flex flex-column">
               <Card.Title>{tutorial.title}</Card.Title>
               <Card.Text>{tutorial.text}</Card.Text>
@@ -99,7 +99,7 @@ class CodingChallenges extends React.Component {
           <TutorialCards
             data={[
               {
-                img: `${baseUrl}img/ces-logo.png`,
+                img: `${baseUrl}img/ces-logo-small.png`,
                 title: <translate>Ch1.1 Hashes and Signatures</translate>,
                 text: <translate>Learn the magic of hash functions and how signatures work!</translate>,
                 difficulty: "easy",
@@ -108,7 +108,7 @@ class CodingChallenges extends React.Component {
                 href: `${docUrl("sync/ch1.1-code-challenge")}`
               },
               {
-                img: `${baseUrl}img/ces-logo.png`,
+                img: `${baseUrl}img/ces-logo-small.png`,
                 title: <translate>Ch1.2 Payment Processor</translate>,
                 text: <translate>Learn about beautiful state & state transitions, as well as how we use this design pattern to construct our simple payment processor!</translate>,
                 difficulty: "easy",
@@ -117,7 +117,7 @@ class CodingChallenges extends React.Component {
                 href: `${docUrl("sync/ch1.2-code-challenge")}`
               },
               {
-                img: `${baseUrl}img/ces-logo.png`,
+                img: `${baseUrl}img/ces-logo-small.png`,
                 title: <translate>Ch1.3 Replay Protection</translate>,
                 text: <translate>Learn how signed messages can be used for unsavory ends! Replay protection is critical!</translate>,
                 difficulty: "easy",
@@ -126,7 +126,7 @@ class CodingChallenges extends React.Component {
                 href: `${docUrl("sync/ch1.3-code-challenge")}`
               },
               {
-                img: `${baseUrl}img/ces-logo.png`,
+                img: `${baseUrl}img/ces-logo-small.png`,
                 title: <translate>Ch1.4 Account Model vs UTXOs</translate>,
                 text: <translate>Learn how to implement the UTXO model & why you might want to!</translate>,
                 difficulty: "easy",
@@ -135,7 +135,7 @@ class CodingChallenges extends React.Component {
                 href: `${docUrl("sync/ch1.4-code-challenge")}`
               },
               {
-                img: `${baseUrl}img/ces-logo.png`,
+                img: `${baseUrl}img/ces-logo-small.png`,
                 title: <translate>Ch1.5 Centralized Systems</translate>,
                 text: <translate>We go over some common pitfalls of building systems which do not account for particularly nasty failure modes--system faults, monopoly pricing, censorship, & fraud. With cryptoeconomics we can make sure these bad things don't happen!</translate>,
                 difficulty: "easy",

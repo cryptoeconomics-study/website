@@ -218,7 +218,7 @@ class Index extends React.Component {
 		// Highlight 1
     const Highlight1 = () => (
       <FeatureWlogo
-        image={`${baseUrl}img/ces-logo.png`}
+        image={`${baseUrl}img/ces-logo-small.png`}
         imageAlign="right"
         title={<translate>A 1 Stop Shop For Cryptoeconomic Mechanism Design</translate>}
         background="light"
