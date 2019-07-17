@@ -116,15 +116,9 @@ class Index extends React.Component {
           md={5}
 					className={props.imageAlign == `right` ? `order-md-2` : `order-md-1`}
         >
-					<iframe 
-						maxWidth='404vmin'
-						maxHeight='250vmin'
-						align='left'
-						src="https://www.youtube-nocookie.com/embed/m-0escxJ-j8" 
-						frameBorder="0" 
-						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-						allowFullScreen>
-					</iframe>
+				<div className="videoWrapper">
+					<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/m-0escxJ-j8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
         </Col>
       </Row>
     );
