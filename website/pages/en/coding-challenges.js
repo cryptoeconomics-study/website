@@ -225,7 +225,6 @@ class CodingChallenges extends React.Component {
 
     return (
       <div>
-				<img src='img/ces-logo.png' />
         <HomeSplash
           siteConfig={siteConfig}
           language={language}

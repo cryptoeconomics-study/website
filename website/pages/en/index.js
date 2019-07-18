@@ -315,7 +315,7 @@ class Index extends React.Component {
           title={siteConfig.title}
           tagline={siteConfig.tagline}
           buttons={[
-            { name: "Get Started, It's Free!", href: `${docUrl('getting-started')}` },
+						{ name: "Get Started, It's Free!", href: `${docUrl('getting-started/welcome')}` },
             { name: "Learn More", href:'#learn'},
           ]}
           padding={5}
