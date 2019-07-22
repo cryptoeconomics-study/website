@@ -28,7 +28,9 @@ We have:
 
 ## What is Cryptoeconomics.Study?
 
-If you are not sure where you should get started, check out our [intro video](https://www.youtube.com/watch?v=m-0escxJ-j8) which are designed to give you a high level overview of everything covered in Cryptoeconomics.Study.
+Cryptoeconomics.Study is a 1 Stop Shop For Cryptoeconomic Mechanism Design. Our goal is to help you understand and utilize the fundamentals of cryptoeconomics to build cool stuff (and maybe even contribute to Ethereum development!). At it's heart, cryptoeconomics is all about aligning incentives. Incentives are all about people. We have a passionate and collaborative community working through the course who are happy to help at any time (the best way to learn is to teach). The course is broken down into chunks, each chapter focusing on a particular flavor of cryptoeconomic mechanisms, and each subsection focusing in on the practical real world tools that make it happen. We present this material in the form of engaging lectures, detailed documentation and resources to dive deeper on all topics covered, and challenging coding assignments. This will get you familiar with concepts, tooling, and workflow used to build cryptoeconomic systems in the real world on Ethereum! 
+
+If you are not sure where you should get started, check out our [intro video](https://www.youtube.com/watch?v=m-0escxJ-j8) to get a high level overview of everything covered in Cryptoeconomics.Study.
 
 ## Coding Challenges 
 
