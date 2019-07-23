@@ -10,27 +10,36 @@ Learn how to implement the UTXO model & why you might want to!
 <br />
 <br />
 
-# Ch1.4 Overview
-
-* Account model vs UTXO model
-   * Briefly cover the differences
-   * Account model (what we are using for our implementation):
-      * A global mapping of `account->balance`
-      * Sends reduce one account’s balance and increase another account's balance
-   * UTXO model (unspent transaction output model used in Bitcoin)
-      * Same as the account model, however with three added rules:
-         * 1) Every send must include the entire account balance.
-         * 2) Sends can specify multiple recipients.
-         * 3) Sends can originate from multiple senders.
-   * Supposed to be privacy preserving, but these days the privacy can be broken. Only purely private way to send is zero knowledge proofs.
-
-
-# Coding Challenges
-
-[Codepen](https://codepen.io/karlfloersch/pen/LrLaZw?editors=0011)
-
 # Slides
 
 [Google Sheets Link](https://docs.google.com/presentation/d/19On3bioVn0oT10oiAq-OR1PJ7f-HCvem74pzyTycmw0/edit?usp=sharing)
+
+<br />
+
+# Ch1.4 Overview
+
+## Account Model vs UTXO Model
+
+Account model (Ethereum) :
+- A global mapping of `account->balance`
+- Sends reduce one account’s balance and increase another account's balance
+- Easy to understand
+- Easy to count and measure (wallets, dApps, etc...)
+- Allows for double spends and replay attacks if you're not careful
+
+UTXO model (Bitcoin)
+- Every send must include the entire account balance.
+- Sends can specify multiple recipients.
+- Sends can originate from multiple senders.
+- Transactions depend on a specific set of unspent outputs (thus double spends are impossible because once spent there's new UTXOs and old ones are invalid)
+- Because double spends are impossible and dependencies are explicit, ordering does not matter so transactions can be processed in parallel
+- Can be complex to create wallets and infrastructure around this architecture
+
+> Neither Account model or UTXOs model addresses are privacy preserving on their own! Just because the numbers/letters of addresses look funny to you does not mean that a computer programmer, crypto-currency exchange, or statistician can't trace blockchain addresses to real world identities. The only purely private way to send transactions is zero knowledge proofs ([zcash](https://z.cash)).
+
+
+## Recommended Resources
+- interactive utxo thing (there's gotta be some good ones)
+- account tx viz thing (I think we already made one of these?)
 
 <br />
