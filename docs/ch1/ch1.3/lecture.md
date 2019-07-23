@@ -10,23 +10,34 @@ Learn how signed messages can be used for unsavory ends! Replay protection is cr
 <br />
 <br />
 
-# Ch1.3 Overview
-
-* Account model vs UTXO model
-   * Briefly cover the differences
-   * Account model (what we are using for our implementation):
-      * A global mapping of `account->balance`
-      * Sends reduce one account’s balance and increase another account's balance
-   * UTXO model (unspent transaction output model used in Bitcoin)
-      * Same as the account model, however with three added rules:
-         * 1) Every send must include the entire account balance.
-         * 2) Sends can specify multiple recipients.
-         * 3) Sends can originate from multiple senders.
-   * Supposed to be privacy preserving, but these days the privacy can be broken. Only purely private way to send is zero knowledge proofs.
-
-
 # Slides
 
 [Google Sheets Link](https://docs.google.com/presentation/d/14ReNvptUeIKGoYQf-M0r5NvGbLkjRAcr2URu48CaPcQ/edit)
 
 <br />
+
+# Ch1.3 Overview
+
+## Replay Protection
+
+What is replay protection?
+- making sure that a transaction can only be processed once (no double spends!)
+
+What is a nonce?
+- A nonce is a number that is unique to every Ethereum account and attached to every transaction from that account. This number is incremented with every new transaction. 
+
+Why are nonces important?
+- Every transaction's signature is a hash of many things including the data of the transaction, the account nonce, and the account key. Thus every authentic transaction signature is unique and every unique transaction is recorded in the history. If someone tries to resend the same transaction twice, the signature will match another transaction in the history. According to the rules of Ethereum (the state transition function) this is invalid. Invalid transactions are not processed by the network. Because all nodes on the network follow the same rules, this works.
+
+What if a node makes up their own rules?
+- Then it wouldn't be an Ethereum node because Ethereum nodes all follow the Ethereum protocol (state transition function) which determines what is and is not valid.
+- If a node goes rouge and tries to process invalid transactions they would have a different state than the rest of the blockchain. This would make all their future transactions and blocks different than the rest of the Ethereum nodes, and thus would be rejected by the blockchain. 
+
+What if the node really wants to do it anyways?
+- This is called a fork. Because nodes receive rewards for processing blocks that other nodes deem valid, it is in everyone's interest to follow the same rules. Yay cryptoeconomics.
+
+## Examples
+- TBD 
+
+<br />
+

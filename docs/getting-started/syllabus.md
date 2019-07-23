@@ -14,8 +14,8 @@ title: "Syllabus"
       * The result of computing all transactions is called the “state”
       * Note: In Ethereum the full history is approx 250 GB, while the state is approx 3 GB.
          * Fun aside: Rent proposals say that people should pay rent on the state storage which they take up. There is no direct incentive to store the history, and so nodes today often do prune or delete historical data. If this happens too much there is a risk that we can’t recreate the chain anymore!
+* Replay Protection
    * Use nonces to provide replay protection. (nonce means you can’t resubmit the same transaction multiple times)
-   * Code implementation: https://codepen.io/karlfloersch/pen/YaEoYy?editors=0012
 * Account model vs UTXO model
    * Briefly cover the differences
    * Account model (what we are using for our implementation):
