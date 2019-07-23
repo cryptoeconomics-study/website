@@ -87,6 +87,7 @@ class CodingChallenges extends React.Component {
         </Col>
       ));
 
+		// Chapter 1 Coding Challenges
 		const Chapter1 = () => (
       <div>
         <h2>
@@ -103,7 +104,7 @@ class CodingChallenges extends React.Component {
                 title: <translate>Ch1.1 Hashes and Signatures</translate>,
                 text: <translate>Learn the magic of hash functions and how signatures work!</translate>,
                 difficulty: "easy",
-                length: "1",
+                length: "1.5",
                 prerequisite: false,
                 href: `${docUrl("sync/ch1.1-code-challenge")}`
               },
@@ -112,7 +113,7 @@ class CodingChallenges extends React.Component {
                 title: <translate>Ch1.2 Payment Processor</translate>,
                 text: <translate>Learn about beautiful state & state transitions, as well as how we use this design pattern to construct our simple payment processor!</translate>,
                 difficulty: "easy",
-                length: "1",
+                length: "2",
                 prerequisite: false,
                 href: `${docUrl("sync/ch1.2-code-challenge")}`
               },
@@ -121,7 +122,7 @@ class CodingChallenges extends React.Component {
                 title: <translate>Ch1.3 Replay Protection</translate>,
                 text: <translate>Learn how signed messages can be used for unsavory ends! Replay protection is critical!</translate>,
                 difficulty: "easy",
-                length: "1",
+                length: "0.5",
                 prerequisite: false,
                 href: `${docUrl("sync/ch1.3-code-challenge")}`
               },
@@ -149,6 +150,7 @@ class CodingChallenges extends React.Component {
       </div>
     );
 
+		// Chapter 2 Coding Challenges
     const Chapter2 = () => (
       <div className="mt-4">
         <h2>
@@ -198,6 +200,7 @@ class CodingChallenges extends React.Component {
       </div>
     );
 
+		// Chapter 3 coding Challenges
     const Chapter3 = () => (
       <div className="mt-4">
         <h2>
