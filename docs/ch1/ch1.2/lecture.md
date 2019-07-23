@@ -10,27 +10,64 @@ Learn about beautiful state & state transitions, as well as how we use this desi
 <br />
 <br />
 
-# Ch1.2 Overview
-
-* Overview of PayPal structure
-   * State object which is simply a mapping of address->balance
-   * Two types of state mutations: 1) `mint` and 2) `send` -- each with their own logic
-   * We start with an initial state (ie `genesis block`) and apply transactions (ie `blocks`) to get our most recent state.
-      * The list of transactions (blocks) is called the “history”
-      * The result of computing all transactions is called the “state”
-      * Note: In Ethereum the full history is approx 250 GB, while the state is approx 3 GB.
-         * Fun aside: Rent proposals say that people should pay rent on the state storage which they take up. There is no direct incentive to store the history, and so nodes today often do prune or delete historical data. If this happens too much there is a risk that we can’t recreate the chain anymore!
-   * Use nonces to provide replay protection. (nonce means you can’t resubmit the same transaction multiple times)
-
-# Code Challenge
-
-[Codepen](https://codepen.io/karlfloersch/pen/YaEoYy?editors=0012)
-
-[GitHub](https://github.com/cryptoeconomics-study/code)
-
 # Slides
 
 [Gooogle Sheets Link]()
+
+<br />
+
+# Ch1.2 Overview
+
+## State
+
+What is a state?
+- A state is a particular configuration of data.
+
+Examples of state:
+- the physical world at any point in time
+- a blockchain at a particular block
+- a chess board after a player makes a move
+
+## State Transition Function
+
+What is a state transition function?
+- a set of rules that determines how to transition the state from one configuration to another
+
+Examples of state transition functions:
+- the laws of physics
+- the rules of a blockchain protocol
+- the rules of chess
+
+
+<br />
+
+## Overview of PayPal structure
+
+The state object which is a mapping of address->balance
+
+There are two types of state mutations (each with their own logic)
+1) `mint`
+2) `send` 
+
+We start with an initial state (ie `genesis block`). We then receive transactions, and based on our state transition function reject invalid transactions and process valid transactions (ie create `blocks`). We then store the history of all transactions in a big ledger (ie a `blockchain`). Everyone's current accounts and balances is the current state (ie the latest `block`).
+- The list of transactions (`blocks`) is called the “history”
+- The result of computing all the transactions in the history leads to the current “state”
+- In Ethereum the full history is approx 250 GB, while the state is approx 3 GB.
+
+> Fun aside: Rent proposals say that people should pay rent on the state storage which they take up. There is no direct incentive to store the history, and so nodes today often do prune or delete historical data. If this happens too much there is a risk that we can’t recreate the chain anymore!
+
+<br />
+
+## Recommended Resources
+
+[Anders Brownworth's blockchain demo](https://anders.com/blockchain/blockchain.html) - Put data in a block, "mine" (hash) it, then add data to the next block, "mine" (hash) it, etc... The "mine" button perfoms the state transition function and you can see the history (blockchain) being created right in front of you. 
+
+[Blockscout Ethereum block explorer](https://blockscout.com/eth/mainnet/) - You can see the current state of the Ethereum blockchain by clicking on the latest block. You can also explore the history by clicking on past blocks and seeing the transactions that were processed in that state transition function. You can also search for the current state of any account or contract.
+
+Conways's Game Of Life
+- [Wikipedia](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) - Explains the rules of the game (state transition function) and shows some fun demos.
+- [Peter Daily's React implimentation of the Game of Life](https://thepeted.github.io/game-of-life-redux/) - Let's you play the game (really start it and watch it unfold).
+- [Code for the above demo](https://github.com/thepeted/game-of-life-redux)
 
 
 <br />
