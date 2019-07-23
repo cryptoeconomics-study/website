@@ -61,5 +61,5 @@ Cryptographic Signatures
 - [Anders Brownworth's blockchain demos](https://anders.com/blockchain/) - Videos explaining (and showing) hash functions and signatures in more detail.
 - [Wikipedia](https://en.wikipedia.org/wiki/Digital_signature) - Everything you could ever want to know about digital (and cryptographic) signatures.
 
-
+<br />
 

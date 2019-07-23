@@ -39,7 +39,16 @@ UTXO model (Bitcoin)
 
 
 ## Recommended Resources
-- interactive utxo thing (there's gotta be some good ones)
-- account tx viz thing (I think we already made one of these?)
+
+[UTXO Stats](https://utxo-stats.com/) - Visual statistics on the UTXOs in the Bitcoin blockchain.
+
+[BitBonkers](https://www.bitbonkers.com/) - Abstract (yet awesome) visualization of the Bitcoin blockchain in real time.
+
+[BitInfoCharts Bitcoin history visualization](https://bitinfocharts.com/bitcoin/visualization.html) - Displays Bitcoin UTXOs on a timeline, showing how they "jump" from one point to another.
+
+[More Bitcoin Visualizations](http://www.bitcoinlinks.net/tag/transaction-visualizations) - Because you can never have too many visualizations :)
+
+[Etherscan](https://etherscan.io) - Ethereum uses an account model, so just click on any transaction to see the history of the account that sent it. 
 
 <br />
+

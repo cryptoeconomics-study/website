@@ -36,8 +36,13 @@ What if a node makes up their own rules?
 What if the node really wants to do it anyways?
 - This is called a fork. Because nodes receive rewards for processing blocks that other nodes deem valid, it is in everyone's interest to follow the same rules. Yay cryptoeconomics.
 
-## Examples
-- TBD 
+## Recommended Resources
+
+[Making Sense of Ethereum Nonce(sense)](https://medium.com/kinblog/making-sense-of-ethereum-nonce-sense-3858d5588c64) - A walkthrough of nonces in Ethereum.
+
+[What is a nonce?](https://ethereum.stackexchange.com/questions/27432/what-is-nonce-in-ethereum-how-does-it-prevent-double-spending) - Ethereum.StackExchange answer to the question: "what is a nonce?"
+
+[Ethereum Wiki](https://github.com/ethereum/wiki/wiki/Ethereum-Development-Tutorial#basics-of-the-ethereum-blockchain) - If you want a more detailed (and equaly dry) walkthrough of how exactly Ethereum uses nonces.
 
 <br />
 

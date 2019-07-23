@@ -38,3 +38,10 @@ We go over some common pitfalls of building systems which do not account for par
 
 Yay blockchains
 
+<br />
+
+## Recommended Resources
+
+[Why Decentralize?](https://k-ho.github.io/why_decentralize/) - A vizual walkthrough of a centralized payment processor and why decentralization is important.
+
+<br />

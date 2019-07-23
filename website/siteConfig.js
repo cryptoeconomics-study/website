@@ -25,11 +25,11 @@ const siteConfig = {
   tagline: 'Everything you Need to Learn The Fundamentals Of Cryptoeconomics',
 
 	// FOR LOCAL DEVELOPMENT
-	//url: 'https://your-docusaurus-test-site.com',
-	//baseUrl: '/',
+	url: 'https://your-docusaurus-test-site.com',
+	baseUrl: '/',
 	// FOR PUBLISHING TO burrrata.ch/ces-website
-	url: 'https://burrrata.github.io',
-	baseUrl: '/ces-website/',
+	//url: 'https://burrrata.github.io',
+	//baseUrl: '/ces-website/',
 
   // Used for publishing and more
   projectName: 'ces-website',
