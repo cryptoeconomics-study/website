@@ -2,7 +2,10 @@
 title: "Lecture"
 ---
 
-Learn how to implement the UTXO model & why you might want to!
+<br />
+
+# Account Model vs UTXOs
+- Compare and contract the account model with the UTXO model which was popularized with Bitcoin. 
 
 <br />
 <br />

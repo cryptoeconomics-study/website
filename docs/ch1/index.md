@@ -2,7 +2,10 @@
 title: "Overview"
 ---
 
-An overview of all the content we will be covering in Chapter 1!
+<br />
+
+# Chapter 1: Central Payment Processor
+- Turning a centralized payment processor into a decentralized payment protocol!
 
 <br />
 <br />

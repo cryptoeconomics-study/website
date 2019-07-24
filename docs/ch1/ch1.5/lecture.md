@@ -2,7 +2,10 @@
 title: "Lecture"
 ---
 
-We go over some common pitfalls of building systems which do not account for particularly nasty failure modes--system faults, monopoly pricing, censorship, & fraud. With cryptoeconomics we can make sure these bad things don't happen!
+<br />
+
+# Properties of Centralized Systems
+- We go over some common pitfalls of building systems which do not account for particularly nasty failure modes--system faults, monopoly pricing, censorship, & fraud. With cryptoeconomics we can make sure these bad things don't happen!
 
 <br />
 <br />

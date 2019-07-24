@@ -2,7 +2,10 @@
 title: "Lecture"
 ---
 
-Learn about synchronous, partially synchronous, and asynchronous networks!
+<br />
+
+# Networks & Synchrony
+- Synchronous, and partially synchronous, and asynchronous networks.. oh my! 
 
 <br />
 <br />

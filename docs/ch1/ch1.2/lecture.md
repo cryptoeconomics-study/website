@@ -2,7 +2,10 @@
 title: "Lecture"
 ---
 
-Learn about beautiful state & state transitions, as well as how we use this design pattern to construct our simple payment processor!
+<br />
+
+# Payment Processor Implementation
+- Implementing a payment processor using the account model. Learn about state, state transitions, and replay protection.
 
 <br />
 <br />

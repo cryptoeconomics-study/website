@@ -2,7 +2,10 @@
 title: "Lecture"
 ---
 
-Learn how signed messages can be used for unsavory ends! Replay protection is critical!
+<br />
+
+# Replay Protection
+- Protecting against undesired resubmission of transactions. Learn how signed messages can be used for unsavory ends! Replay protection is critical!
 
 <br />
 <br />

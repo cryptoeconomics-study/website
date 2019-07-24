@@ -2,7 +2,10 @@
 title: "Lecture"
 ---
 
-Learn the magic of hash functions and how signatures work!
+<br />
+
+# Hashing and Signatures
+- A practical guide to two of the most important cryptographic primatives!
 
 <br />
 <br />

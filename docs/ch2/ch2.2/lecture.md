@@ -2,7 +2,10 @@
 title: "Lecture"
 ---
 
-Learn about the infamous double spend!
+<br />
+
+# Double Spends
+- Inconsistent state in a distributed network of nodes, and the mischief which can ensue! 
 
 <br />
 <br />

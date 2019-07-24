@@ -2,7 +2,10 @@
 title: "Lecture"
 ---
 
-Tagline goes here.
+<br />
+
+# Latency-Based Consensus
+- A 99% fault tolerant consensus algorithm based on network latency!
 
 <br />
 <br />
