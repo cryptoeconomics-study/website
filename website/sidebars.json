@@ -51,8 +51,40 @@
         ]
       }
 		],
-		"Ch2 Network Models": [
-			"ch2/index"
+		"Ch2: Network Models": [
+			"ch2/index",
+      {
+        "type": "subcategory",
+        "label": "2.1 Networks and Synchrony",
+        "ids": [
+          "ch2/ch2.1/lecture",
+          "sync/ch2.1/coding-challenge"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "2.2 Double Spends",
+        "ids": [
+          "ch2/ch2.2/lecture",
+          "sync/ch2.2-code-challenge"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "2.3 Latency-Based Consensus",
+        "ids": [
+          "ch2/ch2.3/lecture",
+          "sync/ch2.3-code-challenge"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "2.4 Proof of Authority",
+        "ids": [
+          "ch2/ch2.4/lecture",
+          "sync/ch2.4-code-challenge"
+        ]
+      }
 		],
 		"Ch3 Proof of Work": [
 			"ch3/index"
