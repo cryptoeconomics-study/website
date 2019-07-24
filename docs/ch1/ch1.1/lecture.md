@@ -6,7 +6,14 @@ Learn the magic of hash functions and how signatures work!
 
 <br />
 <br />
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FLIo_ZjV--U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe 
+	width="560" 
+	height="315" 
+	src="https://www.youtube-nocookie.com/embed/FLIo_ZjV--U" 
+	frameborder="0" 
+	allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+	allowfullscreen>
+</iframe>
 <br />
 <br />
 
