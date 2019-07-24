@@ -25,6 +25,14 @@ Learn about synchronous, partially synchronous, and asynchronous networks!
 
 # Ch2.1 Overview 
 
+Synchronous networks
+- messages will arrive within a given time
+
+Partially synchronous networks
+- messages will arrive, but we don't know when
+
+Asynchronous networks
+- we do not know if or when messages will arrive
 
 <br />
 
@@ -36,5 +44,17 @@ Learn about synchronous, partially synchronous, and asynchronous networks!
 # STUDENT QUESTIONS
 
 
+In decentralized networks do messages always get processed right away?
+- No. We have no idea if or when messages will arrive. This is one of the challenges in designing decentralized networks.
 
+What is a synchronous network model?
+- one in which there is an upper bound on how long it will take a message to be sent and delivered
+
+What is a partially synchronous network model?
+- there is an upper bound on how long it will take messages to be delivered, but we don't know what that upper bound is
+
+What is an asynchronous network model?
+- we do not know if or when messages will arrive 
+
+ 
 

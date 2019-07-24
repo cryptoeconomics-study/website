@@ -48,6 +48,7 @@ title: "Syllabus"
 * Let’s decentralize :)
 
 ## Chapter 2: Client Validation, Networks, and Double Spends
+* TODO: 2.1 synchronous partial sync, and async networks!
 * Client side validation
    * What is it?
       * All clients download all transactions and run the PayPal code to generate their belief of the current state
