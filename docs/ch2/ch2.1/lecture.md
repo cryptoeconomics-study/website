@@ -38,23 +38,6 @@ Asynchronous networks
 
 # Recommended Resources
 
+[Wikipedia](https://en.wikipedia.org/wiki/Message_passing#Synchronous_versus_asynchronous_message_passing) - Synchronous vs asynchronous message passing.
 
 <br />
-
-# STUDENT QUESTIONS
-
-
-In decentralized networks do messages always get processed right away?
-- No. We have no idea if or when messages will arrive. This is one of the challenges in designing decentralized networks.
-
-What is a synchronous network model?
-- one in which there is an upper bound on how long it will take a message to be sent and delivered
-
-What is a partially synchronous network model?
-- there is an upper bound on how long it will take messages to be delivered, but we don't know what that upper bound is
-
-What is an asynchronous network model?
-- we do not know if or when messages will arrive 
-
- 
-
