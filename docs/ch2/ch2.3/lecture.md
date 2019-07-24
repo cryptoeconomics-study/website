@@ -12,7 +12,7 @@ title: "Lecture"
 <iframe 
 	width="560" 
 	height="315" 
-	src=""
+	src="https://www.youtube-nocookie.com/embed/l0AQ0UJAvM8"
 	frameborder="0" 
 	allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
 	allowfullscreen>
@@ -22,17 +22,33 @@ title: "Lecture"
 
 # Slides
 
-[Google Sheets Link]()
+[Google Sheets Link](https://docs.google.com/presentation/d/1BkjtTLly8n663xMySOaJAQogH0-Gy8UEW1idz3Cq40o/edit#slide=id.g4023786b63_0_0)
 
 <br />
 
-# Ch2.X Overview 
+# Ch2.3 Overview 
+
 
 
 <br />
 
 # Recommended Resources
 
+[99% fault tolerant consensus](https://vitalik.ca/general/2018/08/07/99_fault_tolerant.html) - A guide to 99% fault tolerant consensus by Vitalik Buterin.
 
 <br />
+
+# STUDENT QUESTIONS
+
+What is a common problem with using timestamps for security critical protocols?
+- decentalized blockchains are asynchronous so the first valid message is the one that is processed, even if another message is later received that invalidates that earlier message (in this case the second would be discarded because the first was already processed)
+- a user can selectively propagate different messages to different nodes in the network, all of which are individually valid, but together are not
+	- example: user has balance of 10tokens, sends 3 messages spending those 10 tokens on different things, each message is valid, but together only 1 can be valid the rest are double spends.
+- a user can always spoof the timestamp by altering the clock on their local machine
+	- there are only a handful of truly synchronous clocks around the world, and most other computers/services are slightly out of sync with those clocks (note: Cloudflare is trying to help fix this with their [time services](https://www.cloudflare.com/time/))
+
+
+
+
+
 
