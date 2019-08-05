@@ -9,22 +9,17 @@ const pages = [
 	{
 		destination: 'docs/sync/ch2.1-code-challenge.md',
 		title: 'Code Challenge',
-		contentLocation: ''
+		contentLocation: 'ch2/2.1/README.md'
 	},
 	{
 		destination: 'docs/sync/ch2.2-code-challenge.md',
 		title: 'Code Challenge',
-		contentLocation: ''
+		contentLocation: 'ch2/2.2/README.md'
 	},
 	{
 		destination: 'docs/sync/ch2.3-code-challenge.md',
 		title: 'Code Challenge',
-		contentLocation: ''
-	},
-	{
-		destination: 'docs/sync/ch2.4-code-challenge.md',
-		title: 'Code Challenge',
-		contentLocation: ''
+		contentLocation: 'ch2/2.3/README.md'
 	}
 ]
 
