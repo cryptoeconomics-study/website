@@ -5,7 +5,7 @@ title: "Lecture"
 <br />
 
 # Account Model vs UTXOs
-- Compare and contract the account model with the UTXO model which was popularized with Bitcoin. 
+- Compare and contract the account model with the UTXO model which was popularized with Bitcoin.
 
 <br />
 <br />
@@ -43,6 +43,9 @@ UTXO model (Bitcoin)
 
 ## Recommended Resources
 
+[Blockchain in JS](https://blockchain.nambrot.com/) - A Bitcoin style interactive blockchain demo by [nambrot](https://github.com/nambrot)
+- [tutorial to build your own](https://github.com/nambrot/blockchain-in-js)
+
 [UTXO Stats](https://utxo-stats.com/) - Visual statistics on the UTXOs in the Bitcoin blockchain.
 
 [BitBonkers](https://www.bitbonkers.com/) - Abstract (yet awesome) visualization of the Bitcoin blockchain in real time.
@@ -51,7 +54,7 @@ UTXO model (Bitcoin)
 
 [More Bitcoin Visualizations](http://www.bitcoinlinks.net/tag/transaction-visualizations) - Because you can never have too many visualizations :)
 
-[Etherscan](https://etherscan.io) - Ethereum uses an account model, so just click on any transaction to see the history of the account that sent it. 
+[Etherscan](https://etherscan.io) - Ethereum uses an account model, so just click on any transaction to see the history of the account that sent it.
 
 <br />
 
