@@ -46,6 +46,9 @@ UTXO model (Bitcoin)
 [Blockchain in JS](https://blockchain.nambrot.com/) - A Bitcoin style interactive blockchain demo by [nambrot](https://github.com/nambrot)
 - [tutorial to build your own](https://github.com/nambrot/blockchain-in-js)
 
+[UTXOs on Substrate](https://www.parity.io/utxo-on-substrate/) - A walkthrough on what UTXOs are and how you would replicate a UTXO network on an account based network like Substrate.
+- [tutorial to build your own](https://github.com/substrate-developer-hub/utxo-workshop)
+
 [UTXO Stats](https://utxo-stats.com/) - Visual statistics on the UTXOs in the Bitcoin blockchain.
 
 [BitBonkers](https://www.bitbonkers.com/) - Abstract (yet awesome) visualization of the Bitcoin blockchain in real time.
