@@ -114,13 +114,13 @@ const siteConfig = {
   stylesheets: ["https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"],
 
 	// Stuff TODO
-	
+
   // You may provide arbitrary config keys to be used as needed by your template. For example, if you need your repo's URL...
 	//repoUrl: 'https://github.com/cryptoeconomics-study/cryptoeconomicsstudy.github.io',
-	
+
 	// Edit this page button
 	//editUrl: "https://github.com/cryptoeconomics-study/cryptoeconomics-study.github.io/edit/source/docs/",
-	
+
   // Generate CNAME file when building
 	//cname: "cryptoeconomics.study",
 
