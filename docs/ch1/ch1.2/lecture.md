@@ -50,7 +50,7 @@ The state object which is a mapping of address->balance
 
 There are two types of state mutations (each with their own logic)
 1) `mint`
-2) `send` 
+2) `send`
 
 We start with an initial state (ie `genesis block`). We then receive transactions, and based on our state transition function reject invalid transactions and process valid transactions (ie create `blocks`). We then store the history of all transactions in a big ledger (ie a `blockchain`). Everyone's current accounts and balances is the current state (ie the latest `block`).
 - The list of transactions (`blocks`) is called the “history”
@@ -63,7 +63,9 @@ We start with an initial state (ie `genesis block`). We then receive transaction
 
 ## Recommended Resources
 
-[Anders Brownworth's blockchain demo](https://anders.com/blockchain/blockchain.html) - Put data in a block, "mine" (hash) it, then add data to the next block, "mine" (hash) it, etc... The "mine" button perfoms the state transition function and you can see the history (blockchain) being created right in front of you. 
+[But how does a blockchain work?](https://www.youtube.com/watch?v=bBC-nXj3Ng4&feature=youtu.be) - Awesome video by 3Blue1Brown explaining how blockchains work.
+
+[Anders Brownworth's blockchain demo](https://anders.com/blockchain/blockchain.html) - Put data in a block, "mine" (hash) it, then add data to the next block, "mine" (hash) it, etc... The "mine" button perfoms the state transition function and you can see the history (blockchain) being created right in front of you.
 
 [Ethviewer](http://www.ethviewer.live/) - Live Ethereum blockchain visualization.
 
