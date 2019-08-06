@@ -45,6 +45,10 @@ Yay blockchains
 
 ## Recommended Resources
 
-[Why Decentralize?](https://k-ho.github.io/why_decentralize/) - A vizual walkthrough of a centralized payment processor and why decentralization is important.
+[Why Decentralize?](https://k-ho.github.io/why_decentralize/) - A visual walk-through of a centralized payment processor and why decentralization is important.
+
+[Nightmare Market Scam](https://twitter.com/Patrick_Shortis/status/1156354524459802624)
+
+[Tether / Bitfinex Scam](https://medium.com/@bitfinexed)
 
 <br />
