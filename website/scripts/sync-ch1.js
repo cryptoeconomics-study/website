@@ -1,7 +1,8 @@
 const { syncPages } = require('./sync-util')
 
 const GIT_REF = 'master'
-const REPO = 'cryptoeconomics-study/code/'
+//const REPO = 'cryptoeconomics-study/code/'
+const REPO = 'burrrata/code/'
 
 // note: for the sync scripts to work the contentLocation fields are CASE SENSITIVE
 
