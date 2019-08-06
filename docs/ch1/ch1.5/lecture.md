@@ -45,10 +45,12 @@ Yay blockchains
 
 ## Recommended Resources
 
+[Why Decentralization Matters](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) - Chris Dixon of a16z explains why decentralization matters for the next wave of innovation and human cooperation (with helpful diagrams!)
+
 [Why Decentralize?](https://k-ho.github.io/why_decentralize/) - A visual walk-through of a centralized payment processor and why decentralization is important.
 
-[Nightmare Market Scam](https://twitter.com/Patrick_Shortis/status/1156354524459802624)
+[Nightmare Market Scam](https://twitter.com/Patrick_Shortis/status/1156354524459802624) - Because sometimes your paranoid dreams do come true...
 
-[Tether / Bitfinex Scam](https://medium.com/@bitfinexed)
+[Tether / Bitfinex Scam](https://medium.com/@bitfinexed) - Yes, that Tether. The one used by almost every small crypto currency exchange that simply won't die. It seems to be working very well, almost a little too well...
 
 <br />
