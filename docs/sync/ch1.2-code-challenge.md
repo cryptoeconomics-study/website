@@ -59,7 +59,7 @@ We're calling it Paypal, but the name is arbitrary. The goal is really just to s
 
 ### State
 
-The payment processor's state will be an object mapping addresses (client public keys) to balances (an integer in a javascript object). It might look something like this:
+The payment processor's state will be an object mapping addresses (client public keys) to balances (an integer in a Javascript object). It might look something like this:
 ```
 {
     0x129a2BF4B76f3e715E57b4B6CCE78cAf04C87465: {
@@ -130,7 +130,7 @@ checkTxType(tx) {
 #### Process Transaction
 ```
 // Updates account balances according to a transaction and adds the transaction to the history
-processTransaction(tx) {
+processTx(tx) {
   // TODO:
   // decrease the balance of the transaction sender/signer
   // increase the balance of the transaction receiver

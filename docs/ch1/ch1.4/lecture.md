@@ -24,7 +24,7 @@ title: "Lecture"
 ## Account Model vs UTXO Model
 
 Account model (Ethereum) :
-- A global mapping of `account->balance`
+- A global mapping of `accounts -> balances`
 - Sends reduce one account’s balance and increase another account's balance
 - Easy to understand
 - Easy to count and measure (wallets, dApps, etc...)
@@ -38,26 +38,18 @@ UTXO model (Bitcoin)
 - Because double spends are impossible and dependencies are explicit, ordering does not matter so transactions can be processed in parallel
 - Can be complex to create wallets and infrastructure around this architecture
 
-> Neither Account model or UTXOs model addresses are privacy preserving on their own! Just because the numbers/letters of addresses look funny to you does not mean that a computer programmer, crypto-currency exchange, or statistician can't trace blockchain addresses to real world identities. The only purely private way to send transactions is zero knowledge proofs ([zcash](https://z.cash)).
+> Neither the Account model or the UTXOs model are privacy preserving on their own! Just because the numbers/letters of addresses look funny to you does not mean that a computer programmer, crypto-currency exchange, or data scientist can't trace blockchain addresses to real world identities. The only purely private way to send transactions is with a cryptocurrency that uses zero knowledge proofs like ([zcash](https://z.cash)).
 
 
 ## Recommended Resources
 
-[Blockchain in JS](https://blockchain.nambrot.com/) - A Bitcoin style interactive blockchain demo by [nambrot](https://github.com/nambrot)
-- [tutorial to build your own](https://github.com/nambrot/blockchain-in-js)
-
-[UTXOs on Substrate](https://www.parity.io/utxo-on-substrate/) - A walkthrough on what UTXOs are and how you would replicate a UTXO network on an account based network like Substrate.
-- [tutorial to build your own](https://github.com/substrate-developer-hub/utxo-workshop)
-
-[UTXO Stats](https://utxo-stats.com/) - Visual statistics on the UTXOs in the Bitcoin blockchain.
-
-[BitBonkers](https://www.bitbonkers.com/) - Abstract (yet awesome) visualization of the Bitcoin blockchain in real time.
-
-[BitInfoCharts Bitcoin history visualization](https://bitinfocharts.com/bitcoin/visualization.html) - Displays Bitcoin UTXOs on a timeline, showing how they "jump" from one point to another.
-
-[More Bitcoin Visualizations](http://www.bitcoinlinks.net/tag/transaction-visualizations) - Because you can never have too many visualizations :)
-
-[Etherscan](https://etherscan.io) - Ethereum uses an account model, so just click on any transaction to see the history of the account that sent it.
+- [Blockchain in JS](https://blockchain.nambrot.com/) - A Bitcoin style interactive blockchain demo by [nambrot](https://github.com/nambrot) ([tutorial to build your own](https://github.com/nambrot/blockchain-in-js))
+- [UTXOs on Substrate](https://www.parity.io/utxo-on-substrate/) - A walkthrough on what UTXOs are and how you would replicate a UTXO network on an account based network like Substrate. ([tutorial to build your own](https://github.com/substrate-developer-hub/utxo-workshop))
+- [UTXO Stats](https://utxo-stats.com/) - Visual statistics on the UTXOs in the Bitcoin blockchain.
+- [BitBonkers](https://www.bitbonkers.com/) - Abstract (yet awesome) visualization of the Bitcoin blockchain in real time.
+- [BitInfoCharts Bitcoin history visualization](https://bitinfocharts.com/bitcoin/visualization.html) - Displays Bitcoin UTXOs on a timeline, showing how they "jump" from one point to another.
+- [More Bitcoin Visualizations](http://www.bitcoinlinks.net/tag/transaction-visualizations) - Because you can never have too many visualizations :)
+- [Etherscan](https://etherscan.io) - Ethereum uses an account model, so just click on any transaction to see the history of the account that sent it.
 
 <br />
 
