@@ -21,53 +21,30 @@ title: "Overview"
 
 # Slides
 
-[Google Sheets Link](https://docs.google.com/presentation/d/17J2qRYzx27x30UEoXa2cOHOl2MdKQujocQNJpbp7NHE/edit)
+[Google Slides Link](https://docs.google.com/presentation/d/17J2qRYzx27x30UEoXa2cOHOl2MdKQujocQNJpbp7NHE/edit)
 
 <br />
 
 ## Chapter 1 Overview: Centralized Payment Processor
 
-* Basic crypto concepts
-   * Hashes -- not how they work but instead what they do (collision resistance, second preimage resistance [given x and H(x), cannot find y such that H(y) = H(x)], preimage resistance, random oracle)
-   * Public / private keys -- Sign with private key, verify with public key
-* Overview of PayPal structure
-   * State object which is simply a mapping of address->balance
-   * Two types of state mutations: 1) `mint` and 2) `send` -- each with their own logic
-   * We start with an initial state (ie `genesis block`) and apply transactions (ie `blocks`) to get our most recent state.
-      * The list of transactions (blocks) is called the “history”
-      * The result of computing all transactions is called the “state”
-      * Note: In Ethereum the full history is approx 250 GB, while the state is approx 3 GB.
-         * Fun aside: Rent proposals say that people should pay rent on the state storage which they take up. There is no direct incentive to store the history, and so nodes today often do prune or delete historical data. If this happens too much there is a risk that we can’t recreate the chain anymore!
-   * Use nonces to provide replay protection. (nonce means you can’t resubmit the same transaction multiple times)
-* Account model vs UTXO model
-   * Briefly cover the differences
-   * Account model (what we are using for our implementation):
-      * A global mapping of `account->balance`
-      * Sends reduce one account’s balance and increase another account's balance
-   * UTXO model (unspent transaction output model used in Bitcoin)
-      * Same as the account model, however with three added rules:
-         * 1) Every send must include the entire account balance.
-         * 2) Sends can specify multiple recipients.
-         * 3) Sends can originate from multiple senders.
-   * Supposed to be privacy preserving, but these days the privacy can be broken. Only purely private way to send is zero knowledge proofs.
-* Properties of centralized systems
-   * Benefits:
-      * Easy to build and reason about.
-      * Simple to scale.
-      * Privacy preserving. (if you trust the operator)
-   * Downsides:
-      * Single point of failure
-         * If the operator is removed (eg. servers burn down, servers seized by authorities), the entire system breaks.
-      * Censorship
-         * The operator can censor users and change their balances, and it is very difficult for users to prove malfeasance.
-            * This is because there is no client-side validation
-      * Fraud
-         * Because the operator has complete control, they can steal money directly from users.
-         * The only safeguard against this kind of misbehavior is the legal system & social reputation.
-            * Even these threats are not enough--see Bitconnect, Mt. Gox, and many other exchanges which have been hacked.
-            * Also, theft is often unprovable
-   * These downsides limit what can be built on top of these systems.
-      * Clearly no illegal securities!
-* Let’s decentralize :)
+### Section 1 - Hashes and Signatures
+* [Lecture](https://www.burrrata.ch/ces-website/docs/en/ch1/ch1.1/lecture)
+* [Coding Challenge](https://www.burrrata.ch/ces-website/docs/en/sync/ch1.1-code-challenge)
+
+### Section 2 - State Transitions & Payment Processor Implementation
+* [Lecture](https://www.burrrata.ch/ces-website/docs/en/ch1/ch1.2/lecture)
+* [Coding Challenge](https://www.burrrata.ch/ces-website/docs/en/sync/ch1.2-code-challenge)
+
+### Section 3 - Replay Protection
+* [Lecture](https://www.burrrata.ch/ces-website/docs/en/ch1/ch1.3/lecture)
+* [Coding Challenge](https://www.burrrata.ch/ces-website/docs/en/sync/ch1.3-code-challenge)
+
+### Section 4 - UTXO Model
+* [Lecture](https://www.burrrata.ch/ces-website/docs/en/ch1/ch1.4/lecture)
+* [Coding Challenge](https://www.burrrata.ch/ces-website/docs/en/sync/ch1.4-code-challenge)
+
+### Section 5 - Properties of Centralized Systems
+* [Lecture](https://www.burrrata.ch/ces-website/docs/en/ch1/ch1.5/lecture)
+* [Coding Challenge](https://www.burrrata.ch/ces-website/docs/en/sync/ch1.5-code-challenge)
 
 <br />
