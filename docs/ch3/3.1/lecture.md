@@ -2,7 +2,8 @@
 title: "Lecture"
 ---
 
-Tagline goes here.
+Decentralized Consensus and Blockchains
+- Learn the fundamentals of decentralized consensus and the blockchain data structure
 
 <br />
 <br />

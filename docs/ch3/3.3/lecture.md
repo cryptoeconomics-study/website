@@ -2,7 +2,8 @@
 title: "Lecture"
 ---
 
-Tagline goes here.
+Merkle Trees
+- A powerful data structure to improve our protocol's scalability
 
 <br />
 <br />

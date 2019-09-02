@@ -2,7 +2,8 @@
 title: "Lecture"
 ---
 
-Tagline goes here.
+Game Theory in Bitcoin
+- An introduction to basic Game Theory concepts and how we can use them to analyze Bitcoin
 
 <br />
 <br />

@@ -2,7 +2,8 @@
 title: "Lecture"
 ---
 
-Tagline goes here.
+Selfish Mining
+- An attack where dishonest miners can obtain revenue larger than their fair share
 
 <br />
 <br />
