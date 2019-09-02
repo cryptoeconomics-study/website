@@ -10,7 +10,7 @@ Decentralized Consensus and Blockchains
 <iframe
 	width="560"
 	height="315"
-	src=""
+	src="https://youtu.be/dZp4fH0McIg"
 	frameborder="0"
 	allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 	allowfullscreen>
@@ -29,8 +29,20 @@ Google Sheets
 
 # Ch3.1 Overview
 
+Block
+- A bunch of data that is hashed and propagated to the network (often the data is transactions that change the state).
+
+Blockchain
+- Adding a pointer from each block to the block before it, creating a chain of blocks. This way if something changes in a past block it would change the hashes for all future blocks too. The dependency of each block on the block that came before it ties them together in a "chain".
+
+Fork Choice Rule
+- The rules that determine how nodes on a network choose forks.
+
+Confirmations
+- When a block is added on top of another block, signalling that everything in that original block is valid
+
 Consensus
-- making sure that all nodes on a network agree on the same state
+- Making sure that all nodes on a network agree on the same state.
 
 
 
