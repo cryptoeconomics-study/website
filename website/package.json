@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "examples": "docusaurus-examples",
+		"clean:docs": "rm -r ../docs/sync/*",
+		"sync:getting-started": "node ./scripts/sync-getting-started.js",
+		"sync:ch1": "node ./scripts/sync-ch1.js",
+		"sync:ch2": "node ./scripts/sync-ch2.js",
+    "generate": "npm run clean:docs && npm run sync:getting-started && npm run sync:ch1 && npm run sync:ch2",
+    "start": "npm run generate && docusaurus-start",
+    "build": "npm run generate && docusaurus-build",
+    "publish-gh-pages": "docusaurus-publish",
+    "write-translations": "docusaurus-write-translations",
+    "version": "docusaurus-version",
+    "rename-version": "docusaurus-rename-version",
+    "crowdin-upload": "crowdin --config ../crowdin.yaml upload sources --auto-update -b master",
+    "crowdin-download": "crowdin --config ../crowdin.yaml download -b master"
+  },
+  "devDependencies": {
+    "docusaurus": "^1.9.0"
+  },
+  "license": "GFDL-1.3-or-later",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "react-bootstrap": "^1.0.0-beta.9"
+  }
+}
