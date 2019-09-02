@@ -5,16 +5,16 @@ title: "Lecture"
 <br />
 
 # Networks & Synchrony
-- Synchronous, and partially synchronous, and asynchronous networks.. oh my! 
+- Synchronous, and partially synchronous, and asynchronous networks.. oh my!
 
 <br />
 <br />
-<iframe 
-	width="560" 
-	height="315" 
+<iframe
+	width="560"
+	height="315"
 	src="https://www.youtube-nocookie.com/embed/DcCe_dnMNJI"
-	frameborder="0" 
-	allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+	frameborder="0"
+	allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 	allowfullscreen>
 </iframe>
 <br />
@@ -26,21 +26,23 @@ title: "Lecture"
 
 <br />
 
-# Ch2.1 Overview 
+# Ch2.1 Overview
 
-Synchronous networks
-- messages will arrive within a given time
+Synchronous network
+- Global clock, & there is a known (constant) latency L in which all messages are assumed to be received. For instance: "all messages propagate in 5 seconds."
 
-Partially synchronous networks
-- messages will arrive, but we don't know when
+Partially Synchronous network
+- There is some unknown latency L in which all messages are assumed to be received. It is important to note that this latency is unknown and could be extremely high.
 
-Asynchronous networks
-- we do not know if or when messages will arrive
+Asynchronous network
+- Local clock, & there are no timing assumptions made. We are not able to determine objectively the time ordering of transactions, though each individual node still has an idea of what order it saw messages arrive in (and different nodes can disagree).
+
+In a decentralized system, we cannot assume synchrony: perhaps some users are firewalled or censored, and messages take an extremely long time to get to them. We need some way to prevent multiple clients from 'forking'--disagreeing on or having different copies of the current state--even in the case of asynchrony. We need a way to reach *consensus* on which state is the 'right one.'
 
 <br />
 
 # Recommended Resources
 
-[Wikipedia](https://en.wikipedia.org/wiki/Message_passing#Synchronous_versus_asynchronous_message_passing) - Synchronous vs asynchronous message passing.
+[Wikipedia: message passing](https://en.wikipedia.org/wiki/Message_passing#Synchronous_versus_asynchronous_message_passing) - Synchronous vs asynchronous message passing.
 
 <br />
