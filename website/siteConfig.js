@@ -25,27 +25,14 @@ const siteConfig = {
   tagline:
     "A free, open-source course on the fundamentals of Blockchain protocols",
 
-  // FOR LOCAL DEVELOPMENT
-  //url: 'https://your-docusaurus-test-site.com',
-  //baseUrl: '/',
-  //
-  // Publishing Deployment Script
+  // PUBLISHING PARAMS
+  // gh-pages Deployment Config - WORKS
+  url: "https://cryptoeconomics-study.github.io",
+  baseUrl: "/website/",
+  projectName: "website",
+  organizationName: "cryptoeconomics-study",
+  // Deployment Script
   // GIT_USER=your-username CURRENT_BRANCH=master yarn run publish-gh-pages
-  //
-  // FOR PUBLISHING TO burrrata.ch/ces-website
-  url: "https://burrrata.github.io",
-  //baseUrl: "/cryptoeconomics-study-dao/",
-  //
-  // FOR PUBLISHING TO CRYPTOECONOMICS.STUDY
-  //url: "https://cryptoeconomics-study.github.io",
-  baseUrl: "/testing/",
-
-  // Used for publishing and more
-  projectName: "Cryptoeconomics.Study",
-  organizationName: "Cryptoeconomics.Study",
-  // For top-level user or org sites, the organization is still the same.
-  // e.g., for the https://JoelMarcey.github.io site, it would be set like...
-  //   organizationName: 'JoelMarcey'
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
