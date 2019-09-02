@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Advisers 🧙 · Cryptoeconomics.Study</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Advisers 🧙 · Cryptoeconomics.Study"/><meta property="og:type" content="website"/><meta property="og:url" content="last-powder.surge.sh/"/><meta property="og:description" content="&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/en"><img class="logo" src="/img/ces-logo.png" alt="Cryptoeconomics.Study"/><h2 class="headerTitleWithLogo">Cryptoeconomics.Study</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/en/getting-started/welcome" target="_self">Course</a></li><li class=""><a href="community" target="_self">Community</a></li><li class="siteNavGroupActive"><a href="/docs/en/dao/welcome" target="_self">Contribute</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/docs/zh-CN/dao/advisers">中文</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Cryptoeconomics.Study DAO</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Cryptoeconomics.Study DAO<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/en/dao/welcome">Welcome 👋</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dao/gerbils">Gerbils 🐹</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dao/carrots">Carrots 🥕</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/en/dao/advisers">Advisers 🧙</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dao/help-wanted">Help Wanted 🙌</a></li><li class="navListItem"><a class="navItem" href="/docs/en/dao/code-of-conduct">Code of Conduct ❤️</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Advisers 🧙</h1></header><article><div><span><p><br /></p>
+<p>Advisers are an essential group in the Cryptoeconomics.Study DAO. Advisers help shape product decisions, promote upcoming product releases, and provide perspective on important debates within the community. Advisers are trusted members of the community, but are not expected to be involved in day to day activities. The expected engagement for advisers is to check in about once a month. This will help Gerbils and Carrot holders make good decisions that are best for the community.</p>
+<p>Gerbils will mint 1000 Carrot tokens per month for active Advisers. This will give Advisers a meaningful percentage of voting weight in Carrot votes as Carrot supply increases. Advisers are required to hodl their Carrot tokens in order to be able to maintain their position as Advisers. This is crucial because Carrot tokens are required to participate in Carrot votes. If an Adviser disagrees with the direction of the project they can trade or burn their Carrot tokens. This signals that they no longer want to be a part of the project and makes them ineligible for future Adviser shares of Carrot tokens.</p>
+<p>Roles and responsibilities of advisers includes:</p>
+<ul>
+<li>reviewing and providing feedback on all major product releases via a post on the community forum</li>
+<li>promoting all major product releases via a tweet or blog post</li>
+<li>providing council and insight on debates that could potentially fork the community (via the community forum)</li>
+</ul>
+<p><br /></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 9/1/2019 by burrrata</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/en/dao/carrots"><span class="arrow-prev">← </span><span>Carrots 🥕</span></a><a class="docs-next button" href="/docs/en/dao/help-wanted"><span>Help Wanted 🙌</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Course</h5><a href="/docs/en/getting-started/welcome">Getting Started</a><a href="/en/coding-challenges">Coding Challenges</a></div><div><h5>Community</h5><a href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/">DAO</a><a href="https://forum.cryptoeconomics.study/">Forum</a><a href="/en/users.html">Contributors</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://cryptoeconomicsstudy.substack.com/subscribe">Newsletter</a><a href="https://github.com/cryptoeconomics-study-dao/">GitHub</a></div></section><section class="copyright">Copyright © 2019 Cryptoeconomics.Study</section></footer></div></body></html>
