@@ -1,2 +1,2 @@
-# New Cyrptoconomics.Study Homepage
-
+# website
+Website for Cryptoeconomics.Study + DAO
