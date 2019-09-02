@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Cryptoeconomics.Study Is Live! · Cryptoeconomics.Study</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;br /&gt;"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Cryptoeconomics.Study Is Live! · Cryptoeconomics.Study"/><meta property="og:type" content="website"/><meta property="og:url" content="https://cryptoeconomics-study.github.io/website/blog/2019/08/31/mvp"/><meta property="og:description" content="&lt;br /&gt;"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/website/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/website/js/scrollSpy.js"></script><link rel="stylesheet" href="/website/css/prism.css"/><link rel="stylesheet" href="/website/css/main.css"/><script src="/website/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/website/en"><img class="logo" src="/website/img/ces-logo.png" alt="Cryptoeconomics.Study"/><h2 class="headerTitleWithLogo">Cryptoeconomics.Study</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/website/docs/en/getting-started/welcome" target="_self">Course</a></li><li class=""><a href="community" target="_self">Community</a></li><li class=""><a href="/website/docs/en/dao/welcome" target="_self">Contribute</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/website/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/website/zh-CN">中文</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Recent Posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Recent Posts</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/website/blog/2019/08/31/mvp">Cryptoeconomics.Study Is Live!</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/website/blog/2019/08/31/mvp">Cryptoeconomics.Study Is Live!</a></h1><p class="post-meta">August 31, 2019</p><div class="authorBlock"><p class="post-authorName"><a href="http://burrrata.ch/" target="_blank" rel="noreferrer noopener">burrrata</a></p></div></header><div><span><p><br /></p>
+<p>After much anticipation and preparation, <a href="">Cryptoeconomics.Study</a> is live! We have a new website, new lectures, coding challenges, and a <a href="">DAO</a>. Best of all... it's completely free and open source. <a href="https://cryptoeconomics.study">Check it out</a>!</p>
+<p>We are now releasing the first 3 chapters covering cryptography basics, networking, and proof of work account based blockchains. Every concept is introduced with a lecture video and study notes. Then we provide an interactive coding challenges so that you can actually apply and test your knowledge. While the core cryptoeconomics.study team will provide the initial exercises, we highly encourage (<a href="">and actively reward</a>) community contributions. Our hope is that as the community takes the course you'll add in your own challenges and bonus rounds. This way as new Ethereum features and apps are created the course can always stay fresh and constantly evolving.</p>
+<p>Speaking of community driven open source stuff, we have a DAO! Yes we do :) Unlike most DAOs that have a single token, we have 2! Yes that right... not 1, but 2 tokens! Gerbil tokens for core builders and Carrot tokens for community contributions. This allows the core contributors to initially manage things, but then transition more and more control to the community as we evolve. We will do this 2 ways. First by minting lots and lots of Carrots for the community via <a href="">bounties</a> and <a href="">weekly allocations</a>. Second, we are working on integrating a <a href="">dual token voting app</a> that will allow votes to be split between both Gerbils and Carrot holders. This will ensure that incentives are aligned and only win-win proposals can be passed. More details on the DAO and how to earn Carrots can be found <a href="">here</a> :)</p>
+<p>If you thought the DAO and new course was cool, we're just getting started! Our goal is to build out several more chapters covering things like Plasma, Proof of Stake, and everything all the way up to Eth2.0. We truly believe that cryptoeconomic mechanisms are the evolution of human cooperation at scale and this course is intended to make those mechanisms available to more people. Incentive alignment can solve the world's hardest problems. We can't do it alone though. We need your help. If you'd like to contribute please drop into the forum and dive in! If you'd like to support the community that is building out this course, please donate to our <a href="">GitCoin</a>, <a href="">MolochDAO</a>, and <a href="">TBD</a> campaigns!</p>
+<p><br /></p>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/website/blog">Recent Posts</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/website/" class="nav-home"></a><div><h5>Course</h5><a href="/website/docs/en/getting-started/welcome">Getting Started</a><a href="/website/en/coding-challenges">Coding Challenges</a></div><div><h5>Community</h5><a href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/">DAO</a><a href="https://forum.cryptoeconomics.study/">Forum</a><a href="/website/en/users.html">Contributors</a></div><div><h5>More</h5><a href="/website/blog">Blog</a><a href="https://cryptoeconomicsstudy.substack.com/subscribe">Newsletter</a><a href="https://github.com/cryptoeconomics-study-dao/">GitHub</a></div></section><section class="copyright">Copyright © 2019 Cryptoeconomics.Study</section></footer></div></body></html>

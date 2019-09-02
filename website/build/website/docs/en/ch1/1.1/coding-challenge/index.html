@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Coding Challenge · Cryptoeconomics.Study</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Welcome to the first coding challenge!&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Coding Challenge · Cryptoeconomics.Study"/><meta property="og:type" content="website"/><meta property="og:url" content="https://cryptoeconomics-study.github.io/website/"/><meta property="og:description" content="&lt;p&gt;Welcome to the first coding challenge!&lt;/p&gt;
+"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/website/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/website/js/scrollSpy.js"></script><link rel="stylesheet" href="/website/css/prism.css"/><link rel="stylesheet" href="/website/css/main.css"/><script src="/website/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/website/en"><img class="logo" src="/website/img/ces-logo.png" alt="Cryptoeconomics.Study"/><h2 class="headerTitleWithLogo">Cryptoeconomics.Study</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/website/docs/en/getting-started/welcome" target="_self">Course</a></li><li class=""><a href="community" target="_self">Community</a></li><li class=""><a href="/website/docs/en/dao/welcome" target="_self">Contribute</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/website/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/website/docs/zh-CN/ch1/1.1/coding-challenge">中文</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Coding Challenge</h1></header><article><div><span><p>Welcome to the first coding challenge!</p>
+<p>Here we'll explore the concepts covered in the lecuture and see how Ethereum developers actually impliment them in practice. As always, make sure you've already gone through the <a href="">dev env setup</a> page so that you have everything working. With that in mind, open up 1.1-Hashes_and_Signatures and let's get started :)</p>
+<p>For reference, here's the code we'll be using for this chapter:</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> EthCrypto <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'eth-crypto'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Client</span> <span class="token punctuation">{</span>
+    <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//TODO</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">toHash</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//TODO</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">sign</span><span class="token punctuation">(</span><span class="token parameter">message</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// TODO</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">verify</span><span class="token punctuation">(</span><span class="token parameter">signature<span class="token punctuation">,</span> messageHash<span class="token punctuation">,</span> address</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//TODO</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> Client<span class="token punctuation">;</span>
+</code></pre>
+<p><br /></p>
+<h1><a class="anchor" aria-hidden="true" id="cryptographic-hashes"></a><a href="#cryptographic-hashes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cryptographic Hashes</h1>
+<p>As Karl mentioned in the lecture, Ethereum uses the Keccak-256 (aka SHA3) hash function. To learn more about what that hash function is, why it was chosen, and how it works in Ethereum please take a few min to look over the following resources:</p>
+<ul>
+<li>wiki</li>
+<li>docs</li>
+<li>etc...</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="using-keccak-256"></a><a href="#using-keccak-256" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Keccak-256</h3>
+<p>Now that you're familiar with the hash function used by Ethereum, let's try it out! We're going to start by completing the <code>toHash</code> function in the coding challenge. The purpose of the function is to allow you to pass in some data and return the <code>keccak256</code> hash of that data. Use <code>EthCrypto.hash.keccak256</code> (<a href="https://github.com/pubkey/eth-crypto#sign">Documentation</a>) to make that happen.</p>
+<p><br /></p>
+<h1><a class="anchor" aria-hidden="true" id="digital-signatures"></a><a href="#digital-signatures" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Digital Signatures</h1>
+<h3><a class="anchor" aria-hidden="true" id="creating-keys"></a><a href="#creating-keys" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating Keys</h3>
+<p>Now, let's see digital signatures in action! In order to sign messages, you’ll first need a public and private key. Let's see how to do that using the <a href="https://github.com/pubkey/eth-crypto">EthCrypto</a> library.</p>
+<p>Inside of the <code>constructor</code>, use <code>this.wallet</code> and <a href="https://github.com/pubkey/eth-crypto#createidentity"><code>EthCrypto.createIdentity()</code></a> to create a public key, private key, and Ethereum address. You can check that it's working by... [TBD].</p>
+<h3><a class="anchor" aria-hidden="true" id="signing-things"></a><a href="#signing-things" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Signing Things</h3>
+<p>The whole point of habing public/private keys is to sign messages. With that in mind, let's use our private key to sign some stuff!. Complete the sign() function so that it can use the keys we just created to sign an input message. This function should take in <code>data</code>, use <code>this.toHash</code> calculate the <code>hash</code> of that <code>data</code>, and then use <a href="https://github.com/pubkey/eth-crypto#sign"><code>EthCrypto.sign</code></a> and your wallet's private key to sign that hash. The function should return the resulting signature.</p>
+<p>You can check your function is working by... [TBD].</p>
+<blockquote>
+<p><em>Hint</em>: <code>console.log(this.wallet)</code> to figure out how to access your private key.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="verifying-signatures"></a><a href="#verifying-signatures" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Verifying Signatures</h3>
+<p>The best part about digital signatures is that we can verify that signatures are autentic. Public/private key encryption allows anyone to use someone's address to verify that the private key for that address signed a particular message. If someone sends us a signed message, we'd like to be able to verify that their signature is valid so let's make a function that does that.</p>
+<p>Write a <code>verify</code> function that takes in 3 parameters (in this order):</p>
+<ol>
+<li><code>signature</code> - Sender's signature</li>
+<li><code>message</code> - Hash of the sender's message</li>
+<li><code>sender</code> - Sender's Ethereum address</li>
+</ol>
+<p>and then returns true or false depending on if the signature is valid or not. You can check that your function is working by... [TBD]</p>
+<blockquote>
+<p><em>Hint</em>: You can use <a href="https://github.com/pubkey/eth-crypto#recover"><code>EthCrypto.recover</code></a> to recover an Ethereum address from a <code>signature</code> and <code>messageHash</code>. See &quot;Details&quot; to learn how this function works.</p>
+</blockquote>
+<p><br /></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/22/2019 by burrrata</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/website/" class="nav-home"></a><div><h5>Course</h5><a href="/website/docs/en/getting-started/welcome">Getting Started</a><a href="/website/en/coding-challenges">Coding Challenges</a></div><div><h5>Community</h5><a href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/">DAO</a><a href="https://forum.cryptoeconomics.study/">Forum</a><a href="/website/en/users.html">Contributors</a></div><div><h5>More</h5><a href="/website/blog">Blog</a><a href="https://cryptoeconomicsstudy.substack.com/subscribe">Newsletter</a><a href="https://github.com/cryptoeconomics-study-dao/">GitHub</a></div></section><section class="copyright">Copyright © 2019 Cryptoeconomics.Study</section></footer></div></body></html>

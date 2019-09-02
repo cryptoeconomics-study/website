@@ -25,14 +25,19 @@ const siteConfig = {
   tagline:
     "A free, open-source course on the fundamentals of Blockchain protocols",
 
-  // PUBLISHING PARAMS
-  // gh-pages Deployment Config - WORKS
+  // GH-PAGES PUBLISHING PARAMS
+	//url: "https://cryptoeconomics-study.github.io",
+	//baseUrl: "/website/",
+	//projectName: "website",
+	//organizationName: "cryptoeconomics-study",
+  // Deployment Script
+  // GIT_USER=cryptoeconomics-study CURRENT_BRANCH=master yarn run publish-gh-pages
+
+  // SURGE PUBLISHING PARAMS
   url: "https://cryptoeconomics-study.github.io",
   baseUrl: "/website/",
   projectName: "website",
   organizationName: "cryptoeconomics-study",
-  // Deployment Script
-  // GIT_USER=your-username CURRENT_BRANCH=master yarn run publish-gh-pages
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
