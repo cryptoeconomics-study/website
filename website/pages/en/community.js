@@ -1,6 +1,6 @@
 /**
  * Copyright 2019 Cryptoeconomics.Study
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -20,11 +20,11 @@ const HomeSplash = require(`${process.cwd()}` + `/core/HomeSplash.js`);
 
 const Container = require("../../../../react-bootstrap/Container.js");
 const Button = require("../../../../react-bootstrap/Button.js");
-const translate = require('../../server/translate.js').translate;
+const translate = require("../../server/translate.js").translate;
 
 function Community(props) {
-  const { config: siteConfig, language = "" } = props;
-  const { baseUrl, docsUrl } = siteConfig;
+  const {config: siteConfig, language = ""} = props;
+  const {baseUrl, docsUrl} = siteConfig;
   const docsPart = `${docsUrl ? `${docsUrl}/` : ""}`;
   const langPart = `${language ? `${language}/` : ""}`;
   const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
@@ -37,141 +37,115 @@ function Community(props) {
     </div>
   );
 
-  const StackOverflow = () => (
-    <CommunityResource title="StackOverflow">
-      Stack Overflow is a great place to ask code-level questions or if you’re
-      stuck with a specific error. Read through the existing questions/answers
-      or ask your own!
+  const Forum = () => (
+    <CommunityResource title="Forum">
+      The Cryptoeconomics.Study community forum is the best place to ask
+      questions and stay up to date with the latest news.
       <p>
-        <translate>Tags:</translate>
         <Button
-          variant="info"
+          variant="dark"
           size="sm"
-          href="https://stackoverflow.com/questions/tagged/substrate"
+          href="https://forum.cryptoeconomics.study/"
           className="m-1"
         >
-          <code>substrate</code>
+          General 📒
         </Button>
         <Button
           variant="dark"
           size="sm"
-          href="https://stackoverflow.com/questions/tagged/ink"
+          href="https://forum.cryptoeconomics.study/t/introduction-of-self/141"
           className="m-1"
         >
-          <code>ink</code>
+          Intros 👋
         </Button>
         <Button
-          variant="secondary"
+          variant="dark"
           size="sm"
-          href="https://stackoverflow.com/questions/tagged/parity-io"
-          className="m-1 primary-color"
-        >
-          <code>parity-io</code>
-        </Button>
-        <Button
-          variant="warning"
-          size="sm"
-          href="https://stackoverflow.com/questions/tagged/rust"
+          href="https://forum.cryptoeconomics.study/t/technical-difficulties-thread/512"
           className="m-1"
         >
-          <code>rust</code>
+          Technical Difficulties 💻
+        </Button>
+        <Button
+          variant="dark"
+          size="sm"
+          href="https://forum.cryptoeconomics.study/t/new-course-feedback/519"
+          className="m-1"
+        >
+          Course Feedback 🥕
+        </Button>
+        <Button
+          variant="dark"
+          size="sm"
+          href="https://forum.cryptoeconomics.study/t/community-nominations/522"
+          className="m-1"
+        >
+          Nominations 🥕
+        </Button>
+        <Button
+          variant="dark"
+          size="sm"
+          href="https://forum.cryptoeconomics.study/t/official-contribution-guidelines/453"
+          className="m-1"
+        >
+          Contributing 🐹
         </Button>
       </p>
     </CommunityResource>
   );
 
-  const RiotChat = () => (
-    <CommunityResource title={<translate>Riot Chat</translate>}>
-      <translate>
-        Riot is the main form of communication between employees at Parity and the
-        community of people who use Parity products. Drop in to ask technical
-        questions, meet others who share your interests, or keep an eye on what's
-        going on.
-      </translate>
+  const DAO = () => (
+    <CommunityResource title={<translate>DAO</translate>}>
+      The Cryptoeconomics.Study DAO is the main way that we make decisions as a
+      community. We also have bounties and weekly Carrot allocations! 🥕
       <p>
-        <translate>Channels:</translate>
         <Button
           variant="dark"
           size="sm"
-          href="https://riot.im/app/#/room/!HzySYSaIhtyWrwiwEV:matrix.org"
+          href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/0xa000c2e3484a19b598d0162c8cca5ddf80ab37bb"
           className="m-1"
         >
-          Substrate Technical
+          Gerbils 🐹
         </Button>
         <Button
           variant="dark"
           size="sm"
-          href="https://riot.im/app/#/room/!tYUCYdSvSYPMjWNDDD:matrix.parity.io"
+          href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/0x923d9e31cf95bd93e6de1950397621900e119450"
           className="m-1"
         >
-          Parity ink! (Smart Contracts)
+          Gerbils Votes 🐹
         </Button>
         <Button
           variant="dark"
           size="sm"
-          href="https://riot.im/app/#/room/!fOOzymDEHiIIUtmlBE:matrix.org"
+          href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/0x2625a091eab924da6a45aab3f181e8b66cec48e1"
           className="m-1"
         >
-          Polkadot Watercooler
+          Carrots 🥕
         </Button>
         <Button
           variant="dark"
           size="sm"
-          href="https://riot.im/app/#/room/!IWlcTyHSqIEjpUReHD:matrix.parity.io"
+          href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/0x7147928551406adaeca76cf3e04557bd3412cf53"
           className="m-1"
         >
-          Parity Watercooler
+          Carrots Votes 🥕
         </Button>
-      </p>
-    </CommunityResource>
-  );
-
-  const TwitchStream = () => (
-    <CommunityResource title={<translate>Twitch Stream</translate>}>
-      <p>
-        <translate>
-          You might catch us streaming cool live coding sessions. Follow our channel
-          to make sure you never miss a stream!
-        </translate>
-      </p>
-      <iframe
-        src="https://player.twitch.tv/?channel=paritylivecoding"
-        frameBorder="0"
-        allowFullScreen={true}
-        scrolling="no"
-        height="378"
-        width="620"
-      />
-      <p>
         <Button
-          variant="secondary"
+          variant="dark"
           size="sm"
-          href="https://www.twitch.tv/paritylivecoding"
-          style={{ backgroundColor: "#6441A5" }}
+          href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/0x2225ca26a71af7dd81cf2ebbcd4b16d0090cfe10"
           className="m-1"
         >
-          Twitch Channel >
+          Carrot Allocation Votes 🥕
         </Button>
-      </p>
-    </CommunityResource>
-  );
-  
-  
-  const AwesomeSubstrate = () => (
-    <CommunityResource title={<translate>Awesome Substrate</translate>}>
-      <p>
-        <translate>
-          An "awesome list" of up-to-date news, events, and onboarding materials for Substrate.
-        </translate>
-      </p>
-      <p>
         <Button
-          variant="secondary"
+          variant="dark"
           size="sm"
-          href="https://substrate.dev/awesome-substrate/"
-          className="m-1 primary-color"
+          href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/0x32016d05910e344470ec832ed344a385ab18ae6b"
+          className="m-1"
         >
-          Awesome Substrate
+          Carrot Bounties 🥕
         </Button>
       </p>
     </CommunityResource>
@@ -189,15 +163,12 @@ function Community(props) {
       <div className="mainContainer">
         <Container>
           <p>
-            <translate>
-              The Substrate community is both technical and friendly, and we would
-              be happy for you to join!
-            </translate>
+            The Cryptoeconomics.Study community is both technical and friendly,
+            and we would be happy for you to join!
           </p>
-          <StackOverflow />
-          <RiotChat />
-          <AwesomeSubstrate />
-          <TwitchStream />
+          <Forum />
+          <DAO />
+					<br />
         </Container>
       </div>
     </div>
@@ -205,5 +176,6 @@ function Community(props) {
 }
 
 Community.title = "Community";
-Community.description = "Learn about community resources for Substrate.";
+Community.description =
+  "Learn about and engage with the Cryptoeconomics.Study community.";
 module.exports = Community;

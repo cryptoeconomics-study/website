@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Lecture · Cryptoeconomics.Study</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Lecture · Cryptoeconomics.Study"/><meta property="og:type" content="website"/><meta property="og:url" content="https://burrrata.github.io/cryptoeconomics-study-dao/"/><meta property="og:description" content="&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/cryptoeconomics-study-dao/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100}
+          )
+        });
+        </script><script src="/cryptoeconomics-study-dao/js/scrollSpy.js"></script><link rel="stylesheet" href="/cryptoeconomics-study-dao/css/prism.css"/><link rel="stylesheet" href="/cryptoeconomics-study-dao/css/main.css"/><script src="/cryptoeconomics-study-dao/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/cryptoeconomics-study-dao/en"><img class="logo" src="/cryptoeconomics-study-dao/img/ces-logo.png" alt="Cryptoeconomics.Study"/><h2 class="headerTitleWithLogo">Cryptoeconomics.Study</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/cryptoeconomics-study-dao/docs/en/getting-started/welcome" target="_self">Course</a></li><li class=""><a href="community" target="_self">Community</a></li><li class=""><a href="/cryptoeconomics-study-dao/docs/en/dao/welcome" target="_self">Contribute</a></li><span><li><a id="languages-menu" href="#"><img class="languages-icon" src="/cryptoeconomics-study-dao/img/language.svg" alt="Languages icon"/>English</a><div id="languages-dropdown" class="hide"><ul id="languages-dropdown-items"><li><a href="/cryptoeconomics-study-dao/docs/zh-CN/ch1/ch1.1/lecture">中文</a></li></ul></div></li><script>
+        const languagesMenuItem = document.getElementById("languages-menu");
+        const languagesDropDown = document.getElementById("languages-dropdown");
+        languagesMenuItem.addEventListener("click", function(event) {
+          event.preventDefault();
+
+          if (languagesDropDown.className == "hide") {
+            languagesDropDown.className = "visible";
+          } else {
+            languagesDropDown.className = "hide";
+          }
+        });
+      </script></span></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>1.1 Hashes and Signatures</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Getting Started<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/getting-started/welcome">Welcome</a></li><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/getting-started/syllabus">Syllabus</a></li><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/sync/development-setup">Development Setup</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Ch1: Payment Processor<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/ch1/">Overview</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">1.1 Hashes and Signatures</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/ch1/ch1.1/lecture">Lecture</a></li><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/sync/ch1.1-code-challenge">Code Challenge</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">1.2 Payment Processor</h4><ul><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/ch1/ch1.2/lecture">Lecture</a></li><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/sync/ch1.2-code-challenge">Code Challenge</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">1.3 Replay Protection</h4><ul><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/ch1/ch1.3/lecture">Lecture</a></li><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/sync/ch1.3-code-challenge">Code Challenge</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">1.4 Account Model vs UTXOs</h4><ul><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/ch1/ch1.4/lecture">Lecture</a></li><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/sync/ch1.4-code-challenge">Code Challenge</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">1.5 Centralized Systems</h4><ul><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/ch1/ch1.5/lecture">Lecture</a></li><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/sync/ch1.5-code-challenge">Code Challenge</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Ch2: Network Models<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/ch2/">Overview</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">2.1 Networks and Synchrony</h4><ul><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/ch2/ch2.1/lecture">Lecture</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">2.2 Double Spends</h4><ul><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/ch2/ch2.2/lecture">Lecture</a></li><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/sync/ch2.2-code-challenge">Code Challenge</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">2.3 Latency-Based Consensus</h4><ul><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/ch2/ch2.3/lecture">Lecture</a></li><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/sync/ch2.3-code-challenge">Code Challenge</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">2.4 Proof of Authority</h4><ul><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/ch2/ch2.4/lecture">Lecture</a></li><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/sync/ch2.4-code-challenge">Code Challenge</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Ch3 Proof of Work<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/ch3/">Ch3</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">More<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/more/resources">Glossary</a></li><li class="navListItem"><a class="navItem" href="/cryptoeconomics-study-dao/docs/en/more/glossary">Glossary</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Lecture</h1></header><article><div><span><p><br /></p>
+<h1><a class="anchor" aria-hidden="true" id="hashing-and-signatures"></a><a href="#hashing-and-signatures" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hashing and Signatures</h1>
+<ul>
+<li>A practical guide to two of the most important cryptographic primatives!</li>
+</ul>
+<p><br />
+<br /></p>
+<iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube-nocookie.com/embed/FLIo_ZjV--U" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+<br />
+<br />
+<h1><a class="anchor" aria-hidden="true" id="slides"></a><a href="#slides" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Slides</h1>
+<p><a href="https://docs.google.com/presentation/d/17J2qRYzx27x30UEoXa2cOHOl2MdKQujocQNJpbp7NHE/edit">Google Sheets Link</a></p>
+<p><br /></p>
+<h1><a class="anchor" aria-hidden="true" id="ch11-overview"></a><a href="#ch11-overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ch1.1 Overview</h1>
+<h2><a class="anchor" aria-hidden="true" id="cryptographic-hashes"></a><a href="#cryptographic-hashes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cryptographic Hashes</h2>
+<p>What is a cryptographic hash?</p>
+<ul>
+<li>data (preimage) =&gt; hash function =&gt; unique output (hash)</li>
+</ul>
+<p>Preimage Resistance:</p>
+<ul>
+<li>Given the output of a hash function (hash) you cannot determine the input data to that hash function (preimage)</li>
+</ul>
+<p>2nd Preimage Resistance (aka Collision Resistance):</p>
+<ul>
+<li>A hash cannot have more than 1 preimage - each piece of data produces a unique hash</li>
+</ul>
+<p>Random Oracle:</p>
+<ul>
+<li>A hash has no statistical correlation to the input data that created it (aka it looks like random data)</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="cryptographic-signatures"></a><a href="#cryptographic-signatures" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cryptographic Signatures</h2>
+<p>What is a cryptographic signature?</p>
+<ul>
+<li>A mathematical way to prove that a signer signed something</li>
+</ul>
+<p>Public/Private Keys:</p>
+<ul>
+<li>Public key is like an address/username</li>
+<li>Private key is like a password/signature</li>
+</ul>
+<p>Signature Functions:</p>
+<ul>
+<li>Allows you to sign stuff with your keys</li>
+<li>This also allows other people to verify that you did or did not sign something</li>
+</ul>
+<p>Verification Functions:</p>
+<ul>
+<li>If you have a hash you can check that against a message (data), message signature, and public key of the signer to determine if that key signed that message. This is used to prove that X person signed Y document. If someone tries to change the document or the signature, the hash will be completely different.</li>
+</ul>
+<p><br /></p>
+<h1><a class="anchor" aria-hidden="true" id="recommended-resources"></a><a href="#recommended-resources" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recommended Resources</h1>
+<p>Crptographic Hash Functions</p>
+<ul>
+<li><a href="https://anders.com/blockchain/hash.html">SHA256 Hash App</a> - Whatever you type into the box is instantly hashed via the SHA256 algorithm.</li>
+<li><a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">Wikipedia</a> - Everything you could ever want to know about hash functions.</li>
+</ul>
+<p>Cryptographic Signatures</p>
+<ul>
+<li><a href="https://anders.com/blockchain/">Anders Brownworth's blockchain demos</a> - Videos explaining (and showing) hash functions and signatures in more detail.</li>
+<li><a href="https://en.wikipedia.org/wiki/Digital_signature">Wikipedia</a> - Everything you could ever want to know about digital (and cryptographic) signatures.</li>
+</ul>
+<p><br /></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 8/17/2019 by burrrata</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/cryptoeconomics-study-dao/docs/en/ch1/index"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="/cryptoeconomics-study-dao/docs/en/sync/ch1.1-code-challenge"><span>Code Challenge</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#cryptographic-hashes">Cryptographic Hashes</a></li><li><a href="#cryptographic-signatures">Cryptographic Signatures</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/cryptoeconomics-study-dao/" class="nav-home"></a><div><h5>Course</h5><a href="/cryptoeconomics-study-dao/docs/en/getting-started/welcome">Getting Started</a><a href="/cryptoeconomics-study-dao/en/coding-challenges">Coding Challenges</a></div><div><h5>Community</h5><a href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/">DAO</a><a href="https://forum.cryptoeconomics.study/">Forum</a><a href="/cryptoeconomics-study-dao/en/users.html">Contributors</a></div><div><h5>More</h5><a href="/cryptoeconomics-study-dao/blog">Blog</a><a href="https://github.com/cryptoeconomics-study-dao/">GitHub</a></div></section><section class="copyright">Copyright © 2019 Cryptoeconomics.Study</section></footer></div></body></html>

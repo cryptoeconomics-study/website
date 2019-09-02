@@ -3,45 +3,45 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "Everything you Need to Learn The Fundamentals Of Cryptoeconomics",
+    "tagline": "A free, open-source course on the fundamentals of Blockchain protocols",
     "docs": {
-      "ch1/ch1.1/coding-challenge": {
+      "ch1/1.1/coding-challenge": {
         "title": "Coding Challenge"
       },
-      "ch1/ch1.1/lecture": {
+      "ch1/1.1/lecture": {
         "title": "Lecture"
       },
-      "ch1/ch1.2/lecture": {
+      "ch1/1.2/lecture": {
         "title": "Lecture"
       },
-      "ch1/ch1.3/lecture": {
+      "ch1/1.3/lecture": {
         "title": "Lecture"
       },
-      "ch1/ch1.4/lecture": {
+      "ch1/1.4/lecture": {
         "title": "Lecture"
       },
-      "ch1/ch1.5/lecture": {
+      "ch1/1.5/lecture": {
         "title": "Lecture"
       },
       "ch1/index": {
         "title": "Overview"
       },
-      "ch2/ch2.1/lecture": {
+      "ch2/2.1/lecture": {
         "title": "Lecture"
       },
-      "ch2/ch2.2/lecture": {
+      "ch2/2.2/lecture": {
         "title": "Lecture"
       },
-      "ch2/ch2.3/lecture": {
+      "ch2/2.3/lecture": {
         "title": "Lecture"
       },
-      "ch2/ch2.4/lecture": {
+      "ch2/2.4/lecture": {
         "title": "Lecture"
       },
       "ch2/index": {
         "title": "Overview"
       },
-      "ch3/ch3.1/lecture": {
+      "ch3/3.1/lecture": {
         "title": "Lecture"
       },
       "ch3/index": {
@@ -53,8 +53,26 @@
       "contribute/help-translate": {
         "title": "Help Translate"
       },
-      "getting-started/dev-env-setup": {
-        "title": "Dev Env Setup"
+      "dao/advisers": {
+        "title": "Advisers 🧙"
+      },
+      "dao/carrots": {
+        "title": "Carrots 🥕"
+      },
+      "dao/code-of-conduct": {
+        "title": "Code of Conduct ❤️"
+      },
+      "dao/future": {
+        "title": "dao/future"
+      },
+      "dao/gerbils": {
+        "title": "Gerbils 🐹"
+      },
+      "dao/help-wanted": {
+        "title": "Help Wanted 🙌"
+      },
+      "dao/welcome": {
+        "title": "Welcome 👋"
       },
       "getting-started/syllabus": {
         "title": "Syllabus"
@@ -110,9 +128,6 @@
       "more/book/README": {
         "title": "more/book/README"
       },
-      "more/dev-resources": {
-        "title": "Developer Resources"
-      },
       "more/glossary": {
         "title": "Glossary"
       },
@@ -125,77 +140,41 @@
       "more/intro-to-gametheory": {
         "title": "more/intro-to-gametheory"
       },
-      "more/learning-resources": {
-        "title": "more/learning-resources"
-      },
       "more/proof-of-work": {
         "title": "more/proof-of-work"
       },
-      "sync/ch1.1-code-challenge": {
+      "more/resources": {
+        "title": "Glossary"
+      },
+      "sync/1.1-code-challenge": {
         "title": "Code Challenge"
       },
-      "sync/ch1.2-code-challenge": {
+      "sync/1.2-code-challenge": {
         "title": "Code Challenge"
       },
-      "sync/ch1.3-code-challenge": {
+      "sync/1.3-code-challenge": {
         "title": "Code Challenge"
       },
-      "sync/ch1.4-code-challenge": {
+      "sync/1.4-code-challenge": {
         "title": "Code Challenge"
       },
-      "sync/ch1.5-code-challenge": {
+      "sync/1.5-code-challenge": {
         "title": "Code Challenge"
       },
-      "sync/ch2.1-code-challenge": {
+      "sync/2.1-code-challenge": {
         "title": "Code Challenge"
       },
-      "sync/ch2.2-code-challenge": {
+      "sync/2.2-code-challenge": {
         "title": "Code Challenge"
       },
-      "sync/ch2.3-code-challenge": {
+      "sync/2.3-code-challenge": {
         "title": "Code Challenge"
       },
-      "sync/dev-env-setup": {
-        "title": "Dev Env Setup"
+      "sync/2.4-code-challenge": {
+        "title": "Code Challenge"
       },
-      "tutorials/adding-a-module-to-your-runtime": {
-        "title": "Adding a Module to Your Runtime"
-      },
-      "tutorials/creating-a-runtime-module": {
-        "title": "Creating a Runtime Module"
-      },
-      "tutorials/creating-your-first-contract": {
-        "title": "Creating Your First Contract"
-      },
-      "tutorials/creating-your-first-substrate-chain": {
-        "title": "Creating Your First Substrate chain"
-      },
-      "tutorials/governance--public--mechanism-with-a-substrate-node-chain": {
-        "title": "Governance \"Public\" Mechanism with a Substrate Node Chain"
-      },
-      "tutorials/start-a-private-network-with-substrate": {
-        "title": "Start a Private Network with Substrate"
-      },
-      "tutorials/tcr/building-a-ui-for-the-tcr-runtime": {
-        "title": "Building a UI for the TCR runtime"
-      },
-      "tutorials/tcr/building-an-event-based-off-chain-storage": {
-        "title": "Building an event based off-chain storage"
-      },
-      "tutorials/tcr/building-the-substrate-tcr-runtime": {
-        "title": "Building the Substrate TCR runtime"
-      },
-      "tutorials/tcr/index": {
-        "title": "Introduction"
-      },
-      "tutorials/tcr/tcr-best-practices": {
-        "title": "Best Practices"
-      },
-      "tutorials/tcr/unit-testing-the-tcr-runtime-module": {
-        "title": "Unit testing the TCR runtime module"
-      },
-      "tutorials/validator-nodes-and-nominators-on-substrate-chains": {
-        "title": "Validator Nodes and Nominators on Substrate chains"
+      "sync/development-setup": {
+        "title": "Development Setup"
       }
     },
     "links": {
@@ -208,7 +187,8 @@
       "Ch1: Payment Processor": "Ch1: Payment Processor",
       "Ch2: Network Models": "Ch2: Network Models",
       "Ch3 Proof of Work": "Ch3 Proof of Work",
-      "More": "More"
+      "More": "More",
+      "Cryptoeconomics.Study DAO": "Cryptoeconomics.Study DAO"
     }
   },
   "pages-strings": {
@@ -232,22 +212,14 @@
     "Learn to create a blockchain network that uses Proof of Work to validate blocks|no description given": "Learn to create a blockchain network that uses Proof of Work to validate blocks",
     "Cryptoeconomics.Study Coding Challenges|no description given": "Cryptoeconomics.Study Coding Challenges",
     "Let's learn together!|no description given": "Let's learn together!",
-    "Tags:|no description given": "Tags:",
-    "Riot Chat|no description given": "Riot Chat",
-    "Riot is the main form of communication between employees at Parity and the community of people who use Parity products. Drop in to ask technical questions, meet others who share your interests, or keep an eye on what's going on.|no description given": "Riot is the main form of communication between employees at Parity and the community of people who use Parity products. Drop in to ask technical questions, meet others who share your interests, or keep an eye on what's going on.",
-    "Channels:|no description given": "Channels:",
-    "Twitch Stream|no description given": "Twitch Stream",
-    "You might catch us streaming cool live coding sessions. Follow our channel to make sure you never miss a stream!|no description given": "You might catch us streaming cool live coding sessions. Follow our channel to make sure you never miss a stream!",
-    "Awesome Substrate|no description given": "Awesome Substrate",
-    "An \"awesome list\" of up-to-date news, events, and onboarding materials for Substrate.|no description given": "An \"awesome list\" of up-to-date news, events, and onboarding materials for Substrate.",
+    "DAO|no description given": "DAO",
     "Community|no description given": "Community",
     "Join the Conversation!|no description given": "Join the Conversation!",
-    "The Substrate community is both technical and friendly, and we would be happy for you to join!|no description given": "The Substrate community is both technical and friendly, and we would be happy for you to join!",
     "A Course Of Course!|no description given": "A Course Of Course!",
     "Cryptoeconomics.Study is a fun and engaging course built to help you understand the basics of cryptoeconomic mechanism design.|no description given": "Cryptoeconomics.Study is a fun and engaging course built to help you understand the basics of cryptoeconomic mechanism design.",
     "Try It Out!|no description given": "Try It Out!",
     "Cryptoeconomics.Study has a rapidly growing, friendly, and engaged community. Ask questions and work together to solve coding challenges.|no description given": "Cryptoeconomics.Study has a rapidly growing, friendly, and engaged community. Ask questions and work together to solve coding challenges.",
-    "Community Forum|no description given": "Community Forum",
+    "Community Page|no description given": "Community Page",
     "Coding Challenges|no description given": "Coding Challenges",
     "Cryptoeconomics.Study has a range of coding challenges to help you go from speculator to builder.|no description given": "Cryptoeconomics.Study has a range of coding challenges to help you go from speculator to builder.",
     "What is Cryptoeconomics.Study?|no description given": "What is Cryptoeconomics.Study?",
@@ -258,9 +230,11 @@
     "Interactive visualizations of key concepts|no description given": "Interactive visualizations of key concepts",
     "Challenging coding assignments that get you familiar with the tooling used to build cryptoeconomic systems in the real world|no description given": "Challenging coding assignments that get you familiar with the tooling used to build cryptoeconomic systems in the real world",
     "Fun Fastpaced Lectures|no description given": "Fun Fastpaced Lectures",
-    "Our goal is to make it as easily as possible to understand cryptoeconomics. We start from first principles with a simple payment processor and go all the way to the current state of Ethereum. Along the way we break down all the concepts you need to know into intuitive actionable chunks.|no description given": "Our goal is to make it as easily as possible to understand cryptoeconomics. We start from first principles with a simple payment processor and go all the way to the current state of Ethereum. Along the way we break down all the concepts you need to know into intuitive actionable chunks.",
+    "Our goal is to make it as easily as possible to understand the inner workings of protocols like Bitcoin and Ethereum. We start by learning about how a simple payment processor like Paypal works and go all the way to understanding Bitcoin and (coming soon!) cutting-edge Ethereum research like Proof of Stake and Plasma. Through our fun, animated lectures, we’ll give you a high-level overview of all of the key concepts needed to understand Blockchain protocols.|no description given": "Our goal is to make it as easily as possible to understand the inner workings of protocols like Bitcoin and Ethereum. We start by learning about how a simple payment processor like Paypal works and go all the way to understanding Bitcoin and (coming soon!) cutting-edge Ethereum research like Proof of Stake and Plasma. Through our fun, animated lectures, we’ll give you a high-level overview of all of the key concepts needed to understand Blockchain protocols.",
     "Challenging Code Assignments|no description given": "Challenging Code Assignments",
-    "We help you translate the knowledge you gain from the lectures and documentation into real live working code. These aren't just toy demo assignments either. You'll be using the same tooling and workflows that professional Ethereum Dapp developers and researchers use everyday.|no description given": "We help you translate the knowledge you gain from the lectures and documentation into real live working code. These aren't just toy demo assignments either. You'll be using the same tooling and workflows that professional Ethereum Dapp developers and researchers use everyday.",
+    "Each lecture is accompanied by a challenging coding assignment, where you will implement the concepts from the lecture. By actually building the protocols and attacks from the lectures, you’ll learn all of the nitty-gritty technical details in a fun, hands-on way. After completing the coding assignments, you’ll have the knowledge to start contributing to research discussions and development of cryptoeconomic designs.|no description given": "Each lecture is accompanied by a challenging coding assignment, where you will implement the concepts from the lecture. By actually building the protocols and attacks from the lectures, you’ll learn all of the nitty-gritty technical details in a fun, hands-on way. After completing the coding assignments, you’ll have the knowledge to start contributing to research discussions and development of cryptoeconomic designs.",
+    "Community Driven|no description given": "Community Driven",
+    "Cryptoeconomics.Study has a DAO! This allows the community to transparently make decisions, manage funds, and reward community contributors. As the community grows we will move more and more from core contributors (gerbils) to community contributors (carrot holders). This will allow us to create a truly decentralized, self sovereign, incentive aligned community :)|no description given": "Cryptoeconomics.Study has a DAO! This allows the community to transparently make decisions, manage funds, and reward community contributors. As the community grows we will move more and more from core contributors (gerbils) to community contributors (carrot holders). This will allow us to create a truly decentralized, self sovereign, incentive aligned community :)",
     "Cryptoeconomics.Study Contributors|no description given": "Cryptoeconomics.Study Contributors",
     "More Cryptoeconomics.Study Contributors|no description given": "More Cryptoeconomics.Study Contributors",
     "We're shaping the future of positive-sum system development.|no description given": "We're shaping the future of positive-sum system development.",

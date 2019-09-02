@@ -22,53 +22,53 @@
 // Please include the following information in your PR:
 // 'name': Your name.
 // 'image': A link to your Github profile image.
-// 'homepage': This will be the link users go to when they click on a profile image. 
+// 'homepage': This will be the link users go to when they click on a profile image.
 // 'github': Your Github repo.
 // 'pinned': Determines whether the profile is pinned to the homepage or just shows up in the users.js page.
 
 const usersList = [
   {
-    name: 'K-Ho',
-    image: 'https://avatars3.githubusercontent.com/u/5341583?s=460&v=4',
-    homepage: 'http://kevinjho.co/',
-		github: 'https://github.com/K-Ho',
-    pinned: true,
+    name: "K-Ho",
+    image: "https://avatars3.githubusercontent.com/u/5341583?s=460&v=4",
+    homepage: "http://kevinjho.co/",
+    github: "https://github.com/K-Ho",
+    pinned: true
   },
-	{
-    name: 'burrrata',
-    image: 'https://avatars2.githubusercontent.com/u/42473928?s=460&v=4',
-    homepage: 'https://burrrata.ch/website',
-    github: 'https://github.com/burrrata',
-    pinned: true,
+  {
+    name: "burrrata",
+    image: "https://avatars2.githubusercontent.com/u/42473928?s=460&v=4",
+    homepage: "https://burrrata.ch/website",
+    github: "https://github.com/burrrata",
+    pinned: true
   },
-	{
-		name: 'Goki Gnanendran',
-		image: 'https://avatars0.githubusercontent.com/u/18605279?s=460&v=4',
-		homepage: 'https://github.com/gqln',
-		github: 'https://github.com/gqln',
-		pinned: true,
-	},
-	{
-		name: 'Nichanan Kesonpat',
-		image: 'https://avatars1.githubusercontent.com/u/15038946?s=460&v=4',
-		homepage: 'http://www.nichanank.com/',
-		github: 'https://github.com/nichanank',
-		pinned: true,
-	},
-	{
-		name: 'Jinglan Wang',
-		image: 'https://avatars2.githubusercontent.com/u/9970082?s=460&v=4',
-		homepage: 'https://github.com/Jinglan',
-		github: 'https://github.com/Jinglan',
-		pinned: true,
-	},
-	{
-		name: 'Karl Floersch',
-		image: 'https://avatars1.githubusercontent.com/u/706123?s=460&v=4',
-		homepage: 'https://karl.tech/',
-		github: 'https://github.com/karlfloersch',
-		pinned: true,
-	},
+  {
+    name: "Goki Gnanendran",
+    image: "https://avatars0.githubusercontent.com/u/18605279?s=460&v=4",
+    homepage: "https://github.com/gqln",
+    github: "https://github.com/gqln",
+    pinned: true
+  },
+  {
+    name: "Nichanan Kesonpat",
+    image: "https://avatars1.githubusercontent.com/u/15038946?s=460&v=4",
+    homepage: "http://www.nichanank.com/",
+    github: "https://github.com/nichanank",
+    pinned: true
+  },
+  {
+    name: "Jinglan Wang",
+    image: "https://avatars2.githubusercontent.com/u/9970082?s=460&v=4",
+    homepage: "https://github.com/Jinglan",
+    github: "https://github.com/Jinglan",
+    pinned: true
+  },
+  {
+    name: "Karl Floersch",
+    image: "https://avatars1.githubusercontent.com/u/706123?s=460&v=4",
+    homepage: "https://karl.tech/",
+    github: "https://github.com/karlfloersch",
+    pinned: true
+  }
 ];
 
 function alphabetize(a, b) {

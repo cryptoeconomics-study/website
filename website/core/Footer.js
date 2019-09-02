@@ -1,6 +1,6 @@
 /**
- * Copyright 2019 Cryptoeconomics.Study 
- * 
+ * Copyright 2019 Cryptoeconomics.Study
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -45,35 +45,36 @@ class Footer extends React.Component {
             )}
           </a>
           <div>
-            <h5>Docs</h5>
-						<a href={this.docUrl("getting-started/welcome", this.props.language)}>
-              Course
+            <h5>Course</h5>
+            <a
+              href={this.docUrl("getting-started/welcome", this.props.language)}
+            >
+              Getting Started
             </a>
             <a href={this.pageUrl("coding-challenges", this.props.language)}>
               Coding Challenges
             </a>
-            <a href="https://forum.cryptoeconomics.study/">
-              Community
-            </a>
           </div>
           <div>
             <h5>Community</h5>
+            <a href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/">
+              DAO
+            </a>
+            <a href="https://forum.cryptoeconomics.study/">Forum</a>
             <a href={this.pageUrl("users.html", this.props.language)}>
               Contributors
-            </a>
-            <a href="https://forum.cryptoeconomics.study/">
-              Forum
             </a>
           </div>
           <div>
             <h5>More</h5>
             <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
-            <a href="https://github.com/cryptoeconomics-study/">GitHub</a>
+            <a href="https://cryptoeconomicsstudy.substack.com/subscribe">
+              Newsletter
+            </a>
+            <a href="https://github.com/cryptoeconomics-study-dao/">GitHub</a>
           </div>
         </section>
-				<section className="copyright">
-					{this.props.config.copyright}
-				</section>
+        <section className="copyright">{this.props.config.copyright}</section>
       </footer>
     );
   }

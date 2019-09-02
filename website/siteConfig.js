@@ -18,47 +18,58 @@
 // site configuration options.
 
 // List of projects listed on the "users" page.
-const users = require('./data/users');
+const users = require("./data/users");
 
 const siteConfig = {
-  title: 'Cryptoeconomics.Study', // Title for your website.
-  tagline: 'Everything you Need to Learn The Fundamentals Of Cryptoeconomics',
+  title: "Cryptoeconomics.Study", // Title for your website.
+  tagline: "A free, open-source course on the fundamentals of Blockchain protocols",
 
-	// FOR LOCAL DEVELOPMENT
-	//url: 'https://your-docusaurus-test-site.com',
-	//baseUrl: '/',
-	// FOR PUBLISHING TO burrrata.ch/ces-website
-	url: 'https://burrrata.github.io',
-	baseUrl: '/ces-website/',
+  // FOR LOCAL DEVELOPMENT
+  //url: 'https://your-docusaurus-test-site.com',
+  //baseUrl: '/',
+  //
+  // FOR PUBLISHING TO burrrata.ch/ces-website
+  // Deployment Script
+  // GIT_USER=your-username CURRENT_BRANCH=master yarn run publish-gh-pages
+  // Deployment Config
+  url: "https://burrrata.github.io",
+  baseUrl: "/cryptoeconomics-study-dao/",
 
   // Used for publishing and more
-  projectName: 'ces-website',
-  organizationName: 'burrrata',
+  projectName: "cryptoeconomics-study-dao",
+  organizationName: "burrrata",
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-		{doc: 'getting-started/welcome', label: 'Course'},
-    {href: 'https://forum.cryptoeconomics.study', label: 'Community'},
-		{href: 'https://forum.cryptoeconomics.study/t/official-contribution-guidelines/453', label: 'Contribute'},
-		//{search: true},
+    {doc: "getting-started/welcome", label: "Course"},
+    {href: "community", label: "Community"},
+    {doc: "dao/welcome", label: "Contribute"}
+    /*
+    {
+      href:
+        "https://forum.cryptoeconomics.study/t/official-contribution-guidelines/453",
+      label: "Contribute"
+    }
+		*/
+    //{search: true},
   ],
 
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
-	headerIcon: 'img/ces-logo.png',
-	//footerIcon: 'img/ces-logo.png',
-	favicon: 'img/favicon.ico',
+  headerIcon: "img/ces-logo.png",
+  //footerIcon: 'img/ces-logo.png',
+  favicon: "img/favicon.ico",
 
   /* Colors for website */
   colors: {
-		//primaryColor: '#ff1864',
-		primaryColor: '#6da9e2',
-    secondaryColor: '#222222',
+    //primaryColor: '#ff1864',
+    primaryColor: "#6da9e2",
+    secondaryColor: "#222222"
   },
 
   /* Custom fonts for website */
@@ -80,15 +91,15 @@ const siteConfig = {
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
-    theme: 'default',
-    defaultLang: 'javascript',
+    theme: "default",
+    defaultLang: "javascript"
   },
 
   // Add custom scripts here that would be placed in <script> tags.
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: ["https://buttons.github.io/buttons.js"],
 
   // On page navigation for the current documentation page.
-  onPageNav: 'separate',
+  onPageNav: "separate",
   // No .html extensions for paths.
   cleanUrl: true,
   // Collapsible Categories
@@ -111,24 +122,26 @@ const siteConfig = {
   scrollToTop: true,
 
   // Style sheets to import
-  stylesheets: ["https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"],
+  stylesheets: [
+    "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  ]
 
-	// Stuff TODO
+  // Stuff TODO
 
   // You may provide arbitrary config keys to be used as needed by your template. For example, if you need your repo's URL...
-	//repoUrl: 'https://github.com/cryptoeconomics-study/cryptoeconomicsstudy.github.io',
+  //repoUrl: 'https://github.com/cryptoeconomics-study/cryptoeconomicsstudy.github.io',
 
-	// Edit this page button
-	//editUrl: "https://github.com/cryptoeconomics-study/cryptoeconomics-study.github.io/edit/source/docs/",
+  // Edit this page button
+  //editUrl: "https://github.com/cryptoeconomics-study/cryptoeconomics-study.github.io/edit/source/docs/",
 
   // Generate CNAME file when building
-	//cname: "cryptoeconomics.study",
+  //cname: "cryptoeconomics.study",
 
   // Translation recruitment link, appears in the language drop down as "Help Translate"
-	//translationRecruitingLink: "https://crowdin.com/project/cryptoeconomics.study",
+  //translationRecruitingLink: "https://crowdin.com/project/cryptoeconomics.study",
 
   // Algolia Search
-	/*
+  /*
   algolia: {
     apiKey: 'TBD',
     indexName: 'cryptoeconomics.study',
@@ -140,8 +153,8 @@ const siteConfig = {
 	*/
 
   // Open Graph and Twitter card images.
-	//ogImage: 'img/cryptoeconomics-study-card.png',
-	//twitterImage: 'img/cryptoeconomics-study-card.png',
+  //ogImage: 'img/cryptoeconomics-study-card.png',
+  //twitterImage: 'img/cryptoeconomics-study-card.png',
 };
 
 module.exports = siteConfig;
