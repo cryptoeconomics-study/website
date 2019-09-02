@@ -1,2 +1,2 @@
 # website
-Website for Cryptoeconomics.Study + DAO
+Website for Cryptoeconomics.Study
