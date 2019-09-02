@@ -36,7 +36,7 @@ Blockchain
 - Adding a pointer from each block to the block before it, creating a chain of blocks. This way if something changes in a past block it would change the hashes for all future blocks too. The dependency of each block on the block that came before it ties them together in a "chain".
 
 Fork Choice Rule
-- The rules that determine how nodes on a network choose forks.
+- The rules that determine how nodes on a network choose forks. In Bitcoin this is to always choose the longest valid fork.
 
 Confirmations
 - When a block is added on top of another block, signalling that everything in that original block is valid
