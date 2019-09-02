@@ -34,9 +34,10 @@ const siteConfig = {
   // GIT_USER=cryptoeconomics-study CURRENT_BRANCH=master yarn run publish-gh-pages
 
   // SURGE PUBLISHING PARAMS
-  url: "last-powder.surge.sh",
+  //url: "last-powder.surge.sh", // for testing
+  //url: "cryptoeconomics.study", // for publishing
   baseUrl: "/",
-	projectName: "cryptoeconomics-study",
+  projectName: "cryptoeconomics-study",
   organizationName: "cryptoeconomics-study",
 
   // For no header links in the top nav bar -> headerLinks: [],

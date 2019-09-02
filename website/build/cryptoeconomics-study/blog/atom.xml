@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>last-powder.surge.sh/blog</id>
+    <id>undefined/blog</id>
     <title>Cryptoeconomics.Study Blog</title>
     <updated>2019-08-31T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
-    <link rel="alternate" href="last-powder.surge.sh/blog"/>
+    <link rel="alternate" href="undefined/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Cryptoeconomics.Study news and events.</subtitle>
-    <logo>last-powder.surge.sh/img/ces-logo.png</logo>
+    <logo>undefined/img/ces-logo.png</logo>
     <rights>Copyright © 2019 Cryptoeconomics.Study</rights>
     <entry>
         <title type="html"><![CDATA[Cryptoeconomics.Study Is Live!]]></title>
-        <id>last-powder.surge.sh/blog/2019/08/31/mvp.html</id>
-        <link href="last-powder.surge.sh/blog/2019/08/31/mvp.html">
+        <id>undefined/blog/2019/08/31/mvp.html</id>
+        <link href="undefined/blog/2019/08/31/mvp.html">
         </link>
         <updated>2019-08-31T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p><br></p> <p>After much anticipation and preparation, <a href>Cryptoeconomics.Study</a> is live! We have a new website, new lectures, coding challenges, and a <a href>DAO</a>. Best of all... it's completely free and open source. <a href="https://cryptoeconomics.study">Check it out</a>!</p> <p>We are now releasing the first 3 chapters c...</p>]]></summary>
