@@ -22,31 +22,36 @@ const users = require("./data/users");
 
 const siteConfig = {
   title: "Cryptoeconomics.Study", // Title for your website.
-  tagline: "A free, open-source course on the fundamentals of Blockchain protocols",
+  tagline:
+    "A free, open-source course on the fundamentals of Blockchain protocols",
 
   // FOR LOCAL DEVELOPMENT
   //url: 'https://your-docusaurus-test-site.com',
   //baseUrl: '/',
   //
-  // FOR PUBLISHING TO burrrata.ch/ces-website
-  // Deployment Script
+  // Publishing Deployment Script
   // GIT_USER=your-username CURRENT_BRANCH=master yarn run publish-gh-pages
-  // Deployment Config
+  //
+  // FOR PUBLISHING TO burrrata.ch/ces-website
   url: "https://burrrata.github.io",
-  baseUrl: "/cryptoeconomics-study-dao/",
+  //baseUrl: "/cryptoeconomics-study-dao/",
+  //
+  // FOR PUBLISHING TO CRYPTOECONOMICS.STUDY
+  //url: "https://cryptoeconomics-study.github.io",
+  baseUrl: "/testing/",
 
   // Used for publishing and more
-  projectName: "cryptoeconomics-study-dao",
-  organizationName: "burrrata",
+  projectName: "Cryptoeconomics.Study",
+  organizationName: "Cryptoeconomics.Study",
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: "getting-started/welcome", label: "Course"},
-    {href: "community", label: "Community"},
-    {doc: "dao/welcome", label: "Contribute"}
+    { doc: "getting-started/welcome", label: "Course" },
+    { href: "community", label: "Community" },
+    { doc: "dao/welcome", label: "Contribute" }
     /*
     {
       href:
