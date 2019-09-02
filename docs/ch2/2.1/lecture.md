@@ -28,6 +28,20 @@ title: "Lecture"
 
 # Ch2.1 Overview
 
+In Chapter 1, we began to lay the foundations for bringing money into the digital realm, interpreting money as a "state" which updates upon recieving or sending value. By using digital signatures to enforce ownership of that money--only allowing it to be sent when the owner digitally "signs off"--we are beginning to get a sense of how systems like Paypal and Bitcoin might be built.
+
+Unfortunately, using digital signatures to enforce ownership properties are only part of the story to putting money on the internet. Let's say Alice wants to buy a coffee from Bob and Alice sends him a message "I, Alice, send Bob $5." Should Bob hand over the coffee?
+
+Well... not necessarily. Bob needs more assurances than just Alice's message. Bob needs to know that everyone else on the network also agrees about the state (everyone's balance)
+- Does Alice's state have $5 to give in the first place?
+- Will that message definitely change the state so that Bob gets +5?
+
+One way we can try to tackle the first question is via something called "client side validation." In this method, all participants keep track of all previous states and transactions on their own computer. This way, everyone can run the entire history of the state themselves and confirm Alice really has $5!
+
+This is an improvement--but it still has significant issues. For one, the more history and transactions there are, the longer it would take you to check--in other words, the throughput (number of transactions) is limited by the person's computer!  Similarly, it hurts privacy--every person can see every other person's spending.
+
+Regardless of how Bob figures out WHETHER Alice has the money to spend, he faces an even harder problem after: making sure that he gets it. How can Bob be assured that, once he hands over a coffee, the state will update his account +$5? This is an essential problem in decentralized networks because all nodes on the network need to receive all messages and agree on the same state. There are many different ways messages can be sent and received on networks:
+
 Synchronous network
 - Global clock, & there is a known (constant) latency L in which all messages are assumed to be received. For instance: "all messages propagate in 5 seconds."
 
