@@ -54,7 +54,7 @@
         "type": "subcategory",
         "label": "2.1 Networks and Synchrony",
         "ids": [
-          "ch2/2.1/lecture",
+          "sync/2.1-lecture",
           "sync/2.1-coding-challenge"
         ]
       },
@@ -62,7 +62,7 @@
         "type": "subcategory",
         "label": "2.2 Double Spends",
         "ids": [
-          "ch2/2.2/lecture",
+          "sync/2.2-lecture",
           "sync/2.2-code-challenge"
         ]
       },
@@ -70,7 +70,7 @@
         "type": "subcategory",
         "label": "2.3 Latency-Based Consensus",
         "ids": [
-          "ch2/2.3/lecture",
+          "sync/2.3-lecture",
           "sync/2.3-code-challenge"
         ]
       },
@@ -78,7 +78,7 @@
         "type": "subcategory",
         "label": "2.4 Proof of Authority",
         "ids": [
-          "ch2/2.4/lecture",
+          "sync/2.4-lecture",
           "sync/2.4-code-challenge"
         ]
       }
@@ -89,7 +89,7 @@
         "type": "subcategory",
         "label": "3.1 Decentralized Consensus and Blockchains",
         "ids": [
-          "ch3/3.1/lecture",
+          "sync/3.1-lecture",
           "sync/3.1-coding-challenge"
         ]
       },
@@ -97,7 +97,7 @@
         "type": "subcategory",
         "label": "3.2 Bitcoin and Nakamoto Consensus",
         "ids": [
-          "ch3/3.2/lecture",
+          "sync/3.2-lecture",
           "sync/3.2-code-challenge"
         ]
       },
@@ -105,7 +105,7 @@
         "type": "subcategory",
         "label": "3.3 Merkle Trees",
         "ids": [
-          "ch3/3.3/lecture",
+          "sync/3.3-lecture",
           "sync/3.3-code-challenge"
         ]
       },
@@ -113,7 +113,7 @@
         "type": "subcategory",
         "label": "3.4 Game Thoery in Bitcoin",
         "ids": [
-          "ch3/3.4/lecture",
+          "sync/3.4-lecture",
           "sync/3.4-code-challenge"
         ]
       },
@@ -121,7 +121,7 @@
         "type": "subcategory",
         "label": "3.5 Selfish Mining",
         "ids": [
-          "ch3/3.5/lecture",
+          "sync/3.5-lecture",
           "sync/3.5-code-challenge"
         ]
       }

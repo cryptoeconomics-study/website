@@ -2,10 +2,9 @@
   "scripts": {
     "examples": "docusaurus-examples",
 		"clean:docs": "rm -r ../docs/sync/*",
-		"sync:getting-started": "node ./scripts/sync-getting-started.js",
-		"sync:ch1": "node ./scripts/sync-ch1.js",
-		"sync:ch2": "node ./scripts/sync-ch2.js",
-		"sync:ch3": "node ./scripts/sync-ch3.js",
+		"sync:code-repo": "node ./scripts/sync-code-repo.js",
+		"sync:dao-repo": "node ./scripts/sync-dao-repo.js",
+		"sync:lectures-repo": "node ./scripts/sync-lectures-repo.js",
     "generate": "npm run clean:docs && npm run sync:getting-started && npm run sync:ch1 && npm run sync:ch2",
     "start": "npm run generate && docusaurus-start",
     "build": "npm run generate && docusaurus-build",
