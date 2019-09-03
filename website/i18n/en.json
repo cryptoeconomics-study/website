@@ -86,8 +86,8 @@
       "dao/welcome": {
         "title": "Welcome 👋"
       },
-      "getting-started/syllabus": {
-        "title": "Syllabus"
+      "getting-started/course-overview": {
+        "title": "Course Overview"
       },
       "getting-started/welcome": {
         "title": "Welcome"
@@ -224,7 +224,9 @@
     "Learn to create a blockchain network that uses Proof of Work to validate blocks|no description given": "Learn to create a blockchain network that uses Proof of Work to validate blocks",
     "Cryptoeconomics.Study Coding Challenges|no description given": "Cryptoeconomics.Study Coding Challenges",
     "Let's learn together!|no description given": "Let's learn together!",
-    "DAO|no description given": "DAO",
+    "Forum 👥|no description given": "Forum 👥",
+    "DAO 🦅|no description given": "DAO 🦅",
+    "Newsletter 📧|no description given": "Newsletter 📧",
     "Community|no description given": "Community",
     "Join the Conversation!|no description given": "Join the Conversation!",
     "A Course Of Course!|no description given": "A Course Of Course!",

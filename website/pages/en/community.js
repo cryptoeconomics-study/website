@@ -11,8 +11,7 @@
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+ * limitations under the License.  */
 
 const React = require("react");
 
@@ -23,8 +22,8 @@ const Button = require("../../../../react-bootstrap/Button.js");
 const translate = require("../../server/translate.js").translate;
 
 function Community(props) {
-  const {config: siteConfig, language = ""} = props;
-  const {baseUrl, docsUrl} = siteConfig;
+  const { config: siteConfig, language = "" } = props;
+  const { baseUrl, docsUrl } = siteConfig;
   const docsPart = `${docsUrl ? `${docsUrl}/` : ""}`;
   const langPart = `${language ? `${language}/` : ""}`;
   const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
@@ -38,7 +37,7 @@ function Community(props) {
   );
 
   const Forum = () => (
-    <CommunityResource title="Forum">
+    <CommunityResource title={<translate>Forum 👥</translate>}>
       The Cryptoeconomics.Study community forum is the best place to ask
       questions and stay up to date with the latest news.
       <p>
@@ -95,7 +94,7 @@ function Community(props) {
   );
 
   const DAO = () => (
-    <CommunityResource title={<translate>DAO</translate>}>
+    <CommunityResource title={<translate>DAO 🦅</translate>}>
       The Cryptoeconomics.Study DAO is the main way that we make decisions as a
       community. We also have bounties and weekly Carrot allocations! 🥕
       <p>
@@ -151,6 +150,22 @@ function Community(props) {
     </CommunityResource>
   );
 
+  const Newsletter = () => (
+    <CommunityResource title={<translate>Newsletter 📧</translate>}>
+      Get the latest updates on the Cryptoeconomics.Study course and community.
+      <p>
+        <Button
+          variant="dark"
+          size="sm"
+          href="https://cryptoeconomicsstudy.substack.com/subscribe"
+          className="m-1"
+        >
+          Sign up now!
+        </Button>
+      </p>
+    </CommunityResource>
+  );
+
   return (
     <div>
       <HomeSplash
@@ -168,7 +183,8 @@ function Community(props) {
           </p>
           <Forum />
           <DAO />
-					<br />
+          <Newsletter />
+          <br />
         </Container>
       </div>
     </div>
