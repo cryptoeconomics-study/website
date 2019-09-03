@@ -15,7 +15,7 @@ title: "Lecture"
 
 # Slides
 
-[Gooogle Sheets Link]()
+[Gooogle Sheets Link](https://docs.google.com/presentation/d/11HU5a3gVsU3N68Jfc6JMY_gH4MDTdKNlm0j0vqZETQU/edit#slide=id.g3b69596d2b_0_0)
 
 <br />
 
