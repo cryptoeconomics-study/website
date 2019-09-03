@@ -1,9 +1,9 @@
 {
   "docs": {
     "Getting Started": [
-      "sync/welcome",
-      "sync/development-setup",
-			"sync/course-overview"
+      "sync/getting-started-welcome",
+      "sync/getting-started-development-setup",
+			"sync/getting-started-course-overview"
     ],
 		"Ch1: Payment Processor": [
 			"ch1/index",

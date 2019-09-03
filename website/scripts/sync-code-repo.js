@@ -8,7 +8,7 @@ const REPO = "cryptoeconomics-study/code/";
 const pages = [
   // development setup
   {
-    destination: "docs/sync/development-setup.md",
+    destination: "docs/sync/getting-started-development-setup.md",
     title: "Development Setup",
     contentLocation: "README.md"
   },

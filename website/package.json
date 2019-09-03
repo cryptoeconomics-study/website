@@ -5,7 +5,7 @@
 		"sync:code-repo": "node ./scripts/sync-code-repo.js",
 		"sync:dao-repo": "node ./scripts/sync-dao-repo.js",
 		"sync:lectures-repo": "node ./scripts/sync-lectures-repo.js",
-    "generate": "npm run clean:docs && npm run sync:getting-started && npm run sync:ch1 && npm run sync:ch2",
+    "generate": "npm run clean:docs && npm run sync:code-repo && npm run sync:dao-repo && npm run sync:lectures-repo",
     "start": "npm run generate && docusaurus-start",
     "build": "npm run generate && docusaurus-build",
     "publish-gh-pages": "docusaurus-publish",

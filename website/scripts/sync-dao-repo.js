@@ -39,7 +39,7 @@ const pages = [
   // code of conduct
   {
     destination: "docs/sync/dao-code-of-conduct.md",
-    title: "Code of Conduct ❤️"",
+    title: "Code of Conduct ❤️ ",
     contentLocation: "about/code-of-conduct.md"
   }
 ];

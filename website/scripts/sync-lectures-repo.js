@@ -8,16 +8,16 @@ const REPO = "cryptoeconomics-study/lectures/";
 const pages = [
   // welcome
   {
-    destination: "docs/sync/welcome.md",
+    destination: "docs/sync/getting-started-welcome.md",
     title: "Welcome",
     contentLocation: "getting-started/welcome.md"
   },
   // course overview
   {
-    destination: "docs/sync/course-overview.md",
+    destination: "docs/sync/getting-started-course-overview.md",
     title: "Course Overview",
     contentLocation: "getting-started/course-overview.md"
-  }
+  },
   // 1.1
   {
     destination: "docs/sync/1.1-lecture.md",
