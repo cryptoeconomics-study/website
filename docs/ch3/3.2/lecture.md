@@ -20,7 +20,9 @@ Nakamoto Consensus
 
 # Slides
 
-[Google Sheets Link]()
+Google Sheets
+[Part 1](https://docs.google.com/presentation/d/1WDOs1wBugeRmQ2hvZH7SICEqCk2Ci9doA-7yFHKkXNg/edit)
+[Part 2](https://docs.google.com/presentation/d/1hOo7Rt2jizAqd_08VPaTpgtCs7Je80sf9MQbB5dLosM/edit#slide=id.g578c7d3252_1_1947)
 
 <br />
 

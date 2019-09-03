@@ -20,7 +20,7 @@ Merkle Trees
 
 # Slides
 
-[Google Sheets Link]()
+[Google Sheets Link](https://docs.google.com/presentation/d/1KxqlX9_IvCfnbqGU1q5nIiaj4FXV7mFoUJwHRovIUG8/edit)
 
 <br />
 

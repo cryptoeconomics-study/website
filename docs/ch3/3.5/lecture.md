@@ -20,7 +20,7 @@ Selfish Mining
 
 # Slides
 
-[Google Sheets Link]()
+[Google Sheets Link](https://docs.google.com/presentation/d/1l4eTY0qzsjlOQDHOw0djm9WfSeoCUnpCcjneTjOKOEo/edit#slide=id.g5a6da1651d_1_1477)
 
 <br />
 
