@@ -161,17 +161,32 @@
       "sync/1.1-code-challenge": {
         "title": "Code Challenge"
       },
+      "sync/1.1-lecture": {
+        "title": "Lecture"
+      },
       "sync/1.2-code-challenge": {
         "title": "Code Challenge"
+      },
+      "sync/1.2-lecture": {
+        "title": "Lecture"
       },
       "sync/1.3-code-challenge": {
         "title": "Code Challenge"
       },
+      "sync/1.3-lecture": {
+        "title": "Lecture"
+      },
       "sync/1.4-code-challenge": {
         "title": "Code Challenge"
       },
+      "sync/1.4-lecture": {
+        "title": "Lecture"
+      },
       "sync/1.5-code-challenge": {
         "title": "Code Challenge"
+      },
+      "sync/1.5-lecture": {
+        "title": "Lecture"
       },
       "sync/2.1-code-challenge": {
         "title": "Code Challenge"
