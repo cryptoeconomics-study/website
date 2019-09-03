@@ -36,6 +36,11 @@ Merkle Proof / Branch
 
 # Recommended Resources
 
+[Wikipedia: Merkle Tree](https://en.wikipedia.org/wiki/Merkle_tree) - Wikipedia page on Merkle trees.
+
+[Brilliant: Merkle Tree](https://brilliant.org/wiki/merkle-tree/) - Free page explaining merkle trees.
+
+[Pegasys: Ethereum Explained](https://pegasys.tech/ethereum-explained-merkle-trees-world-state-transactions-and-more/) - Explains Merkle trees in the context of Ethereum.
 
 <br />
 

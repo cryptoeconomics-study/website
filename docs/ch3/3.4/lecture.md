@@ -60,7 +60,8 @@ Bitcoin mechanism design goals
 
 # Recommended Resources
 
+[Cryptocurrency Game Theory](https://blockgeeks.com/guides/cryptocurrency-game-theory/) - A helpful guide by BlockGeeks.
+
+[Game Theory and Blockchain](https://medium.com/@matthewfinestone/game-theory-and-blockchain-db46e67933d7) - +1 for Matthew Finestone.
 
 <br />
-
-

@@ -34,6 +34,7 @@ In a decentralized network anyone can join. We need a way to choose who gets to 
 
 # Recommended Resources
 
+[Techcoins: nakamoto consensu guide and visualization](https://techcoins.net/nakamoto-consensus/) - Has pictures.
 
 <br />
 
