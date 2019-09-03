@@ -44,8 +44,6 @@ Confirmations
 Consensus
 - Making sure that all nodes on a network agree on the same state.
 
-
-
 <br />
 
 # Recommended Resources
@@ -55,6 +53,8 @@ Consensus
 [But how does a blockchain work?](https://www.youtube.com/watch?v=bBC-nXj3Ng4&feature=youtu.be) - Awesome video by 3Blue1Brown explaining how blockchains work.
 
 [Anders Brownworth's blockchain demo](https://anders.com/blockchain/blockchain.html) - Put data in a block, "mine" (hash) it, then add data to the next block, "mine" (hash) it, etc... The "mine" button perfoms the state transition function and you can see the history (blockchain) being created right in front of you.
+
+[Ethereum Stack Exchange: Fork Choice Rule](https://bitcoin.stackexchange.com/questions/88777/fork-choice-rule-a-general-term-or-a-specific-algorithm) - Fork choice rule explained.
 
 <br />
 
