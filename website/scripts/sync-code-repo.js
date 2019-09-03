@@ -12,6 +12,12 @@ const pages = [
     title: "Development Setup",
     contentLocation: "README.md"
   },
+  // chromebook
+  {
+    destination: "docs/sync/getting-started-chromebook.md",
+    title: "Chromebook",
+    contentLocation: "chromebook.md"
+  },
   // 1.1
   {
     destination: "docs/sync/1.1-code-challenge.md",
