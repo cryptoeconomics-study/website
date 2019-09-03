@@ -1,7 +1,6 @@
 ---
-title: "Syllabus"
+title: "Course Overview"
 ---
-# Course Overview
 
 <br />
 
