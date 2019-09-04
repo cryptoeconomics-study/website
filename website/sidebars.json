@@ -127,8 +127,8 @@
       }
 		],
     "More": [
-			"more/resources",
-			"more/glossary"
+			"sync/more-resources",
+			"sync/more-glossary"
 		]
   },
   "dao": {

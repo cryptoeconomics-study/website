@@ -92,72 +92,6 @@
       "getting-started/welcome": {
         "title": "Welcome"
       },
-      "more/book/chapter-00": {
-        "title": "more/book/chapter-00"
-      },
-      "more/book/chapter-01": {
-        "title": "more/book/chapter-01"
-      },
-      "more/book/chapter-02": {
-        "title": "more/book/chapter-02"
-      },
-      "more/book/chapter-03": {
-        "title": "more/book/chapter-03"
-      },
-      "more/book/chapter-04": {
-        "title": "more/book/chapter-04"
-      },
-      "more/book/chapter-05": {
-        "title": "more/book/chapter-05"
-      },
-      "more/book/chapter-06": {
-        "title": "more/book/chapter-06"
-      },
-      "more/book/chapter-07": {
-        "title": "more/book/chapter-07"
-      },
-      "more/book/chapter-08": {
-        "title": "more/book/chapter-08"
-      },
-      "more/book/chapter-09": {
-        "title": "more/book/chapter-09"
-      },
-      "more/book/chapter-10": {
-        "title": "more/book/chapter-10"
-      },
-      "more/book/chapter-11": {
-        "title": "more/book/chapter-11"
-      },
-      "more/book/contents": {
-        "title": "more/book/contents"
-      },
-      "more/book/ContributorsList": {
-        "title": "more/book/ContributorsList"
-      },
-      "more/book/glossary": {
-        "title": "more/book/glossary"
-      },
-      "more/book/README": {
-        "title": "more/book/README"
-      },
-      "more/glossary": {
-        "title": "Glossary"
-      },
-      "more/intro-to-cryptoeconomics": {
-        "title": "Introduction To Cryptoeconomics"
-      },
-      "more/intro-to-cryptography": {
-        "title": "more/intro-to-cryptography"
-      },
-      "more/intro-to-gametheory": {
-        "title": "more/intro-to-gametheory"
-      },
-      "more/proof-of-work": {
-        "title": "more/proof-of-work"
-      },
-      "more/resources": {
-        "title": "Resources"
-      },
       "sync/1.1-code-challenge": {
         "title": "Code Challenge"
       },
@@ -251,6 +185,9 @@
       "sync/dao-welcome": {
         "title": "Welcome"
       },
+      "sync/getting-started-chromebook": {
+        "title": "Chromebook"
+      },
       "sync/getting-started-course-overview": {
         "title": "Course Overview"
       },
@@ -259,6 +196,12 @@
       },
       "sync/getting-started-welcome": {
         "title": "Welcome"
+      },
+      "sync/more-glossary": {
+        "title": "Glossary"
+      },
+      "sync/more-resources": {
+        "title": "Resources"
       }
     },
     "links": {
