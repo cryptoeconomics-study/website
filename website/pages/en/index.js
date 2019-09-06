@@ -381,7 +381,7 @@ class Index extends React.Component {
           buttons={[
             {
               name: "Get Started, It's Free!",
-              href: `${docUrl("getting-started/welcome")}`
+							href: `${docUrl("sync/getting-started-welcome")}`
             },
             {
               name: "Community DAO",
