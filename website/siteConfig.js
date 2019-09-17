@@ -122,7 +122,9 @@ const siteConfig = {
   // Style sheets to import
   stylesheets: [
     "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  ]
+  ],
+
+  gaTrackingId: 'UA-128367709-2'
 
   // Stuff TODO
 
