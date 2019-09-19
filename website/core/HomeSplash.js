@@ -1,6 +1,6 @@
 /**
- * Copyright 2019 Cryptoeconomics.Study 
- * 
+ * Copyright 2019 Cryptoeconomics.Study
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -40,7 +40,7 @@ class HomeSplash extends React.Component {
 			<div
 				className='heroImage'
 				style={{
-					backgroundImage: `url("img/cropped-rainbow-eth.png")`,
+					backgroundImage: `url("../img/cropped-rainbow-eth.png")`,
 					padding: '20vmin',
 				}}
 			>
