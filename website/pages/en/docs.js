@@ -1,6 +1,6 @@
 /**
  * Copyright 2019 Cryptoeconomics.Study
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -20,7 +20,7 @@ const React = require("react");
 const Redirect = require("../../core/Redirect.js");
 
 class Docs extends React.Component {
-    
+
   render() {
     const { config: siteConfig, language = "" } = this.props;
     const { baseUrl, docsUrl } = siteConfig;
@@ -38,5 +38,5 @@ class Docs extends React.Component {
 }
 
 Docs.title = 'Docs';
-Docs.description = 'Substrate High Level Documentation';
+Docs.description = '';
 module.exports = Docs;

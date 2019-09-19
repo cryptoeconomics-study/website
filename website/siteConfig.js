@@ -43,7 +43,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
 		{ doc: "sync/getting-started-welcome", label: "Course" },
-    { href: "community", label: "Community" },
+    { page: "community", label: "Community" },
 		{ doc: "sync/dao-welcome", label: "Contribute" }
     /*
     {
