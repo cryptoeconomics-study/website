@@ -314,21 +314,19 @@ class Index extends React.Component {
       </Feature>
     );
 
-    // Community DAO Highlight
+    // Community Highlight
     const CommunityDAO = () => (
       <Feature
         background="dark"
-        image="https://i.imgur.com/I1dcOlB.png"
+        image="https://i.imgur.com/lGres1u.png"
         imageAlign="left"
         title={<translate>Community Driven</translate>}
       >
         <translate>
-          Cryptoeconomics.Study has a DAO! This allows the community to
-          transparently make decisions, manage funds, and reward community
-          contributors. As the community grows we will move more and more from
-          core contributors (gerbils) to community contributors (carrot
-          holders). This will allow us to create a truly decentralized, self
-          sovereign, incentive aligned community :)
+          Cryptoeconomics.Study is built by the community, for the community.
+          The course is constantly growing and evolving alongside our community.
+          All are welcome to join in, facilitate discussions, and contribute to
+          expanding the course. Introduce yourself in our forum!
         </translate>
       </Feature>
     );
@@ -384,15 +382,16 @@ class Index extends React.Component {
 							href: `${docUrl("sync/getting-started-welcome")}`
             },
             {
-              name: "Community DAO",
+              name: "Learn More",
               href:
-                "https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/"
+                "#learn"
             }
           ]}
           padding={5}
         />
         <div className="mainContainer">
           <Container>
+            <LearnAnchor />
             <br />
             <Lectures />
             <br />
