@@ -124,8 +124,8 @@ const siteConfig = {
     "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   ],
 
-  gaTrackingId: 'UA-128367709-2'
-
+  gaTrackingId: 'UA-128367709-2',
+  twitterImage: 'img/ces-logo-med.png'
   // Stuff TODO
 
   // You may provide arbitrary config keys to be used as needed by your template. For example, if you need your repo's URL...
@@ -154,7 +154,6 @@ const siteConfig = {
 
   // Open Graph and Twitter card images.
   //ogImage: 'img/cryptoeconomics-study-card.png',
-  //twitterImage: 'img/cryptoeconomics-study-card.png',
 };
 
 module.exports = siteConfig;
