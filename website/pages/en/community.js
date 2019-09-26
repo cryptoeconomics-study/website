@@ -71,15 +71,7 @@ function Community(props) {
           href="https://forum.cryptoeconomics.study/t/new-course-feedback/519"
           className="m-1"
         >
-          Course Feedback 🥕
-        </Button>
-        <Button
-          variant="dark"
-          size="sm"
-          href="https://forum.cryptoeconomics.study/t/community-nominations/522"
-          className="m-1"
-        >
-          Nominations 🥕
+          Course Feedback 👩‍💻
         </Button>
         <Button
           variant="dark"
@@ -88,63 +80,6 @@ function Community(props) {
           className="m-1"
         >
           Contributing 🐹
-        </Button>
-      </p>
-    </CommunityResource>
-  );
-
-  const DAO = () => (
-    <CommunityResource title={<translate>DAO 🦅</translate>}>
-      The Cryptoeconomics.Study DAO is the main way that we make decisions as a
-      community. We also have bounties and weekly Carrot allocations! 🥕
-      <p>
-        <Button
-          variant="dark"
-          size="sm"
-          href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/0xa000c2e3484a19b598d0162c8cca5ddf80ab37bb"
-          className="m-1"
-        >
-          Gerbils 🐹
-        </Button>
-        <Button
-          variant="dark"
-          size="sm"
-          href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/0x923d9e31cf95bd93e6de1950397621900e119450"
-          className="m-1"
-        >
-          Gerbils Votes 🐹
-        </Button>
-        <Button
-          variant="dark"
-          size="sm"
-          href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/0x2625a091eab924da6a45aab3f181e8b66cec48e1"
-          className="m-1"
-        >
-          Carrots 🥕
-        </Button>
-        <Button
-          variant="dark"
-          size="sm"
-          href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/0x7147928551406adaeca76cf3e04557bd3412cf53"
-          className="m-1"
-        >
-          Carrots Votes 🥕
-        </Button>
-        <Button
-          variant="dark"
-          size="sm"
-          href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/0x2225ca26a71af7dd81cf2ebbcd4b16d0090cfe10"
-          className="m-1"
-        >
-          Carrot Allocation Votes 🥕
-        </Button>
-        <Button
-          variant="dark"
-          size="sm"
-          href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/0x32016d05910e344470ec832ed344a385ab18ae6b"
-          className="m-1"
-        >
-          Carrot Bounties 🥕
         </Button>
       </p>
     </CommunityResource>
@@ -182,7 +117,6 @@ function Community(props) {
             and we would be happy for you to join!
           </p>
           <Forum />
-          <DAO />
           <Newsletter />
           <br />
         </Container>

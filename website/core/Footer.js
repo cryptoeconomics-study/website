@@ -47,19 +47,16 @@ class Footer extends React.Component {
           <div>
             <h5>Course</h5>
             <a
-              href={this.docUrl("getting-started/welcome", this.props.language)}
+              href={this.docUrl("sync/getting-started-welcome", this.props.language)}
             >
               Getting Started
             </a>
-            <a href={this.pageUrl("coding-challenges", this.props.language)}>
+{/*            <a href={this.pageUrl("coding-challenges", this.props.language)}>
               Coding Challenges
-            </a>
+            </a>*/}
           </div>
           <div>
             <h5>Community</h5>
-            <a href="https://rinkeby.aragon.org/#/0xEAA147020b006e6Bfe9e3e1A9f1FaD330A9E20F5/">
-              DAO
-            </a>
             <a href="https://forum.cryptoeconomics.study/">Forum</a>
             <a href={this.pageUrl("users.html", this.props.language)}>
               Contributors
@@ -71,7 +68,7 @@ class Footer extends React.Component {
             <a href="https://cryptoeconomicsstudy.substack.com/subscribe">
               Newsletter
             </a>
-            <a href="https://github.com/cryptoeconomics-study-dao/">GitHub</a>
+            <a href="https://github.com/cryptoeconomics-study">GitHub</a>
           </div>
         </section>
         <section className="copyright">{this.props.config.copyright}</section>

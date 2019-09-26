@@ -378,8 +378,8 @@ class Index extends React.Component {
           tagline={siteConfig.tagline}
           buttons={[
             {
-              name: "Get Started, It's Free!",
-							href: `${docUrl("sync/getting-started-welcome")}`
+              name: "Join Our Closed Beta!",
+							href: `${this.props.config.baseUrl}blog/2019/09/18/beta`
             },
             {
               name: "Learn More",
@@ -408,7 +408,7 @@ class Index extends React.Component {
   }
 }
 
-Index.title = "Cryptoeconomics.Study";
+Index.title = "Home";
 Index.description =
   "A free, open-source course on the fundamentals of Blockchain protocols";
 module.exports = Index;

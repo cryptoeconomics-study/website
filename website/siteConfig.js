@@ -124,8 +124,8 @@ const siteConfig = {
     "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   ],
 
-  gaTrackingId: 'UA-128367709-2',
-  twitterImage: 'img/ces-logo-med.png'
+  gaTrackingId: "UA-128367709-2",
+  twitterImage: "https://i.imgur.com/lGres1u.png"
   // Stuff TODO
 
   // You may provide arbitrary config keys to be used as needed by your template. For example, if you need your repo's URL...
