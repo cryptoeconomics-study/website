@@ -5,6 +5,9 @@
     "previous": "Previous",
     "tagline": "A free, open-source course on the fundamentals of Blockchain protocols",
     "docs": {
+      "sync/1.0-lecture": {
+        "title": "Lecture"
+      },
       "sync/1.1-code-challenge": {
         "title": "Code Challenge"
       },
@@ -35,6 +38,9 @@
       "sync/1.5-lecture": {
         "title": "Lecture"
       },
+      "sync/2.0-lecture": {
+        "title": "Lecture"
+      },
       "sync/2.1-code-challenge": {
         "title": "Code Challenge"
       },
@@ -57,6 +63,9 @@
         "title": "Code Challenge"
       },
       "sync/2.4-lecture": {
+        "title": "Lecture"
+      },
+      "sync/3.0-lecture": {
         "title": "Lecture"
       },
       "sync/3.1-code-challenge": {

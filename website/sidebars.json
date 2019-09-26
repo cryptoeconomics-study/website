@@ -6,7 +6,13 @@
 			"sync/getting-started-course-overview"
     ],
 		"Ch1: Payment Processor": [
-			"ch1/index",
+      {
+        "type": "subcategory",
+        "label": "1.0 Chapter Overview",
+        "ids": [
+          "sync/1.0-lecture"
+        ]
+      },
       {
         "type": "subcategory",
         "label": "1.1 Hashes and Signatures",
@@ -49,7 +55,13 @@
       }
 		],
 		"Ch2: Network Models": [
-			"ch2/index",
+      {
+        "type": "subcategory",
+        "label": "2.0 Chapter Overview",
+        "ids": [
+          "sync/2.0-lecture"
+        ]
+      },
       {
         "type": "subcategory",
         "label": "2.1 Networks and Synchrony",
@@ -84,7 +96,13 @@
       }
 		],
 		"Ch3 Proof of Work": [
-			"ch3/index",
+      {
+        "type": "subcategory",
+        "label": "3.0 Chapter Overview",
+        "ids": [
+          "sync/3.0-lecture"
+        ]
+      },
       {
         "type": "subcategory",
         "label": "3.1 Decentralized Consensus and Blockchains",

@@ -18,6 +18,12 @@ const pages = [
     title: "Course Overview",
     contentLocation: "getting-started/course-overview.md"
   },
+  // 1.0
+  {
+    destination: "docs/sync/1.0-lecture.md",
+    title: "Lecture",
+    contentLocation: "ch1/1.0/lecture.md"
+  },
   // 1.1
   {
     destination: "docs/sync/1.1-lecture.md",
@@ -48,6 +54,12 @@ const pages = [
     title: "Lecture",
     contentLocation: "ch1/1.5/lecture.md"
   },
+  // 2.0
+  {
+    destination: "docs/sync/2.0-lecture.md",
+    title: "Lecture",
+    contentLocation: "ch2/2.0/lecture.md"
+  },
   // 2.1
   {
     destination: "docs/sync/2.1-lecture.md",
@@ -71,6 +83,12 @@ const pages = [
     destination: "docs/sync/2.4-lecture.md",
     title: "Lecture",
     contentLocation: "ch2/2.4/lecture.md"
+  },
+  // 3.0
+  {
+    destination: "docs/sync/3.0-lecture.md",
+    title: "Lecture",
+    contentLocation: "ch3/3.0/lecture.md"
   },
   // 3.1
   {
