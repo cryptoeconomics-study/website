@@ -93,7 +93,7 @@ It's a win for everyone! So if you get stuck, don't worry about it. Just post yo
 
 ### Chromebook Support
 
-Chromebooks are great because they're cheap and secure. Lots of people have them. In order to make the course accessible to as many people as possible, we've created a [chromebook guide](chromebook.md).
+Chromebooks are great because they're cheap and secure. Lots of people have them. In order to make the course accessible to as many people as possible, we've created a [chromebook guide](getting-started-chromebook.md).
 
 <br />
 
